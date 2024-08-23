@@ -22,14 +22,6 @@ const CustomNavbar = () => {
     navigate('/login');
   };
 
-  // Handlers for "Who it's for" dropdown
-  const handleWhoMouseEnter = () => setIsWhoDropdownOpen(true);
-  const handleWhoMouseLeave = () => setIsWhoDropdownOpen(false);
-
-  // Handlers for "Test your prep" dropdown
-  // const handleTestPrepMouseEnter = () => setIsTestPrepDropdownOpen(true);
-  // const handleTestPrepMouseLeave = () => setIsTestPrepDropdownOpen(false);
-
   // Handlers for profile dropdown
   const handleProfileMouseEnter = () => setIsProfileDropdownOpen(true);
   const handleProfileMouseLeave = () => setIsProfileDropdownOpen(false);

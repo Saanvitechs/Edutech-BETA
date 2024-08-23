@@ -43,22 +43,22 @@ function App() {
           <Route path="/register" element={<Register />} />
 
           {/* Protect these routes */}
-          {/* <Route 
-            path="/mocks" 
+          <Route 
+            path="/assignments" 
             element={
               <ProtectedRoute>
-                <Mocks />
+                <AssignmentPage />
               </ProtectedRoute>
             } 
-          /> */}
-          <Route 
+          />
+          {/* <Route 
             path="/test/:testId" 
             element={
               <ProtectedRoute>
                 
               </ProtectedRoute>
             } 
-          />
+          /> */}
 
 
 
