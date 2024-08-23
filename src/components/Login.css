@@ -1,0 +1,43 @@
+   /* Container Styles */
+   .MuiGrid-container {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Card Styles */
+  .MuiCard-root {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+  }
+  
+  /* Typography Styles */
+  .MuiTypography-h4 {
+    font-weight: bold;
+    color: #1565C0;
+  }
+  
+  .MuiTypography-body2 {
+    color: #1565C0;
+  }
+  
+  /* TextField Styles */
+  .MuiTextField-root {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styles */
+  .MuiButton-root {
+    background-color: #1565C0;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+  }
+  
+  .MuiButton-root:hover {
+    background-color: #0D47A1;
+  }

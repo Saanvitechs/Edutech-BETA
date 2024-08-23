@@ -1,0 +1,211 @@
+ /* General Navbar styling
+ .custom-navbar {
+  background-color: #343a40; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; 
+  text-decoration: none;
+}
+
+.navbar-logo:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+
+.nav-link {
+  color: #ffffff;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.signup-link {
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.signup-link:hover {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.navbar .dropdown-menu {
+  background-color: #343a40;
+  border: none;
+}
+
+.navbar .dropdown-item {
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #495057; 
+  color: #ffffff;
+}
+
+.navbar .fa-user-circle {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#profile-dropdown {
+  right: 0;
+  left: auto;
+}
+
+.navbar .dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar .dropdown-menu {
+    width: 100%;
+  }
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  color: #ffffff;
+}
+
+.navbar .nav-item .nav-link.active {
+  color: #ffc107;
+  font-weight: bold;
+} */
+
+
+/* General Navbar styling */
+
+
+.custom-navbar {
+  background-color: #343a40; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Increased shadow for more emphasis */
+  padding: 10px 20px; /* Added padding for better spacing */
+}
+
+.navbar-logo {
+  font-size: 1.8rem; /* Increased font size */
+  font-weight: bold;
+  color: #ffffff; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #ff9800; /* Highlight the logo on hover */
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #ffffff;
+  margin-right: 30px; /* Increased spacing */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff9800; /* Changed hover color for better contrast */
+  text-decoration: none;
+}
+
+.signup-link {
+  font-weight: bold;
+  color: #ff9800;
+  background-color: #fff3e0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-link:hover {
+  color: #ffffff;
+  background-color: #ff9800;
+  text-decoration: none;
+}
+
+/* Dropdown Menu Styling */
+.navbar .dropdown-menu {
+  background-color: #343a40;
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  min-width: 100px; /* Adjust this value to make the dropdown narrower */
+  padding: 5px 10px; /* Dropdown shadow */
+}
+
+.navbar .dropdown-item {
+  color: #ffffff;
+  margin-right: 10px; 
+  font-size: 14px; /* Reduce font size for smaller dropdown items */
+  padding: 5px 1px;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #495057; 
+  color: #ff9800; /* Match hover color with link hover */
+}
+
+.navbar .fa-user-circle {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.5rem; /* Increased icon size */
+}
+
+#profile-dropdown {
+  right: 0;
+  left: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    text-align: left;
+    justify-content: flex-end;
+  padding-right: 60px;
+  }
+
+  .navbar .dropdown-menu {
+    width: 100%;
+  }
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  color: #ffffff;
+}
+
+.navbar .nav-item .nav-link.active {
+  color: #ffc107;
+  font-weight: bold;
+  margin-right: 30px;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  margin-right: 10px;
+}
+

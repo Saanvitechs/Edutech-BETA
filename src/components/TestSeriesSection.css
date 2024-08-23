@@ -1,0 +1,95 @@
+.test-series-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 10px;  /* Further reduced gap */
+}
+
+.test-series-content {
+    max-width: 55%;  /* Increase content width to reduce gap */
+}
+
+.test-series-content h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.test-series-content h2 .pass {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.test-series-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.test-series-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+    gap: 10px; /* Adjust the space between the items */
+    padding: 0;
+    list-style: none;
+  }
+  .benefits-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px; /* Minimum width to create uniformity */
+    flex: 1;
+  }
+
+.benefits-list li .icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007bff;
+    display: flex;
+  align-items: center;
+}
+.benefits-list li span {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; /* Ensures the text is centered vertically */
+  }
+
+.explore-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #0056b3;
+}
+
+.test-series-image {
+    max-width: 40%;  /* Adjust the image width to bring it closer to the content */
+}
+
+.test-series-image img {
+    width: 100%;
+    height: 600px;  /* Automatically adjust height */
+    border-radius: 20px;
+    object-fit: contain;  /* Ensure the image fits within the container */
+}
