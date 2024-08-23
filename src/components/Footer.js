@@ -15,8 +15,8 @@ const Footer = () => {
           <img src={sts} alt="Your Company Logo" />
           <p>SAANVI TECHNOLOGY SOLUTIONS.</p>
           <p> Lucknow, Uttar Pradesh, 226001</p>
-          <p>Email: https://saanvitechs.com/</p>
-          <p>Phone: 8XXXXXXXX</p>
+          <p>Email: hr.saanvitechs@saanvitechs.com</p>
+          
           </div>
         </div>
 

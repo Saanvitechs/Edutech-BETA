@@ -6,7 +6,7 @@ const TestSeriesSection = () => {
   return (
     <div className="test-series-container">
       <div className="test-series-content">
-        <h2>Enroll in On-Job-Training for upgrading your skills with <span>STS <span className="mock">MOCK</span></span></h2>
+        <h2>Enroll in On-Job-Training for upgrading your skills with <span>TREx </span></h2>
         <p>Get unlimited access to the most relevant Mock Tests</p>
         <h3>What you get with Us</h3>
         <ul className="benefits-list">
@@ -27,8 +27,8 @@ const TestSeriesSection = () => {
             <p><strong>Mock Tests</strong></p>
           </li>
         </ul>
-        <a href="/mocks" className="explore-btn">
-          Explore More
+        <a href=" " className="explore-btn">
+          Stay with us for more..
         </a>
       </div>
       <div className="test-series-image">
