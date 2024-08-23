@@ -11,11 +11,13 @@
 //   const [username, setUsername] = useState('');
 //   const [email, setEmail] = useState('');
 //   const [phoneNumber, setPhoneNumber] = useState('');
+//   const [aadharPan, setAadharPan] = useState('');
 //   const [password, setPassword] = useState('');
 //   const [confirmPassword, setConfirmPassword] = useState('');
 //   const [showPassword, setShowPassword] = useState(false);
 //   const [errors, setErrors] = useState({});
-//   const [backendError, setBackendError] = useState(''); // State for backend error messages
+//   const [backendError, setBackendError] = useState(''); 
+//   const [file, setFile] = useState(null); // For file upload
 
 //   const navigate = useNavigate();
 
@@ -28,6 +30,7 @@
 //     if (!username) newErrors.username = "Username is required";
 //     if (!email) newErrors.email = "Email is required";
 //     if (!phoneNumber) newErrors.phoneNumber = "Phone Number is required";
+//     if (!aadharPan) newErrors.aadharPan = "Aadhar/Pan Card is required";
 //     if (!password) newErrors.password = "Password is required";
 //     if (!confirmPassword) newErrors.confirmPassword = "Confirm Password is required";
 
@@ -48,7 +51,9 @@
 //         username,
 //         email,
 //         phoneNumber,
+//         aadharPan,
 //         password,
+//         file
 //       };
       
 //       await authService.register(userData);
@@ -56,22 +61,48 @@
 //       navigate('/login'); // Redirect to login after successful registration
 //     } catch (error) {
 //       if (error.response && error.response.data && error.response.data.message) {
-//         setBackendError(error.response.data.message); // Set the backend error message
+//         setBackendError(error.response.data.message); 
 //       } else {
 //         setBackendError("Registration failed. Please try again.");
 //       }
-      
-//       }
+//     }
 //   };
 
 //   const togglePasswordVisibility = () => {
 //     setShowPassword(!showPassword);
 //   };
 
+//   const handleFileChange = (e) => {
+//     setFile(e.target.files[0]);
+//   };
+
 //   return (
-//     <Grid container justifyContent="flex-end" alignItems="center" style={{ height: '100vh', backgroundImage: `url(${require('./images/signup.svg').default})`, backgroundSize: 'cover', paddingRight: '50px' }}>
+//     <Grid 
+//       container 
+//       justifyContent="flex-end" 
+//       alignItems="center" 
+//       style={{ 
+//         height: '100vh', 
+//         backgroundImage: `url(${require('./images/signup.svg').default})`, 
+//         backgroundSize: 'cover', 
+//         marginTop: '30px',
+//         backgroundPosition: 'center', 
+//         paddingRight: '50px' 
+        
+//       }}
+//     >
 //       <Grid item xs={12} sm={8} md={4}>
-//         <Card raised style={{ padding: '40px', borderRadius: '20px', backgroundColor: 'white', textAlign: 'center' }}>
+//         <Card 
+//           raised 
+//           style={{ 
+//             padding: '20px', 
+//             borderRadius: '15px', 
+//             backgroundColor: 'white', 
+//             textAlign: 'center', 
+//             maxWidth: '400px',
+//             margin: '0 auto' 
+//           }}
+//         >
 //           <Typography variant="h4" gutterBottom style={{ fontWeight: 'bold' }}>
 //             Create New Account
 //           </Typography>
@@ -90,7 +121,8 @@
 //                 onChange={(e) => setFirstName(e.target.value)}
 //                 error={!!errors.firstName}
 //                 helperText={errors.firstName}
-//                 style={{ marginBottom: '20px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '8px' }}
+//                 InputProps={{ style: { fontSize: '14px' } }}
 //               />
 //               <TextField
 //                 fullWidth
@@ -100,7 +132,8 @@
 //                 onChange={(e) => setLastName(e.target.value)}
 //                 error={!!errors.lastName}
 //                 helperText={errors.lastName}
-//                 style={{ marginBottom: '20px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '8px' }}
+//                 InputProps={{ style: { fontSize: '14px' } }}
 //               />
 //               <TextField
 //                 fullWidth
@@ -110,7 +143,8 @@
 //                 onChange={(e) => setUsername(e.target.value)}
 //                 error={!!errors.username}
 //                 helperText={errors.username}
-//                 style={{ marginBottom: '20px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '8px' }}
+//                 InputProps={{ style: { fontSize: '14px' } }}
 //               />
 //               <TextField
 //                 fullWidth
@@ -120,7 +154,8 @@
 //                 onChange={(e) => setEmail(e.target.value)}
 //                 error={!!errors.email}
 //                 helperText={errors.email}
-//                 style={{ marginBottom: '20px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '8px' }}
+//                 InputProps={{ style: { fontSize: '14px' } }}
 //               />
 //                <TextField
 //                 fullWidth
@@ -130,7 +165,19 @@
 //                 onChange={(e) => setPhoneNumber(e.target.value)}
 //                 error={!!errors.phoneNumber}
 //                 helperText={errors.phoneNumber}
-//                 style={{ marginBottom: '20px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '8px' }}
+//                 InputProps={{ style: { fontSize: '14px' } }}
+//               />
+//               <TextField
+//                 fullWidth
+//                 variant="outlined"
+//                 label="Aadhar/Pan Card"
+//                 value={aadharPan}
+//                 onChange={(e) => setAadharPan(e.target.value)}
+//                 error={!!errors.aadharPan}
+//                 helperText={errors.aadharPan}
+//                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '8px' }}
+//                 InputProps={{ style: { fontSize: '14px' } }}
 //               />
 //               <TextField
 //                 fullWidth
@@ -141,8 +188,9 @@
 //                 onChange={(e) => setPassword(e.target.value)}
 //                 error={!!errors.password}
 //                 helperText={errors.password}
-//                 style={{ marginBottom: '20px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '8px' }}
 //                 InputProps={{
+//                   style: { fontSize: '14px' },
 //                   endAdornment: (
 //                     <InputAdornment position="end">
 //                       <IconButton onClick={togglePasswordVisibility}>
@@ -161,8 +209,9 @@
 //                 onChange={(e) => setConfirmPassword(e.target.value)}
 //                 error={!!errors.confirmPassword}
 //                 helperText={errors.confirmPassword}
-//                 style={{ backgroundColor: '#F5F5F5', borderRadius: '10px' }}
+//                 style={{ backgroundColor: '#F5F5F5', borderRadius: '8px' }}
 //                 InputProps={{
+//                   style: { fontSize: '14px' },
 //                   endAdornment: (
 //                     <InputAdornment position="end">
 //                       <IconButton onClick={togglePasswordVisibility}>
@@ -172,17 +221,22 @@
 //                   ),
 //                 }}
 //               />
+//               <input
+//                 type="file"
+//                 onChange={handleFileChange}
+//                 style={{ marginTop: '10px', marginBottom: '15px' }}
+//               />
 //             </Box>
 //             <Button
 //               type="submit"
 //               fullWidth
 //               variant="contained"
-//               style={{ borderRadius: '30px', padding: '10px' }}
+//               style={{ borderRadius: '20px', padding: '10px' }}
 //             >
 //               Sign Up
 //             </Button>
 //           </form>
-//           <Typography variant="body2" style={{ marginTop: '20px', color: '#212429' }}>
+//           <Typography variant="body2" style={{ marginTop: '10px', color: '#212429' }}>
 //             Already Registered? <a href="/login" style={{  textDecoration: 'none' }}>Login</a>
 //           </Typography>
 //         </Card>
@@ -192,6 +246,7 @@
 // };
 
 // export default Register;
+
 
 import React, { useState } from 'react';
 import { TextField, Button, Card, Typography, Grid, Box, IconButton, InputAdornment } from '@mui/material';
@@ -240,6 +295,9 @@ const Register = () => {
     }
 
     try {
+      const formData = new FormData();
+      
+      // Append user data as a JSON string
       const userData = {
         firstName,
         lastName,
@@ -247,11 +305,19 @@ const Register = () => {
         email,
         phoneNumber,
         aadharPan,
-        password,
-        file
+        password
       };
       
-      await authService.register(userData);
+      formData.append("userData", JSON.stringify(userData));  // Append JSON user data as a string
+  
+      if (file) {
+        formData.append("file", file);  // Append the file
+      }
+  
+      // Send multipart request
+      await authService.register(formData);
+
+    
       
       navigate('/login'); // Redirect to login after successful registration
     } catch (error) {

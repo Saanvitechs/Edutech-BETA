@@ -1,0 +1,112 @@
+   /* .assignment-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .assignment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .assignment-table th,
+  .assignment-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .assignment-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .assignment-table tr.completed {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .done-button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .undo-button {
+    background-color: #ffc107;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .done-button:hover,
+  .undo-button:hover {
+    opacity: 0.9;
+  }
+     */
+
+     .assignment-page {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        padding-top: 90px;
+      }
+      
+      .page-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      
+      .assignment-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: left;
+      }
+      
+      .assignment-table th,
+      .assignment-table td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      .assignment-table th {
+        background-color: #f4f4f4;
+      }
+      
+      .assignment-table tr.completed {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      
+      .done-button {
+        background-color: #28a745;
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .undo-button {
+        background-color: #ffc107;
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .done-button:hover,
+      .undo-button:hover {
+        opacity: 0.9;
+      }
+      

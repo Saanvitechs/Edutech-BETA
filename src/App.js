@@ -11,6 +11,7 @@ import Register from './components/Register';
 // import ThankYouPage from './components/ThankYouPage';
 // import MembershipPlans from './components/MembershipPlans';
 import ForgotPassword from './components/ForgotPassword';
+import AssignmentPage  from './components/AssignmentPage';
 import ProtectedRoute from './components/ProtectedRoute';
 // import ArithmeticAptitude from './components/prepare/ArithmeticAptitude';
 // import DataInterpretation from './components/prepare/DataInterpretation';
@@ -65,6 +66,7 @@ function App() {
           {/* <Route path="/thank-you" element={<ThankYouPage />} /> */}
           {/* <Route path="/membership-plans" element={<MembershipPlans />} /> */}
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/assignments" element={<AssignmentPage />} />
           {/* <Route path="/arithmetic-aptitude" element={<ArithmeticAptitude />} />
           <Route path="/data-interpretation" element={<DataInterpretation />} />
           <Route path="/verbal-ability" element={<VerbalAbility />} />

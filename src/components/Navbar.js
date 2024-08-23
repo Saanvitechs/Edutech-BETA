@@ -76,7 +76,7 @@ const CustomNavbar = () => {
             {/* <Nav.Link as={Link} to="/mocks">Prepare</Nav.Link>
 
             <Nav.Link as={Link} to="/membership-plans">Pricing</Nav.Link> */}
-            <Nav.Link as={Link} to="/resources">Check My Assignment</Nav.Link>
+            <Nav.Link as={Link} to="/assignments">Check My Assignment</Nav.Link>
 
             {isAuthenticated ? (
               <NavDropdown

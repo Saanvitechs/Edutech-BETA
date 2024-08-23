@@ -6,7 +6,7 @@ import { AuthContext } from '../hooks/AuthContext';
 import authService from '../services/authService';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [usernameOrEmail, setUsernameOrEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [notificationOpen, setNotificationOpen] = useState(false);
@@ -18,10 +18,10 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await authService.login(username, password);
+      const response = await authService.login(usernameOrEmail, password);
       if (response) {
         setError('');
-        localStorage.setItem('name', username);
+        localStorage.setItem('name', usernameOrEmail);
         login(response.accessToken);
         setNotificationOpen(true); // Show success notification
         setTimeout(() => {
@@ -58,9 +58,9 @@ const Login = () => {
               <TextField
                 fullWidth
                 variant="outlined"
-                label="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                label="Username Or Email"
+                value={usernameOrEmail}
+                onChange={(e) => setUsernameOrEmail(e.target.value)}
                 style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
                 error={!!error}
               />
