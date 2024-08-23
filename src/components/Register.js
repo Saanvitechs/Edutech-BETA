@@ -497,7 +497,7 @@ const Register = () => {
               Sign Up
             </Button>
           </form>
-          <Typography variant="body2" style={{ marginTop: '10px', color: '#212429' }}>
+          <Typography variant="body2" style={{ marginTop: '11px', color: '#212429' }}>
             Already Registered? <a href="/login" style={{  textDecoration: 'none' }}>Login</a>
           </Typography>
         </Card>

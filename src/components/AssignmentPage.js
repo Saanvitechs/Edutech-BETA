@@ -101,7 +101,7 @@ function AssignmentPage() {
     {
       id: 3,
       name: 'History Essay',
-      assignedDate: '2024-08-12',
+      assignedDate: '2024-08-10',
       deadlineDate: '2024-08-28',
       isCompleted: true,
     },

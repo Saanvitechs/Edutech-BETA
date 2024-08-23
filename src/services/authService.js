@@ -86,7 +86,7 @@ const axiosWithAuth = () => {
   return axios.create({
     baseURL: API_URL,
     headers: {
-      Authorization: token, // Ensure token is passed without adding Bearer if it already has it
+      Authorization: token, 
     },
   });
 };
