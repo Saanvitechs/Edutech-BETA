@@ -65,7 +65,18 @@ const Home = () => {
           </div>
         </div>
       </motion.div>
+
+      <div className="whatsapp-community-section">
+        <h4>Join Our WhatsApp Community for Placement Updates & Important Resources</h4>
+        <p>
+          Get Updates for: Latest Job opportunities in Big 4s & Top Firms, Important Resources for Interview Preparation, Updates from the Finance World.
+        </p>
+        <a href="https://chat.whatsapp.com/invite/example" target="_blank" rel="noopener noreferrer" className="join-whatsapp-btn">
+          JOIN WHATSAPP COMMUNITY
+        </a>
+      </div>
       <ProgramSection />
+      
       <div className="about-section">
         <div className="about-header">ABOUT STS</div>
         <div className="about-content">

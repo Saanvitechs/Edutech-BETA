@@ -97,17 +97,16 @@ const RefundPolicyPopup = ({ isOpen, onClose }) => {
     <div className="popup-overlay">
       <div className="popup-content">
         <h2>Refund Policy</h2>
-        <p>Returns and Refunds Policy. Thank you for shopping at TREx</p>
-        <p>Non-tangible irrevocable goods ("Digital products")</p>
+        <p>Thank you for tuning with us at TREx</p>
         <p>
-          We do not issue refunds for non-tangible irrevocable goods ("digital products") once the order is confirmed and the product is sent.
+          We do not issue refunds for non-tangible irrevocable goods such as training and guidance once the process is confirmed.
         </p>
         <p>
-          We recommend contacting us for assistance if you experience any issues receiving or downloading our products.
+          We recommend contacting us for assistance if you experience any issues receiving in our services.
         </p>
-        <p>Contact us for any issues:</p>
+        <p>Contact us:</p>
         <ul>
-          <li>By email:  hr.saanvitechs@saanvitechs.com</li>
+          <li>By email:  info@saanvitechs.com</li>
         </ul>
         <button onClick={onClose} className="close-button">Close</button>
       </div>
@@ -136,7 +135,7 @@ const Footer = () => {
           <img src={sts} alt="Your Company Logo" />
           <p>SAANVI TECHNOLOGY SOLUTIONS.</p>
           <p> Lucknow, Uttar Pradesh, 226001</p>
-          <p>Email: hr.saanvitechs@saanvitechs.com</p>
+          <p>Email: info@saanvitechs.com</p>
           
           </div>
         </div>
@@ -180,9 +179,9 @@ const Footer = () => {
           <div className="social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/saanvi-technology-solution/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+            <a href="#" onClick={() => window.open("https://www.linkedin.com/company/saanvi-technology-solution/about/?viewAsMember=true", "_blank")} rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/saanvitechs/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-          </div>
+            </div>
         </div>
       </div>
       <div className="footer-bottom">
