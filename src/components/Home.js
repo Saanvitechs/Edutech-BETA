@@ -21,9 +21,13 @@ const Home = () => {
       <div className="hero-section" style={{ backgroundImage: `url(${hero})` }}>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="hero-text">
         <div align = 'center'>
-          <h1>Turn your exams into success stories</h1>
+        <h1>Bridging Knowledge and Practice for Future Leaders</h1>
           </div>
-          <p>AI-powered skills and knowledge assessment software, serving 2.5M+ business and educational users worldwide.</p>
+          <p></p>
+          <p></p>
+          <p>At our core, we connect classroom learning with real-world applications, shaping the next generation of industry leaders.</p>
+          <p> Our hands-on training programs empower people to develop essential skills, drive innovation, and excel in their  fields.</p>
+          <p>Join us to transform your potential into impactful leadership</p>
           <div align = 'center'>
           {/* <button className="signup-btn" onClick={handleSignUpClick}>Sign up - it's free</button> */}
           </div>
