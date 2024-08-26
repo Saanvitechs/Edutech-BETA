@@ -13,7 +13,6 @@ const CustomNavbar = () => {
   const username = localStorage.getItem('name');
 
   // State to manage each dropdown visibility separately
-  const [isWhoDropdownOpen, setIsWhoDropdownOpen] = useState(false);
   // const [isTestPrepDropdownOpen, setIsTestPrepDropdownOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
@@ -42,32 +41,6 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
-            {/* <NavDropdown
-              title="Who it's for"
-              id="who-dropdown"
-              show={isWhoDropdownOpen}
-              onMouseEnter={handleWhoMouseEnter}
-              onMouseLeave={handleWhoMouseLeave}
-            >
-              <NavDropdown.Item as={Link} to="/">For Beginners</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/">For Graduates</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/">For Students</NavDropdown.Item>
-            </NavDropdown> */}
-
-            {/* <NavDropdown
-              title="Test your prep"
-              id="test-prep-dropdown"
-              show={isTestPrepDropdownOpen}
-              onMouseEnter={handleTestPrepMouseEnter}
-              onMouseLeave={handleTestPrepMouseLeave}
-            >
-              <NavDropdown.Item as={Link} to="/mocks">Test 1</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/mocks">Test 2</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/mocks">Test 3</NavDropdown.Item>
-            </NavDropdown> */}
-            {/* <Nav.Link as={Link} to="/mocks">Prepare</Nav.Link>
-
-            <Nav.Link as={Link} to="/membership-plans">Pricing</Nav.Link> */}
             <Nav.Link as={Link} to="/assignments">Check My Assignment</Nav.Link>
 
             {isAuthenticated ? (
