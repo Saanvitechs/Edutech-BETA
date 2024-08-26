@@ -70,6 +70,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} SAANVI TECHNOLOGY SOLUTIONS All rights reserved</p>
+        <p>AN ISO CERTIFIED COMPANY</p>
         <ul>
           <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="/terms">Terms</a></li>

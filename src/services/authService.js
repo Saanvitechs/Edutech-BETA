@@ -72,12 +72,46 @@ const fetchProtectedData = async () => {
   }
 };
 
+const requestOtp = async (emailOrPhone) => {
+  try {
+    const response = await axios.post(API_URL + 'forgot-password', { email: emailOrPhone });
+    return response.data;
+  } catch (error) {
+    console.error('Error requesting OTP:', error.response?.data || error.message);
+    throw error;
+  }
+};
+
+const verifyOtp = async (email, otp, newPassword) => {
+  try {
+    const response = await axios.post(API_URL + 'reset-password', { email, otp, newPassword });
+    return response.data;
+  } catch (error) {
+    console.error('Error verifying OTP:', error.response?.data || error.message);
+    throw error;
+  }
+};
+
+const updatePassword = async (username, newPassword) => {
+  try {
+    const response = await axiosWithAuth().put(API_URL + 'update-password', { username, newPassword });
+    return response.data;
+  } catch (error) {
+    console.error('Error updating password:', error.response?.data || error.message);
+    throw error;
+  }
+};
+
+
 const authService = {
   register,
   login,
   logout,
   getCurrentUser,
   fetchProtectedData,
+  requestOtp,
+  verifyOtp,
+  updatePassword
 };
 
 export default authService;
