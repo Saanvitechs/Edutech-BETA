@@ -1,16 +1,24 @@
 import React, { useState, useContext } from 'react';
-import { TextField, Button, Card, Typography, Grid, Box, Snackbar, Alert } from '@mui/material';
+import { TextField, Button, Card, Typography, Grid, Box,IconButton, InputAdornment, Snackbar, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { AuthContext } from '../hooks/AuthContext';
 import authService from '../services/authService';
 
 const Login = () => {
   const [usernameOrEmail, setUsernameOrEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false); // Track password visibility
+
   const [error, setError] = useState('');
   const [notificationOpen, setNotificationOpen] = useState(false);
   const navigate = useNavigate();
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
 
   const { login } = useContext(AuthContext);
 
@@ -68,11 +76,19 @@ const Login = () => {
                 fullWidth
                 variant="outlined"
                 label="Password"
-                type="password"
-                value={password}
+                type={showPassword ? 'text' : 'password'}
+                  value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 style={{ backgroundColor: '#F5F5F5', borderRadius: '10px' }}
-                error={!!error}
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton onClick={togglePasswordVisibility}>
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
               />
             </Box>
             {error && (
