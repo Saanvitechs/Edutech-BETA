@@ -130,9 +130,8 @@
   
 
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, Card, CardContent, Typography, Box, Avatar, Button } from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Container, Grid, Card, CardContent, Typography, Box, Avatar, Button, IconButton } from '@mui/material';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
@@ -174,18 +173,20 @@ const ProfilePage = () => {
     <Container maxWidth="md" className="profile-container">
       {/* Profile Header */}
       <Box className="profile-header">
+        <div> 
         <Avatar alt={user.username} src="/profile-picture.jpg" className="profile-avatar" />
+        </div>
         <Typography variant="h4" className="profile-name">
           {user.username}
         </Typography>
-        {/* <Button
+        <Button
           variant="contained"
           color="primary"
-          startIcon={<EditIcon />}
-          className="edit-profile-btn"
+          startIcon={<AssignmentIndIcon/>}
+          className="profile-btn"
         >
-          Edit Profile
-        </Button> */}
+          Profile
+        </Button>
       </Box>
 
       {/* Profile Details */}
