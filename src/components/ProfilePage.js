@@ -130,7 +130,7 @@
   
 
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, Card, CardContent, Typography, Box, Avatar, Button, IconButton } from '@mui/material';
+import { Container, Grid, Card, CardContent, Typography, Box, Avatar, Button } from '@mui/material';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -239,15 +239,16 @@ const ProfilePage = () => {
                   Registration Date: {user.registrationDate}
                 </Typography>
               </Box>
-              <Box className="profile-detail">
-                <Typography variant="subtitle1" className="pending-amount">
-                  Pending Amount: Rs.{user.pendingAmount}
-                </Typography>
-              </Box>
+              
               <Box className="profile-detail">
                 <CalendarTodayIcon className="profile-icon" />
                 <Typography variant="subtitle1">
                   Validity: {user.validity}
+                </Typography>
+              </Box>
+              <Box className="profile-detail">
+                <Typography variant="subtitle1" className="pending-amount">
+                  Pending Amount: Rs.{user.pendingAmount}
                 </Typography>
               </Box>
             </CardContent>
