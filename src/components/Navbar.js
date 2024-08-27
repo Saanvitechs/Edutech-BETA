@@ -42,6 +42,8 @@ const CustomNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
             <Nav.Link as={Link} to="/assignments">Check My Assignment</Nav.Link>
+            <Nav.Link as={Link} to="/membership-plan">Plans</Nav.Link>
+
 
             {isAuthenticated ? (
               <NavDropdown

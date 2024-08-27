@@ -27,13 +27,21 @@
 //       price: 79,
 //       features: ['24/7 gym access', 'Unlimited access to all classes and facilities', 'Weekly personalized training sessions'],
 //       buttonText: 'Subscribe',
-//       color: 'linear-gradient(135deg, #9d50bb, #6e48aa)', // Light green gradient
+//       color: 'linear-gradient(135deg, #9d50bb, #6e48aa)', // Purple gradient
 //       buttonColor: '#64dd17',
+//     },
+//     {
+//       title: 'ULTIMATE MEMBERSHIP',
+//       price: 99,
+//       features: ['All benefits of Elite Membership', 'Personal Nutritionist', 'Monthly Health Check-up'],
+//       buttonText: 'Subscribe',
+//       color: 'linear-gradient(135deg, #FF5722, #D84315)', // Red gradient
+//       buttonColor: '#d84315',
 //     },
 //   ];
 
 //   return (
-//     <Container maxWidth="md" style={{ marginTop: '150px' }}>
+//     <Container maxWidth="lg" style={{ marginTop: '100px' }}>
 //       <Typography
 //         variant="h4"
 //         align="center"
@@ -42,7 +50,7 @@
 //       >
 //         Choose Your Fitness <br /> Membership Plan
 //       </Typography>
-//       <Grid container spacing={4} justifyContent="center">
+//       <Grid container spacing={4} justifyContent="center" alignItems="stretch">
 //         {membershipPlans.map((plan, index) => (
 //           <Grid
 //             item
@@ -50,6 +58,7 @@
 //             sm={6}           // Half width on small screens (tablets)
 //             md={4}           // One-third width on medium screens and up (desktops)
 //             key={index}
+//             style={{ display: 'flex' }}
 //           >
 //             <Card
 //               style={{
@@ -60,6 +69,21 @@
 //                   : '0 5px 15px rgba(0, 0, 0, 0.1)',
 //                 position: 'relative',
 //                 padding: '20px 0',  // Added padding to better position the content
+//                 display: 'flex',
+//                 flexDirection: 'column',
+//                 justifyContent: 'space-between',
+//                 height: '600px', // Make all cards the same height
+//                 transition: 'transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out',
+//               }}
+//               onMouseEnter={(e) => {
+//                 e.currentTarget.style.transform = 'scale(1.05)';
+//                 e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.2)';
+//               }}
+//               onMouseLeave={(e) => {
+//                 e.currentTarget.style.transform = 'scale(1)';
+//                 e.currentTarget.style.boxShadow = plan.isFeatured
+//                   ? '0 10px 30px rgba(0, 0, 0, 0.3)'
+//                   : '0 5px 15px rgba(0, 0, 0, 0.1)';
 //               }}
 //             >
 //               {plan.isFeatured && (
@@ -136,7 +160,6 @@
 
 // export default MembershipPlans;
 
-
 import React from 'react';
 import { Container, Grid, Card, CardContent, Typography, Button, Box } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -169,10 +192,18 @@ const MembershipPlans = () => {
       color: 'linear-gradient(135deg, #9d50bb, #6e48aa)', // Purple gradient
       buttonColor: '#64dd17',
     },
+    {
+      title: 'ULTIMATE MEMBERSHIP',
+      price: 99,
+      features: ['All benefits of Elite Membership', 'Personal Nutritionist', 'Monthly Health Check-up'],
+      buttonText: 'Subscribe',
+      color: 'linear-gradient(135deg, #FF5722, #D84315)', // Red gradient
+      buttonColor: '#212121',
+    },
   ];
 
   return (
-    <Container maxWidth="md" style={{ marginTop: '100px' }}>
+    <Container maxWidth="lg" style={{ marginTop: '100px' }}>
       <Typography
         variant="h4"
         align="center"
@@ -187,7 +218,7 @@ const MembershipPlans = () => {
             item
             xs={12}          // Full width on extra-small screens (mobile)
             sm={6}           // Half width on small screens (tablets)
-            md={4}           // One-third width on medium screens and up (desktops)
+            md={3}           // One-fourth width on medium screens and up (desktops)
             key={index}
             style={{ display: 'flex' }}
           >

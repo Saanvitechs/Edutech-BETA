@@ -10,6 +10,8 @@ import Register from './components/Register';
 import ForgotPassword from './components/ForgotPassword';
 import AssignmentPage  from './components/AssignmentPage';
 import ProtectedRoute from './components/ProtectedRoute';
+import MembershipPlans from './components/MembershipPlans';
+import ProfilePage from './components/ProfilePage';
 function App() {
   return (
     <AuthProvider>
@@ -31,6 +33,9 @@ function App() {
           />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/assignments" element={<AssignmentPage />} />
+          <Route path="/membership-plan" element={<MembershipPlans />} />
+          <Route path="/profile" element={<ProfilePage />} />
+
         
         </Routes>
       </div>

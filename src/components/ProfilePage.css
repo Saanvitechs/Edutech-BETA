@@ -1,0 +1,142 @@
+/* .profile-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-name {
+    font-weight: bold;
+  }
+  
+  .edit-profile-btn {
+    margin-left: auto;
+  }
+  
+  .profile-details-grid {
+    margin-top: 20px;
+  }
+  
+  .profile-card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .profile-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-icon {
+    margin-right: 10px;
+    color: #3f51b5;
+  }
+  
+  .pending-amount {
+    font-weight: bold;
+    color: #f50057;
+  }
+  
+  .active-status {
+    color: #4caf50;
+  }
+  
+  .inactive-status {
+    color: #f44336;
+  }
+   */
+
+   .profile-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-name {
+    font-weight: bold;
+  }
+  
+  .edit-profile-btn {
+    margin-left: auto;
+  }
+  
+  .profile-details-grid {
+    margin-top: 20px;
+  }
+  
+  .profile-card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .profile-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-icon {
+    margin-right: 10px;
+    color: #3f51b5;
+  }
+  
+  .pending-amount {
+    font-weight: bold;
+    color: #f50057;
+  }
+  
+  .active-status {
+    color: #4caf50;
+  }
+  
+  .inactive-status {
+    color: #f44336;
+  }
+  
