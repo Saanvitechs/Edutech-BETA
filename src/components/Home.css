@@ -59,7 +59,7 @@
     margin: 50px 50px;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1800px;
+    max-width: 1200px;
     text-align: center;
     position: relative;
     margin: 55px auto;
@@ -331,3 +331,223 @@
 .join-whatsapp-btn:hover {
   background-color: #1ebc58; /* Darker green on hover */
 }
+
+.faq-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #d7faaa;
+}
+
+.faq-icon {
+  background-color: rgb(228, 9, 9);
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.faq-answer {
+  padding: 15px;
+  border-left: 3px solid red;
+  background-color: #f9f9f9;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
+  font-size: 16px;
+  color: #333;
+  margin-top: -10px; /* Overlaps the bottom border of the question box */
+}
+
+/* .review-carousel {
+  padding: 50px 0;
+  background-color: #000;
+  color: white;
+  text-align: center;
+}
+
+.review-carousel h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.review-card {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.review-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.review-author {
+  margin-top: 20px;
+}
+
+.review-author-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.review-author h3 {
+  margin: 5px 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.review-author p {
+  font-size: 16px;
+  color: #bbb;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+} */
+.review-carousel {
+  padding: 50px 0;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.review-carousel h2 {
+  font-size: 36px;
+  margin-bottom: 35px;
+  color: white;
+}
+
+.review-card {
+  background: linear-gradient(145deg, #1c1c1c, #333333);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: white;
+  width: 500px; /* Set a fixed width for square cards */
+  height: 350px; /* Adjust height for proper text alignment */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.review-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-content p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ddd;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-author {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.review-author h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.review-author p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.slick-slide {
+  padding: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slick-center .review-card {
+  transform: scale(1.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+}
+
+.slick-prev, .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 40px;
+  color: #fff;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}
+

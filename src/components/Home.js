@@ -1,38 +1,98 @@
-import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import Slider from 'react-slick';
+import React, { useState } from 'react';
 import TestSeriesSection from './TestSeriesSection';
 import ProgramSection from './ProgramSection';
 import './Home.css';
 import './WhyPregradSection.css';
 import Footer from './Footer';
 import './Footer.js';
-// import leftArrowIcon from './images/Down.png'; 
-// import rightArrowIcon from './images/Up.png'; 
 import hero from './images/hero.svg'; // Ensure this path is correct
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faUserShield, faClipboardCheck, faClipboardList, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import { faUserShield, faClipboardCheck, faClipboardList, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import CountUp from 'react-countup';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import ReviewCarousel from './ReviewCarousel'; // Ensure the correct path
+
+
+
+const FAQSection = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const faqs = [
+    {
+      question: "What kind of placement support will I be given?",
+      answer: "Respect every individual child's choices which are considered in the basic history and suggest food items accordingly. The child is just given a support diet plan to boost his growth and development. Be easy on them."
+    },
+    {
+      question: "Can I access course materials after completing the course?",
+      answer: "Yes, you will have lifetime access to all course materials, including any updates we make in the future."
+    },
+    {
+      question: "Who is eligible for these courses?",
+      answer: "Our courses are designed for students, professionals, and anyone interested in upgrading their skills."
+    },
+    {
+      question: "What if I miss a lecture?",
+      answer: "All our live sessions are recorded, and you will have access to the recordings within 24 hours after the session."
+    },
+    {
+      question: "When are the live classes held?",
+      answer: "Live classes are typically held in the evenings or weekends to accommodate working professionals."
+    },
+    {
+      question: "Does TREx give certificates?",
+      answer: "Yes, we provide certificates upon successful completion of our courses."
+    },
+  ];
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <div className="faq-section">
+      <h2>FREQUENTLY ASKED QUESTIONS</h2>
+      <p>We're happy to answer your questions</p>
+      {faqs.map((faq, index) => (
+        <div
+          key={index}
+          className={`faq-item ${activeIndex === index ? 'active' : ''}`}
+          onClick={() => toggleFAQ(index)}
+        >
+          <div className="faq-question">
+            {faq.question}
+            <span className="faq-icon">{activeIndex === index ? '-' : '+'}</span>
+          </div>
+          <div className="faq-answer" style={{ display: activeIndex === index ? 'block' : 'none' }}>
+            {faq.answer}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-section" style={{ backgroundImage: `url(${hero})` }}>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="hero-text">
-        <div align = 'center'>
-        <h1>Bridging Knowledge and Practice for Future Leaders</h1>
+          <div align='center'>
+            <h1>Bridging Knowledge and Practice for Future Leaders</h1>
           </div>
           <p></p>
           <p></p>
           <p>At our core, we connect classroom learning with real-world applications, shaping the next generation of industry leaders.</p>
-          <p> Our hands-on training programs empower people to develop essential skills, drive innovation, and excel in their  fields.</p>
+          <p>Our hands-on training programs empower people to develop essential skills, drive innovation, and excel in their fields.</p>
           <p>Join us to transform your potential into impactful leadership</p>
-          <div align = 'center'>
-          {/* <button className="signup-btn" onClick={handleSignUpClick}>Sign up - it's free</button> */}
+          <div align='center'>
+            {/* <button className="signup-btn" onClick={handleSignUpClick}>Sign up - it's free</button> */}
           </div>
         </motion.div>
       </div>
+
       <TestSeriesSection />
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }} className="statistics-section">
@@ -75,6 +135,7 @@ const Home = () => {
           JOIN WHATSAPP COMMUNITY
         </a>
       </div>
+
       <ProgramSection />
       
       <div className="about-section">
@@ -92,17 +153,13 @@ const Home = () => {
         </div>
         <a href="https://saanvitechs.com/about.php" target="_blank" rel="noopener noreferrer" className="read-more-btn">Read More</a>
       </div>
+      <ReviewCarousel />
+      <FAQSection />
+      
 
-      
-      
-
-      
       <Footer />
-      </div>
-      
-      
-      );
-
-      };
+    </div>
+  );
+};
 
 export default Home;
