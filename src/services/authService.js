@@ -101,6 +101,15 @@ const updatePassword = async (username, newPassword) => {
     throw error;
   }
 };
+const getProfile = async () => {
+  try {
+    const response = await axiosWithAuth().get('/user/profile');  // Adjust endpoint if needed
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching profile:', error);
+    throw error;
+  }
+};
 
 
 const authService = {
@@ -111,7 +120,8 @@ const authService = {
   fetchProtectedData,
   requestOtp,
   verifyOtp,
-  updatePassword
+  updatePassword,
+  getProfile,
 };
 
 export default authService;
