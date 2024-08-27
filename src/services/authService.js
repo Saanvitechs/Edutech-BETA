@@ -103,10 +103,10 @@ const updatePassword = async (username, newPassword) => {
 };
 const getProfile = async () => {
   try {
-    const response = await axiosWithAuth().get('/user/profile');  // Adjust endpoint if needed
+    const response = await axiosWithAuth().get('/profile');  // Adjust endpoint if needed
     return response.data;
   } catch (error) {
-    console.error('Error fetching profile:', error);
+    console.error('Error fetching profile:', error.response ? error.response.data : error.message);
     throw error;
   }
 };
