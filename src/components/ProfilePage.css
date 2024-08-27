@@ -1,6 +1,7 @@
-/* .profile-container {
-    margin-top: 50px;
+   /* .profile-container {
+    margin-top: 100px;
     margin-bottom: 50px;
+
   }
   
   .profile-header {
@@ -72,7 +73,10 @@
    .profile-container {
     margin-top: 100px;
     margin-bottom: 50px;
-
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
   
   .profile-header {
@@ -80,19 +84,34 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
   
   .profile-avatar {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #3f51b5;
   }
   
   .profile-name {
     font-weight: bold;
+    font-size: 1.5rem;
+    color: #3f51b5;
   }
   
   .edit-profile-btn {
     margin-left: auto;
+    background-color: #3f51b5;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #303f9f;
   }
   
   .profile-details-grid {
@@ -101,42 +120,49 @@
   
   .profile-card {
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background: linear-gradient(135deg, #ece9e6, #ffffff);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
   
   .profile-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
   
   .card-title {
     font-weight: 700;
     margin-bottom: 15px;
+    color: #3f51b5;
+    text-transform: uppercase;
   }
   
   .profile-detail {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   
   .profile-icon {
     margin-right: 10px;
     color: #3f51b5;
+    font-size: 1.2rem;
   }
   
   .pending-amount {
     font-weight: bold;
     color: #f50057;
+    font-size: 1.1rem;
   }
   
   .active-status {
     color: #4caf50;
+    font-weight: bold;
   }
   
   .inactive-status {
     color: #f44336;
+    font-weight: bold;
   }
   
