@@ -7,24 +7,24 @@ import qrCode2 from './images/trex_logo.png';
 import qrCode3 from './images/sts.png';
 import qrCode4 from './images/trex_logo.png';
 import './MembershipPlans.module.css';
-
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 const MembershipPlans = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   const [selectedQrCodes, setSelectedQrCodes] = useState([]);
 
   const membershipPlans = [
     {
-      title: 'BASIC MEMBERSHIP',
-      price: 29,
+      title: 'SOS PLAN',
+      price: 1490,
       features: ['Access to gym and standard fitness classes', 'Basic fitness assessment', 'Discounted personal training sessions'],
       buttonText: 'Subscribe',
-      color: 'linear-gradient(135deg, #FFE082, #FFA000)',
-      buttonColor: '#ff6f00',
+      color: 'linear-gradient(135deg, #1e3c72, #2a5298)',
+      buttonColor: '#2a5298',
       qrCodes: [qrCode1, qrCode2],
     },
     {
-      title: 'PREMIUM MEMBERSHIP',
-      price: 49,
+      title: 'APPRENTICE PLAN',
+      price: 8990,
       features: ['Unlimited access to gym and premium fitness classes', 'Personalized fitness assessment and training plan'],
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #757575, #212121)',
@@ -33,21 +33,21 @@ const MembershipPlans = () => {
       qrCodes: [qrCode2, qrCode3],
     },
     {
-      title: 'ELITE MEMBERSHIP',
-      price: 79,
+      title: 'EXECUTIVE PLAN',
+      price: 27990,
       features: ['24/7 gym access', 'Unlimited access to all classes and facilities', 'Weekly personalized training sessions'],
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #9d50bb, #6e48aa)',
-      buttonColor: '#64dd17',
+      buttonColor: '#6e48aa',
       qrCodes: [qrCode3, qrCode4],
     },
     {
-      title: 'ULTIMATE MEMBERSHIP',
-      price: 99,
+      title: 'TITAN PLAN',
+      price: 24990,
       features: ['All benefits of Elite Membership', 'Personal Nutritionist', 'Monthly Health Check-up'],
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #FF5722, #D84315)',
-      buttonColor: '#212121',
+      buttonColor: '#D84315',
       qrCodes: [qrCode4, qrCode1],
     },
   ];
@@ -65,7 +65,7 @@ const MembershipPlans = () => {
         gutterBottom
         style={{ fontWeight: 700, marginBottom: '30px' }}
       >
-        Choose Your Fitness <br /> Membership Plan
+        Choose Your Plan <br /> Gain Priviledge
       </Typography>
       <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {membershipPlans.map((plan, index) => (
@@ -119,10 +119,10 @@ const MembershipPlans = () => {
                   color="textPrimary"
                   style={{ fontWeight: 700, color: '#fff' }}
                 >
-                  ${plan.price}
+                ₹{plan.price}
                 </Typography>
                 <Typography variant="h6" align="center" style={{ color: '#fff', marginBottom: '20px' }}>
-                  /month
+                  +GST
                 </Typography>
                 <ul style={{ paddingLeft: '0', listStyle: 'none', margin: 0, color: '#fff' }}>
                   {plan.features.map((feature, idx) => (
