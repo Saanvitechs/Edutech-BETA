@@ -242,7 +242,8 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
               Step 2: Fill Registration Form
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Once payment is done, fill out this form to complete your registration.
+              Once payment is done, fill out this form to complete your registration. <br />
+              After the submittion of form the details will be reflected in profile within 24hrs.
             </Typography>
             <Button
               variant="contained"
