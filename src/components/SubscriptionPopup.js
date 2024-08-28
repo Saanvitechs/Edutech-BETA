@@ -248,7 +248,7 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
               variant="contained"
               color="primary"
               style={{ marginTop: '20px' }}
-              onClick={() => window.open('https://forms.gle/yourGoogleFormLink', '_blank')}
+              onClick={() => window.open('https://forms.gle/8H9YNKrm28yHuvAPA', '_blank')}
             >
               APPLICATION FORM
             </Button>
