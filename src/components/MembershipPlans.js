@@ -1,13 +1,15 @@
+
 // import React, { useState } from 'react';
 // import { Container, Grid, Card, CardContent, Typography, Button } from '@mui/material';
 // import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 // import SubscriptionPopup from './SubscriptionPopup'; // Import the SubscriptionPopup component
-// import qrCode1 from './images/sts.png';
-// import qrCode2 from './images/trex_logo.png';
-// import qrCode3 from './images/sts.png';
-// import qrCode4 from './images/trex_logo.png';
+// import qrCode1 from './images/SOS.jpg';
+// import qrCode2 from './images/AP.jpg';
+// import qrCode3 from './images/EP.jpg';
+// import qrCode4 from './images/titan.jpg';
+// import qrCode5 from './images/ACNO.png';
 // import './MembershipPlans.module.css';
-// import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+
 // const MembershipPlans = () => {
 //   const [popupOpen, setPopupOpen] = useState(false);
 //   const [selectedQrCodes, setSelectedQrCodes] = useState([]);
@@ -15,40 +17,44 @@
 //   const membershipPlans = [
 //     {
 //       title: 'SOS PLAN',
+//       originalPrice: 1990, // Add original price here
 //       price: 1490,
 //       features: ['Access to gym and standard fitness classes', 'Basic fitness assessment', 'Discounted personal training sessions'],
 //       buttonText: 'Subscribe',
 //       color: 'linear-gradient(135deg, #1e3c72, #2a5298)',
 //       buttonColor: '#2a5298',
-//       qrCodes: [qrCode1, qrCode2],
+//       qrCodes: [qrCode1],
 //     },
 //     {
 //       title: 'APPRENTICE PLAN',
+//       originalPrice: 9990, // Add original price here
 //       price: 8990,
 //       features: ['Unlimited access to gym and premium fitness classes', 'Personalized fitness assessment and training plan'],
 //       buttonText: 'Subscribe',
 //       color: 'linear-gradient(135deg, #757575, #212121)',
 //       buttonColor: '#212121',
 //       isFeatured: true,
-//       qrCodes: [qrCode2, qrCode3],
+//       qrCodes: [qrCode2],
 //     },
 //     {
 //       title: 'EXECUTIVE PLAN',
+//       originalPrice: 31990, // Add original price here
 //       price: 27990,
 //       features: ['24/7 gym access', 'Unlimited access to all classes and facilities', 'Weekly personalized training sessions'],
 //       buttonText: 'Subscribe',
 //       color: 'linear-gradient(135deg, #9d50bb, #6e48aa)',
 //       buttonColor: '#6e48aa',
-//       qrCodes: [qrCode3, qrCode4],
+//       qrCodes: [qrCode3, qrCode5],
 //     },
 //     {
 //       title: 'TITAN PLAN',
+//       originalPrice: 29990, // Add original price here
 //       price: 24990,
 //       features: ['All benefits of Elite Membership', 'Personal Nutritionist', 'Monthly Health Check-up'],
 //       buttonText: 'Subscribe',
 //       color: 'linear-gradient(135deg, #FF5722, #D84315)',
 //       buttonColor: '#D84315',
-//       qrCodes: [qrCode4, qrCode1],
+//       qrCodes: [qrCode4, qrCode5],
 //     },
 //   ];
 
@@ -65,7 +71,7 @@
 //         gutterBottom
 //         style={{ fontWeight: 700, marginBottom: '30px' }}
 //       >
-//         Choose Your Plan <br /> Gain Priviledge
+//         Choose Your Plan <br /> Gain Privilege
 //       </Typography>
 //       <Grid container spacing={4} justifyContent="center" alignItems="stretch">
 //         {membershipPlans.map((plan, index) => (
@@ -113,13 +119,20 @@
 //                   {plan.title}
 //                 </Typography>
 //                 <Typography
-//                   component="h2"
+//                   component="div"
 //                   variant="h4"
 //                   align="center"
 //                   color="textPrimary"
 //                   style={{ fontWeight: 700, color: '#fff' }}
 //                 >
-//                 ₹{plan.price}
+//                   <span style={{ 
+//                       textDecoration: 'line-through', 
+//                       marginRight: '10px', 
+//                       fontSize: '0.5em'  // Reduced font size for original price
+//                   }}>
+//                     ₹{plan.originalPrice}
+//                   </span>
+//                   ₹{plan.price}
 //                 </Typography>
 //                 <Typography variant="h6" align="center" style={{ color: '#fff', marginBottom: '20px' }}>
 //                   +GST
@@ -172,20 +185,23 @@
 
 // export default MembershipPlans;
 
+
+
 import React, { useState } from 'react';
 import { Container, Grid, Card, CardContent, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SubscriptionPopup from './SubscriptionPopup'; // Import the SubscriptionPopup component
-import qrCode1 from './images/sts.png';
-import qrCode2 from './images/trex_logo.png';
-import qrCode3 from './images/sts.png';
-import qrCode4 from './images/trex_logo.png';
+import qrCode1 from './images/SOS.jpg';
+import qrCode2 from './images/AP.jpg';
+import qrCode3 from './images/EP.jpg';
+import qrCode4 from './images/titan.jpg';
+import qrCode5 from './images/ACNO.png';
 import './MembershipPlans.module.css';
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 
 const MembershipPlans = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   const [selectedQrCodes, setSelectedQrCodes] = useState([]);
+  const [isSingleQrCode, setIsSingleQrCode] = useState(true); // To determine the number of QR codes to show
 
   const membershipPlans = [
     {
@@ -196,7 +212,8 @@ const MembershipPlans = () => {
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #1e3c72, #2a5298)',
       buttonColor: '#2a5298',
-      qrCodes: [qrCode1, qrCode2],
+      qrCodes: [qrCode1],
+      isSingleQrCode: true, // Set this to true for single QR code plans
     },
     {
       title: 'APPRENTICE PLAN',
@@ -207,7 +224,8 @@ const MembershipPlans = () => {
       color: 'linear-gradient(135deg, #757575, #212121)',
       buttonColor: '#212121',
       isFeatured: true,
-      qrCodes: [qrCode2, qrCode3],
+      qrCodes: [qrCode2],
+      isSingleQrCode: true, // Set this to true for single QR code plans
     },
     {
       title: 'EXECUTIVE PLAN',
@@ -217,7 +235,8 @@ const MembershipPlans = () => {
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #9d50bb, #6e48aa)',
       buttonColor: '#6e48aa',
-      qrCodes: [qrCode3, qrCode4],
+      qrCodes: [qrCode3, qrCode5],
+      isSingleQrCode: false, // Set this to false for plans with two QR codes
     },
     {
       title: 'TITAN PLAN',
@@ -227,12 +246,14 @@ const MembershipPlans = () => {
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #FF5722, #D84315)',
       buttonColor: '#D84315',
-      qrCodes: [qrCode4, qrCode1],
+      qrCodes: [qrCode4, qrCode5],
+      isSingleQrCode: false, // Set this to false for plans with two QR codes
     },
   ];
 
-  const handleSubscribeClick = (qrCodes) => {
+  const handleSubscribeClick = (qrCodes, isSingleQrCode) => {
     setSelectedQrCodes(qrCodes);
+    setIsSingleQrCode(isSingleQrCode);
     setPopupOpen(true);
   };
 
@@ -337,7 +358,7 @@ const MembershipPlans = () => {
                   fontWeight: 600,
                   transition: 'background-color 0.3s ease',
                 }}
-                onClick={() => handleSubscribeClick(plan.qrCodes)}
+                onClick={() => handleSubscribeClick(plan.qrCodes, plan.isSingleQrCode)}
               >
                 {plan.buttonText}
               </Button>
@@ -351,10 +372,10 @@ const MembershipPlans = () => {
         open={popupOpen}
         onClose={() => setPopupOpen(false)}
         qrCodes={selectedQrCodes}
+        isSingleQrCode={isSingleQrCode} // Pass the flag to the popup
       />
     </Container>
   );
 };
 
 export default MembershipPlans;
-

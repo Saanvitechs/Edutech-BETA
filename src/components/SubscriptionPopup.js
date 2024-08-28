@@ -1,88 +1,17 @@
-// import React, { useState } from 'react';
-// import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, Box, Grid } from '@mui/material';
-
-// const SubscriptionPopup = ({ open, onClose }) => {
-//   const [step, setStep] = useState(1);
-
-//   const handleNext = () => {
-//     if (step < 2) {
-//       setStep(step + 1);
-//     } else {
-//       onClose();
-//     }
-//   };
-
-//   const handlePrevious = () => {
-//     if (step > 1) {
-//       setStep(step - 1);
-//     }
-//   };
-
-//   return (
-//     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
-//       <DialogTitle>Subscription Instructions</DialogTitle>
-//       <DialogContent>
-//         {step === 1 && (
-//           <Box>
-//             <Typography variant="h6" gutterBottom>
-//               Step 1: Transfer Fees
-//             </Typography>
-//             <Typography variant="body1" gutterBottom>
-//               Pay the upfront fees of ₹5450 or ₹7450 according to your preferred plan using the QR codes below.
-//             </Typography>
-//             <Grid container spacing={2} justifyContent="center" style={{ marginTop: '20px' }}>
-//               <Grid item>
-//                 <Button variant="contained" color="primary">
-//                   QR CODE 1
-//                 </Button>
-//               </Grid>
-//               <Grid item>
-//                 <Button variant="contained" color="primary">
-//                   QR CODE 2
-//                 </Button>
-//               </Grid>
-//             </Grid>
-//           </Box>
-//         )}
-//         {step === 2 && (
-//           <Box>
-//             <Typography variant="h6" gutterBottom>
-//               Step 2: Fill Registration Form
-//             </Typography>
-//             <Typography variant="body1" gutterBottom>
-//               Once payment is done, fill out this form to complete your registration.
-//             </Typography>
-//             <Button variant="contained" color="primary" style={{ marginTop: '20px' }}>
-//               APPLICATION FORM
-//             </Button>
-//           </Box>
-//         )}
-//       </DialogContent>
-//       <DialogActions>
-//         {step === 2 && (
-//           <Button onClick={handlePrevious} color="secondary" variant="outlined">
-//             Previous
-//           </Button>
-//         )}
-//         <Button onClick={handleNext} color="primary" variant="contained">
-//           {step < 2 ? 'Next' : 'Finish'}
-//         </Button>
-//       </DialogActions>
-//     </Dialog>
-//   );
-// };
-
-// export default SubscriptionPopup;
-
-// import React, { useState } from 'react';
+// import React, { useState, useEffect } from 'react';
 // import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, Box, IconButton } from '@mui/material';
 // import CloseIcon from '@mui/icons-material/Close';
-// import qrCode1 from './images/sts.png';  // Make sure to replace with actual image paths
-// import qrCode2 from './images/trex_logo.png';
 
-// const SubscriptionPopup = ({ open, onClose }) => {
+// const SubscriptionPopup = ({ open, onClose, qrCodes }) => {
 //   const [step, setStep] = useState(1);
 //   const [selectedQrCode, setSelectedQrCode] = useState(null);
+
+//   useEffect(() => {
+//     if (!open) {
+//       setSelectedQrCode(null);  // Reset QR code when the dialog is closed
+//       setStep(1);  // Optionally reset step to 1 when the dialog is closed
+//     }
+//   }, [open]);
 
 //   const handleNext = () => {
 //     if (step < 2) {
@@ -121,21 +50,21 @@
 //               Step 1: Transfer Fees
 //             </Typography>
 //             <Typography variant="body1" gutterBottom>
-//               Pay the upfront fees of ₹5450 or ₹7450 according to your preferred plan using the QR codes below.
+//               Pay the upfront fee according to your preferred plan using the QR codes below. <br /> For our Executive and Titan Plan you can do payment in two installments which is only available in Executive and Titan Plan. <br /> Installment payment can only be done by second mode of payment which is Account Transfer.
 //             </Typography>
 //             <Box style={{ marginTop: '20px', textAlign: 'center' }}>
 //               <Button
 //                 variant="contained"
 //                 color="primary"
 //                 style={{ marginRight: '10px' }}
-//                 onClick={() => handleShowQrCode(qrCode1)}
+//                 onClick={() => handleShowQrCode(qrCodes[0])}
 //               >
 //                 Show QR Code 1
 //               </Button>
 //               <Button
 //                 variant="contained"
 //                 color="primary"
-//                 onClick={() => handleShowQrCode(qrCode2)}
+//                 onClick={() => handleShowQrCode(qrCodes[1])}
 //               >
 //                 Show QR Code 2
 //               </Button>
@@ -203,11 +132,12 @@
 
 // export default SubscriptionPopup;
 
+
 import React, { useState, useEffect } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, Box, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
-const SubscriptionPopup = ({ open, onClose, qrCodes }) => {
+const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
   const [step, setStep] = useState(1);
   const [selectedQrCode, setSelectedQrCode] = useState(null);
 
@@ -255,24 +185,28 @@ const SubscriptionPopup = ({ open, onClose, qrCodes }) => {
               Step 1: Transfer Fees
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Pay the upfront fees of ₹5450 or ₹7450 according to your preferred plan using the QR codes below.
+              Pay the upfront fee according to your preferred plan using the QR codes below. <br /> 
+              For our Executive and Titan Plans, you can do payment in two installments, which is only available in these plans. <br /> 
+              Installment payment can only be done by the second mode of payment, which is Account Transfer.
             </Typography>
             <Box style={{ marginTop: '20px', textAlign: 'center' }}>
               <Button
                 variant="contained"
                 color="primary"
-                style={{ marginRight: '10px' }}
                 onClick={() => handleShowQrCode(qrCodes[0])}
               >
-                Show QR Code 1
+                Show QR Code
               </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => handleShowQrCode(qrCodes[1])}
-              >
-                Show QR Code 2
-              </Button>
+              {!isSingleQrCode && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  style={{ marginLeft: '10px' }}
+                  onClick={() => handleShowQrCode(qrCodes[1])}
+                >
+                  Show Account Details
+                </Button>
+              )}
             </Box>
             {selectedQrCode && (
               <Box style={{ marginTop: '20px', textAlign: 'center' }}>
