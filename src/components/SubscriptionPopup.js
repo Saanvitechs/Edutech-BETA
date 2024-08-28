@@ -75,10 +75,14 @@
 // export default SubscriptionPopup;
 
 import React, { useState } from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, Box, Grid, Paper } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, Box, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import qrCode1 from './images/sts.png';  // Make sure to replace with actual image paths
+import qrCode2 from './images/trex_logo.png';
 
 const SubscriptionPopup = ({ open, onClose }) => {
   const [step, setStep] = useState(1);
+  const [selectedQrCode, setSelectedQrCode] = useState(null);
 
   const handleNext = () => {
     if (step < 2) {
@@ -94,9 +98,22 @@ const SubscriptionPopup = ({ open, onClose }) => {
     }
   };
 
+  const handleShowQrCode = (qrCode) => {
+    setSelectedQrCode(qrCode);
+  };
+
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
-      <DialogTitle>Subscription Instructions</DialogTitle>
+      <DialogTitle>
+        Subscription Instructions
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          style={{ position: 'absolute', right: 8, top: 8, color: '#f44336' }}  // Red color for close button
+        >
+          <CloseIcon />
+        </IconButton>
+      </DialogTitle>
       <DialogContent>
         {step === 1 && (
           <Box>
@@ -106,20 +123,30 @@ const SubscriptionPopup = ({ open, onClose }) => {
             <Typography variant="body1" gutterBottom>
               Pay the upfront fees of ₹5450 or ₹7450 according to your preferred plan using the QR codes below.
             </Typography>
-            <Grid container spacing={2} justifyContent="center" style={{ marginTop: '20px' }}>
-              <Grid item>
-                <Button variant="contained" color="primary">
-                  QR CODE 1
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button variant="contained" color="primary">
-                  QR CODE 2
-                </Button>
-              </Grid>
-            </Grid>
+            <Box style={{ marginTop: '20px', textAlign: 'center' }}>
+              <Button
+                variant="contained"
+                color="primary"
+                style={{ marginRight: '10px' }}
+                onClick={() => handleShowQrCode(qrCode1)}
+              >
+                Show QR Code 1
+              </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => handleShowQrCode(qrCode2)}
+              >
+                Show QR Code 2
+              </Button>
+            </Box>
+            {selectedQrCode && (
+              <Box style={{ marginTop: '20px', textAlign: 'center' }}>
+                <img src={selectedQrCode} alt="QR Code" style={{ width: '150px', height: '150px' }} />
+              </Box>
+            )}
             {/* General Instructions */}
-            <Paper elevation={3} style={{ padding: '20px', marginTop: '30px' }}>
+            <Box style={{ marginTop: '30px' }}>
               <Typography variant="h6" gutterBottom>
                 General Instructions
               </Typography>
@@ -138,7 +165,7 @@ const SubscriptionPopup = ({ open, onClose }) => {
               <Typography variant="body1">
                 5. Proceed to the registration form only after the payment is confirmed.
               </Typography>
-            </Paper>
+            </Box>
           </Box>
         )}
         {step === 2 && (
@@ -149,7 +176,12 @@ const SubscriptionPopup = ({ open, onClose }) => {
             <Typography variant="body1" gutterBottom>
               Once payment is done, fill out this form to complete your registration.
             </Typography>
-            <Button variant="contained" color="primary" style={{ marginTop: '20px' }}>
+            <Button
+              variant="contained"
+              color="primary"
+              style={{ marginTop: '20px' }}
+              onClick={() => window.open('https://forms.gle/yourGoogleFormLink', '_blank')}
+            >
               APPLICATION FORM
             </Button>
           </Box>
