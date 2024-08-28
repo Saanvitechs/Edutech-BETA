@@ -210,7 +210,7 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
             </Box>
             {selectedQrCode && (
               <Box style={{ marginTop: '20px', textAlign: 'center' }}>
-                <img src={selectedQrCode} alt="QR Code" style={{ width: '150px', height: '150px' }} />
+                <img src={selectedQrCode} alt="QR Code" style={{ width: '250px', height: '250px' }} />
               </Box>
             )}
             {/* General Instructions */}
