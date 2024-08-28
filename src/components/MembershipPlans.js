@@ -36,7 +36,7 @@
 //       features: ['All benefits of Elite Membership', 'Personal Nutritionist', 'Monthly Health Check-up'],
 //       buttonText: 'Subscribe',
 //       color: 'linear-gradient(135deg, #FF5722, #D84315)', // Red gradient
-//       buttonColor: '#d84315',
+//       buttonColor: '#212121',
 //     },
 //   ];
 
@@ -56,7 +56,7 @@
 //             item
 //             xs={12}          // Full width on extra-small screens (mobile)
 //             sm={6}           // Half width on small screens (tablets)
-//             md={4}           // One-third width on medium screens and up (desktops)
+//             md={3}           // One-fourth width on medium screens and up (desktops)
 //             key={index}
 //             style={{ display: 'flex' }}
 //           >
@@ -160,12 +160,24 @@
 
 // export default MembershipPlans;
 
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Container, Grid, Card, CardContent, Typography, Button, Box } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import SubscriptionPopup from './SubscriptionPopup';  // Import the popup component
 import './MembershipPlans.module.css';
 
 const MembershipPlans = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+
+  const handleSubscribeClick = () => {
+    setPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setPopupOpen(false);
+  };
+
   const membershipPlans = [
     {
       title: 'BASIC MEMBERSHIP',
@@ -230,11 +242,11 @@ const MembershipPlans = () => {
                   ? '0 10px 30px rgba(0, 0, 0, 0.3)'
                   : '0 5px 15px rgba(0, 0, 0, 0.1)',
                 position: 'relative',
-                padding: '20px 0',  // Added padding to better position the content
+                padding: '20px 0',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                height: '600px', // Make all cards the same height
+                height: '600px',
                 transition: 'transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out',
               }}
               onMouseEnter={(e) => {
@@ -248,16 +260,6 @@ const MembershipPlans = () => {
                   : '0 5px 15px rgba(0, 0, 0, 0.1)';
               }}
             >
-              {plan.isFeatured && (
-                <Box
-                  position="absolute"
-                  top={-15}
-                  right={-15}
-                  zIndex={1}
-                  style={{ backgroundColor: '#ffb300', borderRadius: '50%', padding: '8px' }}
-                >
-                </Box>
-              )}
               <CardContent>
                 <Typography
                   component="h2"
@@ -309,6 +311,7 @@ const MembershipPlans = () => {
                   fontWeight: 600,
                   transition: 'background-color 0.3s ease',
                 }}
+                onClick={handleSubscribeClick}  // Trigger the popup
               >
                 {plan.buttonText}
               </Button>
@@ -316,6 +319,9 @@ const MembershipPlans = () => {
           </Grid>
         ))}
       </Grid>
+
+      {/* Subscription Popup */}
+      <SubscriptionPopup open={popupOpen} onClose={handleClosePopup} />
     </Container>
   );
 };
