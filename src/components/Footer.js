@@ -102,8 +102,8 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} SAANVI TECHNOLOGY SOLUTIONS All rights reserved</p>
         <ul>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms</a></li>
+          <li><a href="/">Privacy Policy</a></li>
+          <li><a href="/">Terms</a></li>
         </ul>
       </div>
       <RefundPolicyPopup isOpen={isPopupOpen} onClose={closePopup} />

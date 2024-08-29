@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextField, Button, Card, Typography, Grid, Box, IconButton, InputAdornment } from '@mui/material';
-import { Visibility, VisibilityOff, CheckCircle } from '@mui/icons-material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import './Register.module.css';
 import authService from '../services/authService';
