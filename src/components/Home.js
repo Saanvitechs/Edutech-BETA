@@ -99,28 +99,28 @@ const Home = () => {
         <div className="stat-card">
           <FontAwesomeIcon icon={faUserShield} className="stat-icon" />
           <div className="stat-info">
-            <h3><CountUp end={5.9} decimals={1} suffix=" K" duration={15} /></h3>
+            <h3><CountUp end={5.9} decimals={1} suffix=" K" duration={25} /></h3>
             <p>Registered Students</p>
           </div>
         </div>
         <div className="stat-card">
           <FontAwesomeIcon icon={faClipboardCheck} className="stat-icon" />
           <div className="stat-info">
-            <h3><CountUp end={3.2} suffix=" K" duration={15} /></h3>
+            <h3><CountUp end={3.2} suffix=" K" duration={25} /></h3>
             <p>Student Selections</p>
           </div>
         </div>
         <div className="stat-card">
           <FontAwesomeIcon icon={faClipboardList} className="stat-icon" />
           <div className="stat-info">
-            <h3><CountUp end={5.3} suffix=" K" duration={15} /></h3>
+            <h3><CountUp end={5.3} suffix=" K" duration={25} /></h3>
             <p>Tests Attempted</p>
           </div>
         </div>
         <div className="stat-card">
           <FontAwesomeIcon icon={faChalkboardTeacher} className="stat-icon" />
           <div className="stat-info">
-            <h3><CountUp end={5.5} decimals={1} suffix=" K" duration={15} /></h3>
+            <h3><CountUp end={5.5} decimals={1} suffix=" K" duration={25} /></h3>
             <p>Classes Attended</p>
           </div>
         </div>
