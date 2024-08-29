@@ -216,9 +216,9 @@ const MembershipPlans = () => {
   const membershipPlans = [
     {
       title: 'SOS PLAN',
-      originalPrice: 1990, // Add original price here
+      originalPrice: 3990, // Add original price here
       price: 1490,
-      features: ['Access to gym and standard fitness classes', 'Basic fitness assessment', 'Discounted personal training sessions'],
+      features: ['Guidance by Industry Professionals', 'Interview Prep in line with Industry standards', 'Assessment & Feedback'],
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #1e3c72, #2a5298)',
       buttonColor: '#2a5298',
@@ -227,9 +227,9 @@ const MembershipPlans = () => {
     },
     {
       title: 'APPRENTICE PLAN',
-      originalPrice: 9990, // Add original price here
+      originalPrice: 12990, // Add original price here
       price: 8990,
-      features: ['Unlimited access to gym and premium fitness classes', 'Personalized fitness assessment and training plan'],
+      features: ['Internship', 'Guidance by Industry Professionals','Problem-Solving Skills','Soft Skill Development'],
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #757575, #212121)',
       buttonColor: '#212121',
@@ -239,9 +239,9 @@ const MembershipPlans = () => {
     },
     {
       title: 'EXECUTIVE PLAN',
-      originalPrice: 31990, // Add original price here
+      originalPrice: 55990, // Add original price here
       price: 27990,
-      features: ['24/7 gym access', 'Unlimited access to all classes and facilities', 'Weekly personalized training sessions'],
+      features: ['On-Job-Training', 'Guidance by Industry Professionals', 'Problem-Solving Skills','Chance to work on Enterprise-level Application','Interview Prep in line with Industry Standards'],
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #9d50bb, #6e48aa)',
       buttonColor: '#6e48aa',
@@ -250,9 +250,9 @@ const MembershipPlans = () => {
     },
     {
       title: 'TITAN PLAN',
-      originalPrice: 29990, // Add original price here
+      originalPrice: 49990, // Add original price here
       price: 24990,
-      features: ['All benefits of Elite Membership', 'Personal Nutritionist', 'Monthly Health Check-up'],
+      features: ['3 months Intership + OJT', 'Guidance by Industry Professionals', 'Problem-Solving Skills','Soft Skill Develpment','Chance to work on Enterprise-level Application'],
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #FF5722, #D84315)',
       buttonColor: '#D84315',
@@ -279,7 +279,7 @@ const MembershipPlans = () => {
         gutterBottom
         style={{ fontWeight: 700, marginBottom: '30px' }}
       >
-        Choose Your Plan <br /> Gain Privilege
+        Choose Your Plan <br /> 
       </Typography>
       <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {membershipPlans.map((plan, index) => (
