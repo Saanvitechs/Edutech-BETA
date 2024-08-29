@@ -233,6 +233,9 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
               <Typography variant="body1">
                 5. Proceed to the registration form only after the payment is confirmed.
               </Typography>
+              <Typography variant="body1">
+                6. For payment in installments you must pay whole fee in two installments.
+              </Typography>
             </Box>
           </Box>
         )}
