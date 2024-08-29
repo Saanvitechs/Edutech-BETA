@@ -195,7 +195,7 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
                 color="primary"
                 onClick={() => handleShowQrCode(qrCodes[0])}
               >
-                Show QR Code
+               One Time Full payment
               </Button>
               {!isSingleQrCode && (
                 <Button
@@ -204,7 +204,7 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
                   style={{ marginLeft: '10px' }}
                   onClick={() => handleShowQrCode(qrCodes[1])}
                 >
-                  Show Account Details
+                  Installment Pay QR
                 </Button>
               )}
             </Box>

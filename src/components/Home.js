@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faClipboardCheck, faClipboardList, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import CountUp from 'react-countup';
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import ReviewCarousel from './ReviewCarousel'; // Ensure the correct path
@@ -22,8 +22,8 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What kind of placement support will I be given?",
-      answer: "Respect every individual child's choices which are considered in the basic history and suggest food items accordingly. The child is just given a support diet plan to boost his growth and development. Be easy on them."
+      question: "What kind of career support will I be given?",
+      answer: "This course will provide OJT or On Job Training which will works as experience or helps in gaining experience."
     },
     {
       question: "Can I access course materials after completing the course?",

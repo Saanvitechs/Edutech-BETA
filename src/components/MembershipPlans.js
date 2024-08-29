@@ -6,7 +6,8 @@ import qrCode1 from './images/SOS.jpg';
 import qrCode2 from './images/AP.jpg';
 import qrCode3 from './images/EP.jpg';
 import qrCode4 from './images/titan.jpg';
-import qrCode5 from './images/ACNO.png';
+import qrCode5 from './images/EP1.jpg';
+import qrCode6 from './images/TITAN1.jpg';
 import './MembershipPlans.module.css';
 
 const MembershipPlans = () => {
@@ -57,7 +58,7 @@ const MembershipPlans = () => {
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #FF5722, #D84315)',
       buttonColor: '#D84315',
-      qrCodes: [qrCode4, qrCode5],
+      qrCodes: [qrCode4, qrCode6],
       isSingleQrCode: false, // Set this to false for plans with two QR codes
     },
   ];
