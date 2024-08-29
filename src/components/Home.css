@@ -8,7 +8,7 @@
 .hero-section {
   background: url('./images/hero.svg') no-repeat center center;
   background-size: cover;
-  height: 80vh;
+  height: 60vh;
   position: relative;
   margin-bottom: 20px;
 }
@@ -407,13 +407,7 @@
   flex-direction: column;
 }
 
-.review-carousel h2 {
-  font-size: 36px;
-  margin-bottom: 35px;
-  color: white;
-}
-
-.review-card {
+ .review-card {
   background: linear-gradient(145deg, #1c1c1c, #333333);
   border-radius: 15px;
   padding: 25px;
@@ -421,11 +415,12 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   color: white;
-  width: 500px; /* Set a fixed width for square cards */
-  height: 350px; /* Adjust height for proper text alignment */
+  width: 100%; /* Take full width within the slider */
+  max-width: 500px; /* Limit the maximum width for larger screens */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 350px; /* Set a minimum height */
 }
 
 .review-card:hover {
@@ -437,17 +432,14 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center; /* Center text vertically */
+  max-height: none; /* Allow content to grow */
 }
 
 .review-content p {
   font-size: 14px;
   line-height: 1.4;
   color: #ddd;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .review-author {
@@ -461,18 +453,13 @@
   color: #fff;
 }
 
-.review-author p {
-  font-size: 14px;
-  color: #bbb;
-}
-
 .slick-slide {
   padding: 0 10px;
   transition: transform 0.3s ease-in-out;
 }
 
 .slick-center .review-card {
-  transform: scale(1.2);
+  transform: scale(1.1); /* Slightly less scale to fit text better */
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
 }
 
@@ -491,3 +478,9 @@
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .review-card {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+  }
+}
