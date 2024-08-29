@@ -1,46 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import authService from '../services/authService';
 import './AssignmentPage.css';
 
 function AssignmentPage() {
-  // Hardcoded assignment data
-  const [assignments, setAssignments] = useState([
-    {
-      id: 1,
-      name: 'Math Homework',
-      assignedDate: '2024-08-15',
-      deadlineDate: '2024-08-30',
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      name: 'Science Project',
-      assignedDate: '2024-08-10',
-      deadlineDate: '2024-08-25',
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      name: 'History Essay',
-      assignedDate: '2024-08-10',
-      deadlineDate: '2024-08-28',
-      isCompleted: true,
-    },
-  ]);
+  const [projectData, setProjectData] = useState(null);
+  const [error, setError] = useState(null);
 
-  // Handler for toggling completion status
-  const toggleCompletion = (assignmentId) => {
-    setAssignments(
-      assignments.map((assignment) =>
-        assignment.id === assignmentId
-          ? { ...assignment, isCompleted: !assignment.isCompleted }
-          : assignment
-      )
-    );
-  };
+  useEffect(() => {
+    const fetchProjectAndAssignmentData = async () => {
+      try {
+        const data = await authService.getProjectAndAssignmentDetails();
+        setProjectData(data); // Set the fetched data
+      } catch (err) {
+        console.error('Error fetching project and assignment data:', err);
+        setError(err.message || 'An error occurred while fetching data.');
+      }
+    };
+
+    fetchProjectAndAssignmentData();
+  }, []);
+
+  if (error) {
+    return <div className="error">Error: {error}</div>;
+  }
+
+  if (!projectData) {
+    return <div>Loading project and assignment details...</div>;
+  }
 
   return (
     <div className="assignment-page">
       <h1 className="page-heading">ASSIGNMENT</h1>
+      <h2 className="project-name">Project: {projectData.projectName}</h2>
       <table className="assignment-table">
         <thead>
           <tr>
@@ -52,24 +43,13 @@ function AssignmentPage() {
           </tr>
         </thead>
         <tbody>
-          {assignments.map((assignment) => (
-            <tr key={assignment.id}>
-              <td>{assignment.name}</td>
-              <td>{new Date(assignment.assignedDate).toLocaleDateString()}</td>
-              <td>{new Date(assignment.deadlineDate).toLocaleDateString()}</td>
-              <td>{assignment.isCompleted ? 'Completed' : 'Pending'}</td>
-              <td>
-                <button
-                  onClick={() => toggleCompletion(assignment.id)}
-                  className={
-                    assignment.isCompleted ? 'undo-button' : 'done-button'
-                  }
-                >
-                  {assignment.isCompleted ? ' Done' : 'Mark as Done'}
-                </button>
-              </td>
-            </tr>
-          ))}
+          <tr>
+            <td>{projectData.projectName}</td>
+            <td>{new Date(projectData.assignedDate).toLocaleDateString()}</td>
+            <td>{new Date(projectData.deadlineDate).toLocaleDateString()}</td>
+            <td>{projectData.status}</td>
+            <td>{projectData.action}</td>
+          </tr>
         </tbody>
       </table>
     </div>

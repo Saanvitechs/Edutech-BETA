@@ -8,7 +8,7 @@
 .hero-section {
   background: url('./images/hero.svg') no-repeat center center;
   background-size: cover;
-  height: 60vh;
+  height: 65vh;
   position: relative;
   margin-bottom: 20px;
 }
@@ -62,6 +62,8 @@
   text-align: center;
   position: relative;
   margin: 55px auto;
+  margin-top: 80px;
+  margin-bottom: 70px;
 }
 
 .about-header {
@@ -321,7 +323,7 @@
 
 .join-whatsapp-btn {
   display: inline-block;
-  background-color: #25d366;
+  background-color: #59cbf8;
   color: white;
   padding: 15px 30px;
   border-radius: 4px;

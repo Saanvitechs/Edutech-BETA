@@ -41,10 +41,18 @@ function App() {
               </ProtectedRoute>
             } 
           />
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+              </ProtectedRoute>
+            } 
+          />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/assignments" element={<AssignmentPage />} />
+        
           <Route path="/membership-plan" element={<MembershipPlans />} />
-          <Route path="/profile" element={<ProfilePage />} />
+        
 
         
         </Routes>
