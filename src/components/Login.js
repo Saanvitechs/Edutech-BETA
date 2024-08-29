@@ -58,7 +58,7 @@ const Login = () => {
         <Card raised style={{ padding: '49px', borderRadius: '20px', backgroundColor: 'rgba(255, 255, 255, 0.1)', textAlign: 'center' }}>
           <Box mb={3}>
             <Typography variant="h4" gutterBottom style={{ fontWeight: 'bold', color: '#1565C0' }}>
-              TestPortal
+              TREx
             </Typography>
           </Box>
           <form onSubmit={handleLogin}>
