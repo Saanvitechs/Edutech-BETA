@@ -1,5 +1,6 @@
 {
   "name": "student-test-app",
+  "homepage": "https://trex.saanvitechs.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
