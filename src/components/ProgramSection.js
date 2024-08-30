@@ -45,7 +45,7 @@ const ProgramDetails = () => {
         {activeTab === 'LEARNING' && (
           <div className="content-card">
             <h2>#Get Skilled</h2>
-            <p className="powered-by">Powered by STS</p>
+            {/* <p className="powered-by">Powered by STS</p> */}
             <p className="description">
               Advanced Skill Upgrading Program, backed by industry giants to become a Globally Certified Professional.
             </p>
@@ -70,13 +70,13 @@ const ProgramDetails = () => {
         {activeTab === 'mentorship' && (
           <div className="content-card">
             <h2>#Mentorship</h2>
-            <p className="powered-by">Powered by Experts in the Industry</p>
+            {/* <p className="powered-by">Powered by Experts in the Industry</p> */}
             <p className="description">
               Unlock Your Potential with Our Career Enhancing Program. Learn from the best in the industry and gain practical skills through program.
             </p>
             <div className="content-details">
               <ul>
-                <li><span>Learning Skills</span> - Industry Backed Curriculum</li>
+                <li><span>Learning Skills</span></li>
                 <li><span>Completion Certification</span></li>
                 <li><span>Goal Oriented Learning</span></li>
                 <li><span>Guided Projects</span></li>
@@ -93,13 +93,13 @@ const ProgramDetails = () => {
         {activeTab === 'projects' && (
           <div className="content-card">
             <h2>#Projects</h2>
-            <p className="powered-by">Backed by Leading Industry Projects</p>
+            {/* <p className="powered-by">Backed by Leading Industry Projects</p> */}
             <p className="description">
               Real-world projects designed to give you hands-on experience. Collaborate with industry professionals on projects that matter.
             </p>
             <div className="content-details">
               <ul>
-                <li><span>Multiple Projects</span> - Real Industry Experience</li>
+                <li><span>Projects</span></li>
                 <li><span>Team Collaboration</span></li>
                 <li><span>Guided Support</span></li>
                 <li><span>Project Showcase</span></li>

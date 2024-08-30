@@ -139,10 +139,10 @@ const Home = () => {
       <ProgramSection />
       
       <div className="about-section">
-        <div className="about-header">ABOUT STS</div>
+        <div className="about-header">ABOUT US</div>
         <div className="about-content">
           <p>
-            At STS, we bridge the gap between education and employment by offering hands-on, on-the-job experience.
+            At Saanvi Technology (sts), we bridge the gap between education and employment by offering hands-on, on-the-job experience.
             Whether you're a student, a recent graduate, or someone looking to pivot careers, our platform connects
             you with industry leaders ready to mentor and guide you.
           </p>
