@@ -244,6 +244,15 @@ const getProjectAndAssignmentDetails = async () => {
     throw error;
   }
 };
+const getProfile = async () => {
+  try {
+    const response = await axiosWithAuth().get('/profile');  // Adjust endpoint if needed
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching profile:', error.response ? error.response.data : error.message);
+    throw error;
+  }
+};
 
 const authService = {
   register,
@@ -254,7 +263,8 @@ const authService = {
   requestOtp,
   verifyOtp,
   updatePassword,
-  getProjectAndAssignmentDetails,  // Use this method to fetch project and assignment details
+  getProjectAndAssignmentDetails,
+  getProfile,  // Use this method to fetch project and assignment details
 };
 
 

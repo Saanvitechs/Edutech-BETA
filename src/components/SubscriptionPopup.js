@@ -60,7 +60,7 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
                 color="primary"
                 onClick={() => handleShowQrCode(qrCodes[0])}
               >
-               One Time Full payment
+               One Time payment
               </Button>
               {!isSingleQrCode && (
                 <Button
