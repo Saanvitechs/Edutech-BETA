@@ -5,7 +5,7 @@ import './Home.css';
 import './WhyPregradSection.css';
 import Footer from './Footer';
 import './Footer.js';
-import hero from './images/hero.svg'; // Ensure this path is correct
+import hero from './images/hero.png'; // Ensure this path is correct
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faClipboardCheck, faClipboardList, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
