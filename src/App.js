@@ -13,6 +13,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import MembershipPlans from './components/MembershipPlans';
 import ProfilePage from './components/ProfilePage';
 import SubscriptionPopup from './components/SubscriptionPopup';
+import TermsOfUse from './components/TermsOfUse';
 function App() {
   return (
     <AuthProvider>
@@ -22,6 +23,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
+
 
           {/* Protect these routes */}
           <Route 

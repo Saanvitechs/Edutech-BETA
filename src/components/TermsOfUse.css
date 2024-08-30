@@ -1,0 +1,66 @@
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    text-align: left; /* Aligns text to the left */
+    margin-top: 60px;
+  }
+  
+  .terms-container h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center; /* Centers the main heading */
+    text-transform: uppercase; /* Makes the heading uppercase */
+    border-bottom: 2px solid #3498db; /* Adds a border below the heading */
+    padding-bottom: 10px;
+  }
+  
+  .terms-container h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #34495e;
+  }
+  
+  .terms-container p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+  }
+  
+  .terms-container ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .terms-container li {
+    margin-bottom: 10px;
+  }
+  
+  .terms-container a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .terms-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .terms-container blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-left: 5px solid #3498db;
+    font-style: italic;
+    color: #555;
+  }
+  .terms-container a {
+    text-decoration: none; /* Removes underline, but keeps default color */
+  }
+  
+  .terms-container a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+  }

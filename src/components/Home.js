@@ -5,7 +5,6 @@ import './Home.css';
 import './WhyPregradSection.css';
 import Footer from './Footer';
 import './Footer.js';
-import hero from './images/hero.png'; // Ensure this path is correct
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faClipboardCheck, faClipboardList, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
@@ -14,6 +13,7 @@ import CountUp from 'react-countup';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import ReviewCarousel from './ReviewCarousel'; // Ensure the correct path
+import DesktopPopup from './DesktopPopup.js';
 
 
 
@@ -27,23 +27,23 @@ const FAQSection = () => {
     },
     {
       question: "Can I access course materials after completing the course?",
-      answer: "Yes, you will have lifetime access to all course materials, including any updates we make in the future."
+      answer: "Yes, you will have a year access to all course materials, including any updates we make in the future."
     },
     {
       question: "Who is eligible for these courses?",
-      answer: "Our courses are designed for students, professionals, and anyone interested in upgrading their skills."
+      answer: "Our courses are designed for students, professionals, and anyone interested in upgrading their skills in software development."
     },
-    {
-      question: "What if I miss a lecture?",
-      answer: "All our live sessions are recorded, and you will have access to the recordings within 24 hours after the session."
-    },
+    // {
+    //   question: "What if I miss a lecture?",
+    //   answer: "All our live sessions are recorded, and you will have access to the recordings within 24 hours after the session."
+    // },
     {
       question: "When are the live classes held?",
-      answer: "Live classes are typically held in the evenings or weekends to accommodate working professionals."
+      answer: "Live sessions are typically held as per the requirement of the batch."
     },
     {
       question: "Does TREx give certificates?",
-      answer: "Yes, we provide certificates upon successful completion of our courses."
+      answer: "Yes, we provide experience upon successful completion of our courses."
     },
   ];
 
@@ -77,7 +77,8 @@ const FAQSection = () => {
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="hero-section" style={{ backgroundImage: `url(${hero})` }}>
+      <DesktopPopup />
+      <div className="hero-section">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="hero-text">
           <div align='center'>
             <h1>Bridging Knowledge and Practice for Future Leaders</h1>
@@ -99,28 +100,28 @@ const Home = () => {
         <div className="stat-card">
           <FontAwesomeIcon icon={faUserShield} className="stat-icon" />
           <div className="stat-info">
-            <h3><CountUp end={5.9} decimals={1} suffix=" K" duration={25} /></h3>
+            <h3><CountUp end={1.5} decimals={1} suffix=" K" duration={30} /></h3>
             <p>Registered Students</p>
           </div>
         </div>
         <div className="stat-card">
           <FontAwesomeIcon icon={faClipboardCheck} className="stat-icon" />
           <div className="stat-info">
-            <h3><CountUp end={3.2} suffix=" K" duration={25} /></h3>
-            <p>Student Selections</p>
+            <h3><CountUp end={554} duration={35} /></h3>
+            <p>Student Onboarded</p>
           </div>
         </div>
         <div className="stat-card">
           <FontAwesomeIcon icon={faClipboardList} className="stat-icon" />
           <div className="stat-info">
-            <h3><CountUp end={5.3} suffix=" K" duration={25} /></h3>
+            <h3><CountUp end={414}duration={35} /></h3>
             <p>Tests Attempted</p>
           </div>
         </div>
         <div className="stat-card">
           <FontAwesomeIcon icon={faChalkboardTeacher} className="stat-icon" />
           <div className="stat-info">
-            <h3><CountUp end={5.5} decimals={1} suffix=" K" duration={25} /></h3>
+            <h3><CountUp end={1.31} decimals={2} suffix=" K" duration={15} /></h3>
             <p>Classes Attended</p>
           </div>
         </div>

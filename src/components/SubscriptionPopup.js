@@ -50,9 +50,9 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
               Step 1: Transfer Fees
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Pay the upfront fee according to your preferred plan using the QR codes below. <br /> 
-              For our Executive and Titan Plans, you can do payment in two installments, which is only available in these plans. <br /> 
-              Installment payment can only be done by the second mode of payment, which is Account Transfer.
+              1. Pay the upfront fee according to your preferred plan using the QR codes below. <br /> 
+              2. For our Executive and Titan Plans, you can do payment in two installments, which is only available in these plans. <br /> 
+              3. Installment payment can only be done by the second mode of payment, which is Account Transfer.
             </Typography>
             <Box style={{ marginTop: '20px', textAlign: 'center' }}>
               <Button
@@ -66,7 +66,8 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
                 <Button
                   variant="contained"
                   color="primary"
-                  style={{ marginLeft: '10px' }}
+                  
+                  style={{ marginLeft: '10px', marginTop: '10px' }}
                   onClick={() => handleShowQrCode(qrCodes[1])}
                 >
                   Installment Pay QR
@@ -96,7 +97,7 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
                 4. If you face any issues during payment, contact our support team immediately.
               </Typography>
               <Typography variant="body1">
-                5. Proceed to the registration form only after the payment is confirmed.
+                5. Proceed to the registration form in STEP-2 only after the payment is confirmed.
               </Typography>
               <Typography variant="body1">
                 6. For payment in installments you must pay whole fee in two installments.

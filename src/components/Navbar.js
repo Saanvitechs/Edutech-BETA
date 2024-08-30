@@ -115,6 +115,7 @@ const CustomNavbar = () => {
             src={logo}
             width="40"
             height="40"
+            style={{ borderRadius: '10%' }}
             className="d-inline-block align-top"
             alt="Logo"
           />
