@@ -141,6 +141,7 @@
 import axios from 'axios';
 
 const API_URL = 'https://assessment-test-production.up.railway.app/api/auth/';
+// const API_URL = 'http://localhost:8080/api/auth/';
 
 const axiosWithAuth = () => {
   const token = localStorage.getItem('token');
@@ -264,7 +265,7 @@ const authService = {
   verifyOtp,
   updatePassword,
   getProjectAndAssignmentDetails,
-  getProfile,  // Use this method to fetch project and assignment details
+  getProfile, 
 };
 
 
