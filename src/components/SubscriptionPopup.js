@@ -67,7 +67,7 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
                   variant="contained"
                   color="primary"
                   
-                  style={{ marginLeft: '10px', marginTop: '10px' }}
+                  style={{marginLeft: '10px', marginTop: '10px', textAlign: 'center' }}
                   onClick={() => handleShowQrCode(qrCodes[1])}
                 >
                   Installment Pay QR
@@ -75,7 +75,7 @@ const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
               )}
             </Box>
             {selectedQrCode && (
-              <Box style={{ marginTop: '20px', textAlign: 'center' }}>
+              <Box style={{ marginTop: '30px', textAlign: 'center' }}>
                 <img src={selectedQrCode} alt="QR Code" style={{ width: '250px', height: '250px' }} />
               </Box>
             )}

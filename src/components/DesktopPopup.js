@@ -21,7 +21,7 @@ const DesktopPopup = () => {
     showPopup && (
       <div className="desktop-popup">
         <div className="popup-content">
-          <p>Use desktop site for better experience.</p>
+          <p>Use desktop for better experience.</p>
           <CloseIcon onClick={closePopup} className="close-icon" />
         </div>
       </div>

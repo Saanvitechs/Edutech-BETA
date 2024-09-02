@@ -11,6 +11,7 @@
 }
 
 .test-series-content {
+    margin-top: 10px; 
     max-width: 100%;  /* Allow content to take full width on smaller screens */
     text-align: center; /* Center-align text for better readability */
 }
@@ -27,6 +28,7 @@
 }
 
 .test-series-content p {
+    margin-top: 20px;
     font-size: 15px;
     color: #666;
     margin-bottom: 20px;
@@ -54,6 +56,13 @@
     padding: 10px 15px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .benefits-list li .icon {

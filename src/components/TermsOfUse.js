@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './TermsOfUse.css';
 
 const TermsOfUse = () => {
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="terms-container">
       <h1>Terms of Use</h1>
