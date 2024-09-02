@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TestSeriesSection from './TestSeriesSection';
 import ProgramSection from './ProgramSection';
 import './Home.css';
@@ -76,6 +77,11 @@ const FAQSection = () => {
 };
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleApplyClick = () => {
+    navigate('/register');
+  };
   return (
     <div className="home-container">
       <DesktopPopup />
@@ -90,7 +96,7 @@ const Home = () => {
           <p>Our hands-on training programs empower people to develop essential skills, drive innovation, and excel in their fields.</p>
           <p>Join us to transform your potential into impactful leadership</p>
           <div align='center'>
-            {/* <button className="signup-btn" onClick={handleSignUpClick}>Sign up - it's free</button> */}
+          <button className="apply-btn" onClick={handleApplyClick}>Apply Now</button>
           </div>
         </motion.div>
       </div>
