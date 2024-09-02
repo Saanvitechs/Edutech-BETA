@@ -14,6 +14,7 @@ import MembershipPlans from './components/MembershipPlans';
 import ProfilePage from './components/ProfilePage';
 import SubscriptionPopup from './components/SubscriptionPopup';
 import TermsOfUse from './components/TermsOfUse';
+import ComingSoon from './components/ComingSoon';
 function App() {
   return (
     <AuthProvider>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/comingsoon" element={<ComingSoon />} />
 
 
           {/* Protect these routes */}

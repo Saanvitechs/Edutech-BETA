@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Box } from '@mui/material';
+import ComingSoon from './ComingSoon';
 
 const style = {
   position: 'absolute',
@@ -85,8 +86,8 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Products</h4>
           <ul>
-            <li><a href="/mocks">Test Series</a></li>
-            <li><a href="/mocks">Practice</a></li>
+            <li><a href="/comingsoon">Test Series</a></li>
+            <li><a href="/comingsoon">Practice</a></li>
             <li><a href="https://saanvitechs.com/">Know more</a></li>
           </ul>
         </div>
