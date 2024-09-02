@@ -24,26 +24,82 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  const validateInputs = () => {
+    const newErrors = {};
+
+    // Validate first name
+    if (!firstName.trim()) {
+      newErrors.firstName = "First Name is required";
+    } else if (firstName.length > 50) {
+      newErrors.firstName = "First Name cannot exceed 50 characters";
+    }
+
+    // Validate last name
+    if (!lastName.trim()) {
+      newErrors.lastName = "Last Name is required";
+    } else if (lastName.length > 50) {
+      newErrors.lastName = "Last Name cannot exceed 50 characters";
+    }
+
+    // Validate username
+    if (!username.trim()) {
+      newErrors.username = "Username is required";
+    } else if (username.length < 3 || username.length > 20) {
+      newErrors.username = "Username must be between 3 and 20 characters";
+    }
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    // Validate phone number
+    if (!phoneNumber.trim()) {
+      newErrors.phoneNumber = "Phone Number is required";
+    } else if (!/^\d{10}$/.test(phoneNumber)) {
+      newErrors.phoneNumber = "Phone Number must be exactly 10 digits";
+    }
+
+    // Validate Aadhar/Pan
+    if (!aadharPan.trim()) {
+      newErrors.aadharPan = "Aadhar/Pan Card is required";
+    } else if (!/^\d{12}$/.test(aadharPan)) {
+      newErrors.aadharPan = "Aadhar must be exactly 12 digits";
+    }
+
+    // Validate password
+    const passwordRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/;
+    if (!password) {
+      newErrors.password = "Password is required";
+    } else if (password.length < 8 || password.length > 40) {
+      newErrors.password = "Password must be between 8 and 40 characters";
+    } else if (!passwordRegex.test(password)) {
+      newErrors.password = "Password must contain at least one digit, one lowercase letter, one uppercase letter, and one special character";
+    }
+
+    // Validate confirm password
+    if (!confirmPassword) {
+      newErrors.confirmPassword = "Confirm Password is required";
+    } else if (confirmPassword !== password) {
+      newErrors.confirmPassword = "Passwords do not match";
+    }
+
+    if (!file) {
+      newErrors.file = "Aadhar is required";
+    }
+
+    return newErrors;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newErrors = {};
-    if (!firstName) newErrors.firstName = "First Name is required";
-    if (!lastName) newErrors.lastName = "Last Name is required";
-    if (!username) newErrors.username = "Username is required";
-    if (!email) newErrors.email = "Email is required";
-    if (!phoneNumber) newErrors.phoneNumber = "Phone Number is required";
-    if (!aadharPan) newErrors.aadharPan = "Aadhar/Pan Card is required";
-    if (!password) newErrors.password = "Password is required";
-    if (!confirmPassword) newErrors.confirmPassword = "Confirm Password is required";
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setErrors({ confirmPassword: "Passwords do not match" });
+    const validationErrors = validateInputs();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
       return;
     }
 
@@ -56,14 +112,14 @@ const Register = () => {
         email,
         phoneNumber,
         aadharPan,
-        password
+        password,
       };
       formData.append("userData", JSON.stringify(userData));
       if (file) {
         formData.append("file", file);
       }
       await authService.register(formData);
-      
+
       setBackendError('');
       setNotificationMessage('User registered successfully!');
       setNotificationOpen(true);
@@ -171,7 +227,7 @@ const Register = () => {
               <TextField
                 fullWidth
                 variant="outlined"
-                label="Aadhar/Pan Card"
+                label="Aadhar Number"
                 value={aadharPan}
                 onChange={(e) => setAadharPan(e.target.value)}
                 error={!!errors.aadharPan}
@@ -229,9 +285,27 @@ const Register = () => {
                 onChange={handleFileChange}
               />
               <label htmlFor="file-upload">
-                <Button variant="contained" component="span" style={{ marginTop: '10px', marginBottom: '15px' }}>
-                  Upload Aadhar/Pan Image
+                {!file ? (
+                  <Button
+                    variant="contained"
+                    component="span"
+                    style={{
+                      marginTop: '10px',
+                      marginBottom: '15px',
+                    }}
+                  >
+                    Upload Aadhar/Pan Image
                   </Button>
+                ) : (
+                  <Typography variant="body2" style={{ marginTop: '10px', marginBottom: '15px', color: '#212429' }}>
+                    {file.name}
+                  </Typography>
+                )}
+              {errors.file && (
+                <Typography variant="body2" color="error" style={{ marginTop: '5px' }}>
+                  {errors.file}
+                </Typography>
+              )}
               </label>
             </Box>
             <Button
