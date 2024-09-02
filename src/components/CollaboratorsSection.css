@@ -1,0 +1,47 @@
+.collaborators-section {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.collaborators-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.collaborators-section h2 span {
+  color: #0056b3;
+}
+
+.collaborators-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.collaborator img {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out; /* Added transformation effect */
+}
+
+.collaborator img:hover {
+  transform: scale(1.1); /* Slight scale on hover */
+}
+
+@media (min-width: 768px) {
+  .collaborator img {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .collaborator img {
+    max-width: 150px;
+  }
+}

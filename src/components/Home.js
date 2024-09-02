@@ -16,6 +16,8 @@ import "slick-carousel/slick/slick-theme.css";
 import ReviewCarousel from './ReviewCarousel'; // Ensure the correct path
 import DesktopPopup from './DesktopPopup.js';
 import { Typography } from '@mui/material';
+import CollaboratorsSection from './CollaboratorsSection';
+
 
 
 
@@ -102,6 +104,7 @@ const Home = () => {
       </div>
 
       <TestSeriesSection />
+      <CollaboratorsSection />
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }} className="statistics-section">
         <div className="stat-card">

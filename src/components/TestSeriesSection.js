@@ -47,7 +47,7 @@ const TestSeriesSection = () => {
         <h3>For more information check our PLAN section above 👍</h3>
 
         <a href=" " className="explore-btn">
-          Stay with us for more..
+          For more Information click here!
         </a>
       </div>
       <div className="test-series-image">
