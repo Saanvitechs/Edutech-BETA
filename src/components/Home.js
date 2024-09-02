@@ -82,7 +82,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleApplyClick = () => {
-    navigate('/register');
+    navigate('/membership-plan');
   };
   return (
     <div className="home-container">
