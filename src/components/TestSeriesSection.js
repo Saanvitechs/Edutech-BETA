@@ -44,10 +44,10 @@ const TestSeriesSection = () => {
             <p><strong>Interview Preparation</strong></p>
           </li>
         </ul>
-        <h3>For more information check our PLAN section above 👍</h3>
+        {/* <h3>For more information check our PLAN section above 👍</h3> */}
 
         <a href=" /Brochure.pdf" className="explore-btn" target="_blank" rel="noopener noreferrer">
-          For more Information click here!
+          Know More!
         </a>
       </div>
       <div className="test-series-image">

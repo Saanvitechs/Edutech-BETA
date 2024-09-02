@@ -90,6 +90,7 @@
     text-decoration: none;
     transition: background-color 0.3s ease;
     margin-top: 20px;
+    margin-left: 290px;
 }
 
 .explore-btn:hover {
