@@ -8,7 +8,7 @@ import Nike from './images/Nike.svg';
 import backbase from './images/BOA.svg';
 import GAP from './images/Gap.svg';
 import infosys from './images/infosys.svg';
-import SpiceMoney from './images/Spice Money.svg';
+import TCS from './images/TCS.svg';
 import Tupper from './images/tupperware.svg'
 
 
@@ -19,11 +19,11 @@ const CollaboratorsSection = () => {
     { name: 'IBM', logo: IBM },
     { name: 'Walmart', logo: Walmart },
     { name: 'NIKE', logo: Nike },
+    { name: 'TCS', logo: TCS },
     { name: 'BOA', logo: backbase },
     { name: 'GAP', logo: GAP },
     { name: 'Infosys', logo: infosys },
-    { name: 'SpiceCompany', logo: SpiceMoney },
-    { name: 'Tupper', logo: Tupper } 
+    { name: 'Tupper', logo: Tupper } ,
   ];
 
   return (

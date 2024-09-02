@@ -1,14 +1,14 @@
 .collaborators-section {
   background-color: #f8f9fa;
-  padding: 40px 0;
+  padding: 20px 0; /* Reduced padding to save space */
   text-align: center;
 }
 
 .collaborators-section h2 {
-  font-size: 24px;
+  font-size: 20px; /* Reduced font size */
   font-weight: 600;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Reduced margin */
 }
 
 .collaborators-section h2 span {
@@ -16,32 +16,44 @@
 }
 
 .collaborators-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Reduced minimum width */
+  gap: 20px; /* Reduced gap between logos */
+  justify-items: center;
   align-items: center;
-  gap: 20px;
 }
 
 .collaborator img {
-  max-width: 100px;
+  max-width: 80%; /* Reduced max-width */
   height: auto;
   object-fit: contain;
-  transition: transform 0.3s ease-in-out; /* Added transformation effect */
+  transition: transform 0.3s ease-in-out;
 }
 
 .collaborator img:hover {
-  transform: scale(1.1); /* Slight scale on hover */
+  transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
+  .collaborators-section h2 {
+    font-size: 22px; /* Slightly larger font size on medium screens */
+  }
+
+  .collaborators-logos {
+    grid-template-columns: repeat(4, 1fr); /* More columns for medium screens */
+  }
+
   .collaborator img {
-    max-width: 120px;
+    max-width: 100px; /* Reduced max-width */
   }
 }
 
 @media (min-width: 1200px) {
+  .collaborators-logos {
+    grid-template-columns: repeat(5, 1fr); /* More columns for larger screens */
+  }
+
   .collaborator img {
-    max-width: 150px;
+    max-width: 120px; /* Slightly larger logos on larger screens */
   }
 }
