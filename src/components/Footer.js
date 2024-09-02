@@ -150,15 +150,16 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         
-        <div className="footer-logo">
-        <div style={{textAlign: 'left'}}>
-          <img src={sts} alt="Your Company Logo" />
-          <p>SAANVI TECHNOLOGY SOLUTIONS.</p>
-          <p> Lucknow, Uttar Pradesh, 226001</p>
-          <p>Email: info@saanvitechs.com</p>
-          
-          </div>
-        </div>
+      <div className="footer-logo">
+  <div style={{ textAlign: 'left' }}>
+    <a href="https://www.saanvitechs.com" target="_blank" rel="noopener noreferrer">
+      <img src={sts} alt="Your Company Logo" style={{ cursor: 'pointer' }} />
+    </a>
+    <p>SAANVI TECHNOLOGY SOLUTIONS.</p>
+    <p>Email: info@saanvitechs.com</p>
+  </div>
+</div>
+
 
         <div className="footer-section">
           <h4>Company</h4>
