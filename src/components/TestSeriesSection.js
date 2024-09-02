@@ -46,7 +46,7 @@ const TestSeriesSection = () => {
         </ul>
         <h3>For more information check our PLAN section above 👍</h3>
 
-        <a href=" " className="explore-btn">
+        <a href=" /Brochure.pdf" className="explore-btn" target="_blank" rel="noopener noreferrer">
           For more Information click here!
         </a>
       </div>
