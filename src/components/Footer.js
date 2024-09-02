@@ -2,8 +2,9 @@ import React from 'react';
 import './Footer.css';
 import sts from './images/sts.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+
 
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -96,7 +97,7 @@ const Footer = () => {
           <div className="social-icons">
           
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} />
+              <FontAwesomeIcon icon={faXTwitter} />
             </a>
             <a href="https://www.linkedin.com/company/saanvi-technology-solution/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedinIn} />
