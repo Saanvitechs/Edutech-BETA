@@ -152,7 +152,7 @@ const Home = () => {
       <div className="about-section">
         <div className="about-header">ABOUT US</div>
         <div className="about-content">
-          <Typography variant="h4">About Us</Typography>
+          <Typography variant="h3">About Us</Typography>
           <p>
             At Saanvi Technology Solutions (sts), we bridge the gap between education and employment by offering hands-on, on-the-job experience.
             Whether you're a student, a recent graduate, or someone looking to pivot careers, our platform connects
