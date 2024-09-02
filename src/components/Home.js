@@ -14,7 +14,7 @@ import CountUp from 'react-countup';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import ReviewCarousel from './ReviewCarousel'; // Ensure the correct path
-import DesktopPopup from './DesktopPopup.js';
+// import DesktopPopup from './DesktopPopup.js';
 import { Typography } from '@mui/material';
 import CollaboratorsSection from './CollaboratorsSection';
 
@@ -86,7 +86,7 @@ const Home = () => {
   };
   return (
     <div className="home-container">
-      <DesktopPopup />
+      {/* <DesktopPopup /> */}
       <div className="hero-section">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="hero-text">
           <div align='center'>
