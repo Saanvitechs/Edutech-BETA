@@ -19,12 +19,25 @@ const ForgotPassword = () => {
     setShowPassword(!showPassword);
   };
 
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleRequestOtp = async (e) => {
     e.preventDefault();
     setMessage(''); // Clear previous messages
+
+    // Validate email format
+    if (!isValidEmail(emailOrPhone)) {
+      setMessage('Please enter a valid email address.');
+      setMessageType('error');
+      return;
+    }
+
     try {
       await authService.requestOtp(emailOrPhone);
-      setMessage('OTP sent to your email/phone.');
+      setMessage('OTP sent to your email.');
       setMessageType('success');
       setStep(2);
     } catch (error) {
@@ -90,7 +103,7 @@ const ForgotPassword = () => {
                 <TextField
                   fullWidth
                   variant="outlined"
-                  label="Email or Phone"
+                  label="Email"
                   value={emailOrPhone}
                   onChange={(e) => setEmailOrPhone(e.target.value)}
                   style={{ marginBottom: '10px', backgroundColor: '#F5F5F5', borderRadius: '10px' }}
