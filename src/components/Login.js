@@ -166,7 +166,7 @@ const Login = () => {
         setNotificationOpen(true);
         setTimeout(() => {
           navigate('/');
-        }, 2000);
+        }, 500);
       } else {
         setError('Login failed: Invalid credentials');
       }
@@ -260,7 +260,7 @@ const Login = () => {
         </Card>
       </Grid>
       
-      <Snackbar
+      {/* <Snackbar
         open={notificationOpen}
         autoHideDuration={3000}
         onClose={handleCloseNotification}
@@ -269,7 +269,7 @@ const Login = () => {
         <Alert onClose={handleCloseNotification} severity="success" className="notification-alert">
           Login successful! 
         </Alert>
-      </Snackbar>
+      </Snackbar> */}
     </Grid>
   );
 };
