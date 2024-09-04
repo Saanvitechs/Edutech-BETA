@@ -53,7 +53,7 @@ const MembershipPlans = () => {
       features: ['Internship', 'Guidance by Industry Professionals', 'Problem-Solving Skills', 'Soft Skill Development','Chance to work on Enterprise-level Application'],
       buttonText: 'Subscribe',
       color: 'linear-gradient(135deg, #FF8C42, #FF6E00)',
-      buttonColor: '#212121',
+      buttonColor: '#FF6E00',
       qrCodes: [qrCode2],
       isSingleQrCode: true,
     },
