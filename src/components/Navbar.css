@@ -24,22 +24,22 @@
 }
 
 .nav-link:hover {
-  color: #ff9800; /* Changed hover color for better contrast */
+  color: #df89f9; /* Changed hover color for better contrast */
   text-decoration: none;
 }
 
 .signup-link {
   font-weight: bold;
-  color: #ff9800;
-  background-color: #fff3e0;
+  color: #fff3e0;
+  /* background-color: ; */
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 15px;
   transition: background-color 0.3s ease;
 }
 
 .signup-link:hover {
-  color: #ffffff;
-  background-color: #ff9800;
+  color: #000000;
+  background-color: #df89f9;
   text-decoration: none;
 }
 
