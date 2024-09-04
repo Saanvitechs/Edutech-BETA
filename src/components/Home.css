@@ -33,7 +33,7 @@
   position: absolute;
   bottom: 15px;
   left: 15px;
-  background-color: rgba(248, 248, 248, 0.9);
+  background-color: rgba(241, 235, 243, 0.9);
   padding: 10px 15px;
   border-radius: 10px;
   text-align: center;
@@ -94,7 +94,7 @@
 }
 
 .about-section {
-  background: hwb(105 94% 1%);
+  background: #f4f7f6;
   color: #333;
   padding: 20px;
   margin: 40px 20px;
@@ -143,38 +143,46 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #f4f7f6;
+  background-color: #beb8fa59;
   padding: 20px;
   border-radius: 12px;
   margin: 40px auto;
-  width: 90%;
+  width: 100%;
+  margin-top: 35px;
 }
 
 .stat-card {
   display: flex;
   align-items: center;
-  background: white;
+  background-color: #eee2fcc2; /* Dark background color */
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: calc(50% - 90px);
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  background-color: #eee2fcc2; /* Darker background on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More intense shadow */
 }
 
 .stat-icon {
   font-size: 30px;
   margin-bottom: 10px;
-  color: #3f51b5;
+  color: hwb(276 2% 11% / 0.795); /* Bright yellow for icons */
 }
 
 .stat-info h3 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: #000000; /* White text for better contrast */
 }
-
 .whatsapp-community-section {
   text-align: center;
   background-color: #f4f7f6;
@@ -182,9 +190,11 @@
   margin: 30px auto;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 15em;
 }
 
 .whatsapp-community-section h4 {
+  margin-top: 20px;
   font-size: 22px;
   font-weight: bold;
   color: #000000;
@@ -192,6 +202,7 @@
 }
 
 .whatsapp-community-section p {
+  margin-top: 30px;
   font-size: 14px;
   color: #666;
   margin-bottom: 15px;
@@ -250,7 +261,7 @@
 }
 
 .faq-question:hover {
-  background-color: #d7faaa;
+  background-color: #eee2fcc2;
 }
 
 .faq-answer {

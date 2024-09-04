@@ -1,19 +1,19 @@
 .test-series-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically on smaller screens */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    background-color: #f9f9f9;
+    background-color: #beb8fa59;
     padding: 30px 15px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    gap: 20px;  /* Adjust gap for better spacing */
+    gap: 20px;  
 }
 
 .test-series-content {
     margin-top: 10px; 
-    max-width: 100%;  /* Allow content to take full width on smaller screens */
-    text-align: center; /* Center-align text for better readability */
+    max-width: 100%;  
+    text-align: center; 
 }
 
 .test-series-content h2 {
@@ -42,13 +42,14 @@
 
 .benefits-list {
     display: grid;
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-    gap: 15px; /* Increase gap for better spacing */
+    grid-template-columns: 1fr;
+    gap: 15px; 
     padding: 0;
     list-style: none;
-    width: 100%; /* Full width on mobile */
+    width: 100%; 
 }
 
+/* Base styles for benefits list */
 .benefits-list li {
     display: flex;
     align-items: center;
@@ -57,81 +58,88 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.benefits-list li:hover {
+    transition: background-position 300ms ease, transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: 200% 100%; 
+    background-image: linear-gradient(to right, #eee2fcc2 50%, #f4cbf7bb 50%); 
+    background-position: 0% 0%; 
+  }
+  
+  .benefits-list li:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+    background-position: 100% 0%; 
+  }
 
-.benefits-list li .icon {
+  .benefits-list li .icon {
     font-size: 24px;
-    margin-right: 10px;
-    color: #007bff;
-    display: flex;
-    align-items: center;
+    margin-right: 15px; /* Increase space between icon and text */
+    /* color: #007bff; */
 }
-
-.benefits-list li span {
+  
+  .benefits-list li p {
     font-size: 16px;
     color: #333;
     display: flex;
     align-items: center;
     text-align: left;
-}
+    transition: color 0.3s ease;
+  }
 
 .explore-btn {
     display: inline-block;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ff6b6b; /* Initial background color */
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-position 300ms ease; /* Transition for the hover effect */
     margin-top: 20px;
-    margin-left: 290px;
+    background-size: 200% 100%; /* Double the background width */
+    background-image: linear-gradient(to right, #ff6b6b 50%, #ff4f4f 50%); /* Sliding gradient from left to right */
+    background-position: 0% 0%; /* Initial background position */
 }
 
 .explore-btn:hover {
-    background-color: #0056b3;
+    background-position: 100% 0%; /* Move the background on hover to create the sliding effect */
+    color: white;
 }
 
 .test-series-image {
-    max-width: 100%;  /* Image takes full width on mobile */
-    margin-top: 20px; /* Add margin for spacing */
+    max-width: 100%;  
+    margin-top: 20px; 
     text-align: center;
 }
 
 .test-series-image img {
     width: 100%;
-    height: auto;  /* Maintain aspect ratio */
+    height: auto;  
     border-radius: 20px;
-    object-fit: contain;  /* Ensure the image fits within the container */
+    object-fit: contain; 
 }
 
-/* Media query for larger screens */
 @media (min-width: 768px) {
     .test-series-container {
-        flex-direction: row; /* Side-by-side layout on larger screens */
+        flex-direction: row; 
         gap: 20px;
     }
 
     .test-series-content {
-        max-width: 55%; /* Restore max width for content */
-        text-align: left; /* Align text to the left on larger screens */
+        max-width: 55%; 
+        text-align: left; 
     }
 
     .benefits-list {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .test-series-image {
-        max-width: 40%; /* Restore image size for larger screens */
+        max-width: 40%; 
     }
 
     .test-series-image img {
-        height: 500px;  /* Fixed height on larger screens */
-        padding-left: 0; /* Remove padding */
+        height: 500px;  
+        padding-left: 0;
     }
-}
+} 
+
+

@@ -8,6 +8,7 @@ import mentor from './images/mentor.svg';
 const ProgramDetails = () => {
   const [activeTab, setActiveTab] = useState('LEARNING');
   const [isHovered, setIsHovered] = useState(false); // State to track hover
+  const [hoveredText, setHoveredText] = useState(null); // Track the text to show on hover
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -27,30 +28,42 @@ const ProgramDetails = () => {
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, [activeTab, isHovered]);
 
+  const handleHover = (text) => {
+    setHoveredText(text);
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredText(null);
+    setIsHovered(false);
+  };
+
   return (
-    <div
-      className="program-details-container"
-      onMouseEnter={() => setIsHovered(true)} // Stop rotation on hover
-      onMouseLeave={() => setIsHovered(false)} // Resume rotation when not hovered
-    >
+    <div className="program-details-container">
       <div className="tabs">
         <button
           className={`tab-button ${activeTab === 'LEARNING' ? 'active' : ''}`}
           onClick={() => handleTabClick('LEARNING')}
+          onMouseEnter={() => handleHover('Discover the power of Learning!')}
+          onMouseLeave={handleMouseLeave}
         >
-          LEARNING
+          {hoveredText === 'Discover the power of Learning!' ? hoveredText : 'LEARNING'}
         </button>
         <button
           className={`tab-button ${activeTab === 'mentorship' ? 'active' : ''}`}
           onClick={() => handleTabClick('mentorship')}
+          onMouseEnter={() => handleHover('Get Expert Mentorship!')}
+          onMouseLeave={handleMouseLeave}
         >
-          MENTORSHIP
+          {hoveredText === 'Get Expert Mentorship!' ? hoveredText : 'MENTORSHIP'}
         </button>
         <button
           className={`tab-button ${activeTab === 'projects' ? 'active' : ''}`}
           onClick={() => handleTabClick('projects')}
+          onMouseEnter={() => handleHover('Work on Real Projects!')}
+          onMouseLeave={handleMouseLeave}
         >
-          PROJECTS
+          {hoveredText === 'Work on Real Projects!' ? hoveredText : 'PROJECTS'}
         </button>
       </div>
       <motion.div
@@ -63,9 +76,8 @@ const ProgramDetails = () => {
       >
         {activeTab === 'LEARNING' && (
           <div className="content-card">
-           
             <p className="description">
-            <h2>#Get Skilled</h2>
+              <h2>#Get Skilled</h2>
               Advanced Skill Upgrading Program, backed by industry giants to become a Globally Certified Professional.
             </p>
             <div className="content-details">
@@ -87,10 +99,9 @@ const ProgramDetails = () => {
         )}
         {activeTab === 'mentorship' && (
           <div className="content-card">
-            
             <p className="description">
-            <h2>#Mentorship</h2>
-              Unlock Your Potential with Our Career Enhancing Program. Learn from the best in the industry and gain practical skills through program.
+              <h2>#Mentorship</h2>
+              Unlock Your Potential with Our Career Enhancing Program. Learn from the best in the industry and gain practical skills through the program.
             </p>
             <div className="content-details">
               <ul>
@@ -110,9 +121,8 @@ const ProgramDetails = () => {
         )}
         {activeTab === 'projects' && (
           <div className="content-card">
-            
             <p className="description">
-            <h2>#Projects</h2>
+              <h2>#Projects</h2>
               Real-world projects designed to give you hands-on experience. Collaborate with industry professionals on projects that matter.
             </p>
             <div className="content-details">

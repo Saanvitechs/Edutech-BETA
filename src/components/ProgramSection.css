@@ -1,145 +1,137 @@
+.program-details-container {
+  background-color: #beb8fa59;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
 
-   .program-details-container {
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px auto;
-    max-width: 1200px; /* Limit the maximum width on larger screens */
-  }
-  
-  .tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .tab-button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    margin: 0 15px;
-    cursor: pointer;
-    padding: 10px;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  .tab-button.active {
-    color: #00bfff;
-  }
-  
-  .tab-button.active::after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #00bfff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .tab-content {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .content-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #333;
-  }
-  
-  .powered-by {
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .description {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  margin: 0 15px;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-button.active {
+  color: #007bff;
+}
+
+.tab-button.active::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.tab-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+.description {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.content-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.content-details ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.content-details ul li span {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.image-container {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
   .content-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 20px;
   }
-  
+
   .content-details ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    width: 50%;
   }
-  
-  .content-details ul li {
-    font-size: 14px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .content-details ul li span {
-    font-weight: bold;
-    margin-right: 8px;
-  }
-  
+
   .image-container {
-    width: 80%;
-    margin-top: 20px;
+    width: 40%;
+    margin-top: 0;
   }
-  
-  .image-container img {
-    width: 100%;
-    border-radius: 10px;
+}
+
+@media (min-width: 1200px) {
+  .tab-button {
+    font-size: 18px;
+    margin: 0 20px;
   }
-  
-  @media (min-width: 768px) {
-    .content-details {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start; /* Align items to the top to avoid stretching */
-      margin-left: 20px;
-    }
-  
-    .content-details ul {
-      margin-bottom: 0;
-      width: 50%; /* Restrict the width to balance with the image */
-    }
-  
-    .image-container {
-      width: 40%;
-      margin-top: 0;
-    }
+
+  .content-card {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  @media (min-width: 1200px) {
-    .tab-button {
-      font-size: 18px; /* Slightly larger font on very large screens */
-      margin: 0 20px;
-    }
-  
-    .content-card {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .description {
-      font-size: 18px;
-    }
-  
-    .image-container {
-      width: 35%;
-    }
+
+  .description {
+    font-size: 18px;
   }
-  
-  
+
+  .image-container {
+    width: 35%;
+  }
+}
