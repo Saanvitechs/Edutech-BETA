@@ -70,7 +70,7 @@ import React, { useState } from 'react';
 import { List, ListItem, ListItemIcon, ListItemText, Box, Typography, Collapse } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
-import {  faSchool } from '@fortawesome/free-solid-svg-icons';
+import {  faSchool, faBriefcase, faChartLine, faMessage, faCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import CodeIcon from '@mui/icons-material/Code';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import AssessmentIcon from '@mui/icons-material/Assessment';
@@ -81,12 +81,12 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import './Dashboard.css'; // Make sure to include custom styles
 
 const dashboardItems = [
-  { name: 'General Aptitude', subtopics: [{ name: 'Arithmetic Aptitude', path: '/arithmetic-aptitude' }, { name: 'Data Interpretation', path: '/data-interpretation' }, { name: 'Online Aptitude Test', path: '/test/online-aptitude' }], icon: <AssessmentIcon /> },
+  { name: 'General Aptitude', subtopics: [{ name: 'Arithmetic Aptitude', path: '/arithmetic-aptitude' }, { name: 'Data Interpretation', path: '/data-interpretation' }, { name: 'Online Aptitude Test', path: '/test/online-aptitude' }], icon: <FontAwesomeIcon icon={faChartLine} style={{ color: "#FFFFFF" }} /> },
   { name: 'Verbal & Reasoning', subtopics: [{ name: 'Verbal Ability', path: '/verbal-ability' }, { name: 'Logical Reasoning', path: '/logical-reasoning' }, { name: 'Verbal Reasoning', path: '/verbal-reasoning' }], icon: <FontAwesomeIcon icon={faSchool} style={{ color: "#FFFFFF" }} /> },
-  { name: 'Interview', subtopics: [{ name: 'Placement Papers', path: '/placement-papers' }, { name: 'Group Discussion', path: '/group-discussion' }, { name: 'HR Interview', path: '/hr-interview' }], icon: <WorkIcon /> },
-  { name: 'Engineering', subtopics: [{ name: 'Mechanical Engineering', path: '/mechanical-engineering' }, { name: 'Civil Engineering', path: '/test/civil-engineering' }, { name: 'Chemical Engineering', path: '/test/chemical-engineering' }], icon: <EngineeringIcon /> },
-  { name: 'Programming', subtopics: [{ name: 'C Programming', path: '/c-programming' }, { name: 'C++ Programming', path: '/cpp-programming' }, { name: 'Java Programming', path: '/java-programming' }], icon: <CodeIcon /> },
-  { name: 'Technical MCQs', subtopics: [{ name: 'Networking Questions', path: '/networking' }, { name: 'Database Questions', path: '/database' }, { name: 'Operating System', path: '/operating-system' }], icon: <QuestionAnswerIcon /> },
+  { name: 'Interview', subtopics: [{ name: 'Placement Papers', path: '/placement-papers' }, { name: 'Group Discussion', path: '/group-discussion' }, { name: 'HR Interview', path: '/hr-interview' }], icon: <FontAwesomeIcon icon={faBriefcase} style={{ color: "#FFFFFF" }} /> },
+  { name: 'Engineering', subtopics: [{ name: 'Mechanical Engineering', path: '/mechanical-engineering' }, { name: 'Civil Engineering', path: '/test/civil-engineering' }, { name: 'Chemical Engineering', path: '/test/chemical-engineering' }], icon: <FontAwesomeIcon icon={ faLaptopCode} style={{ color: "#FFFFFF" }} /> },
+  { name: 'Programming', subtopics: [{ name: 'C Programming', path: '/c-programming' }, { name: 'C++ Programming', path: '/cpp-programming' }, { name: 'Java Programming', path: '/java-programming' }], icon: <FontAwesomeIcon icon={faCode} style={{ color: "#FFFFFF" }} /> },
+  { name: 'Technical MCQs', subtopics: [{ name: 'Networking Questions', path: '/networking' }, { name: 'Database Questions', path: '/database' }, { name: 'Operating System', path: '/operating-system' }],icon: <FontAwesomeIcon icon={faMessage} style={{ color: "#FFFFFF" }} /> },
 ];
 
 const Dashboard = () => {
