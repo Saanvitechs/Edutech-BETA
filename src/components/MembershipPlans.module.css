@@ -1,5 +1,42 @@
+/* body {
+  background-color: #fafafa;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+} */
+
+
+/* Add this CSS to your styles (MembershipPlans.module.css or global CSS file) */
+
 body {
   background-color: #fafafa;
+  background-image: url('./images/bg\ plans.png');
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+.membership-plans-container {
+  padding: 50px 20px; /* Add padding to ensure the content is readable */
+  background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background to improve readability */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
 h4 {

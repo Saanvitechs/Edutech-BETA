@@ -63,8 +63,9 @@ const ProgramDetails = () => {
       >
         {activeTab === 'LEARNING' && (
           <div className="content-card">
-            <h2>#Get Skilled</h2>
+           
             <p className="description">
+            <h2>#Get Skilled</h2>
               Advanced Skill Upgrading Program, backed by industry giants to become a Globally Certified Professional.
             </p>
             <div className="content-details">
@@ -86,8 +87,9 @@ const ProgramDetails = () => {
         )}
         {activeTab === 'mentorship' && (
           <div className="content-card">
-            <h2>#Mentorship</h2>
+            
             <p className="description">
+            <h2>#Mentorship</h2>
               Unlock Your Potential with Our Career Enhancing Program. Learn from the best in the industry and gain practical skills through program.
             </p>
             <div className="content-details">
@@ -108,8 +110,9 @@ const ProgramDetails = () => {
         )}
         {activeTab === 'projects' && (
           <div className="content-card">
-            <h2>#Projects</h2>
+            
             <p className="description">
+            <h2>#Projects</h2>
               Real-world projects designed to give you hands-on experience. Collaborate with industry professionals on projects that matter.
             </p>
             <div className="content-details">

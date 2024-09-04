@@ -19,7 +19,7 @@
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.15s ease;
@@ -199,13 +199,14 @@
 
 .join-whatsapp-btn {
   display: inline-block;
-  background-color: #25d366;
+  background-color: #008531;
   color: white;
   padding: 12px 20px;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  border-radius: 50px;
 }
 
 .join-whatsapp-btn:hover {

@@ -20,49 +20,55 @@ const MembershipPlans = () => {
   const [isSingleQrCode, setIsSingleQrCode] = useState(true); // To determine the number of QR codes to show
 
   const membershipPlans = [
-    {
-      title: 'SOS PLAN',
-      originalPrice: 3990,
-      price: 1490,
-      features: ['Guidance by Industry Professionals', 'Interview Prep in line with Industry standards', 'Assessment & Feedback', 'Get skilled with our plan of SOS and get a brief.'],
-      buttonText: 'Subscribe',
-      color: 'linear-gradient(135deg, #1e3c72, #2a5298)',
-      buttonColor: '#2a5298',
-      qrCodes: [qrCode1],
-      isSingleQrCode: true,
-    },
-    {
-      title: 'APPRENTICE PLAN',
-      originalPrice: 12990,
-      price: 8990,
-      features: ['Internship', 'Guidance by Industry Professionals', 'Problem-Solving Skills', 'Soft Skill Development','Chance to work on Enterprise-level Application'],
-      buttonText: 'Subscribe',
-      color: 'linear-gradient(135deg, #757575, #212121)',
-      buttonColor: '#212121',
-      qrCodes: [qrCode2],
-      isSingleQrCode: true,
-    },
+
+
     {
       title: 'EXECUTIVE PLAN',
       originalPrice: 55990,
       price: 27990,
       features: ['On-Job-Training', 'Guidance by Industry Professionals', 'Problem-Solving Skills', 'Chance to work on Enterprise-level Application', 'Interview Prep in line with Industry Standards'],
       buttonText: 'Subscribe',
-      color: 'linear-gradient(135deg, #9d50bb, #6e48aa)',
+      color: 'linear-gradient(135deg, #3A3A8D, #8A2BE2)',
       buttonColor: '#6e48aa',
       qrCodes: [qrCode3, qrCode5],
       isSingleQrCode: false,
     },
+
     {
       title: 'TITAN PLAN',
       originalPrice: 49990,
       price: 24990,
       features: ['3 months Internship + OJT', 'Guidance by Industry Professionals', 'Problem-Solving Skills', 'Soft Skill Development', 'Chance to work on Enterprise-level Application'],
       buttonText: 'Subscribe',
-      color: 'linear-gradient(135deg, #FF5722, #D84315)',
+      color: 'linear-gradient(135deg, #FF4500, #FF6347)',
       buttonColor: '#D84315',
       qrCodes: [qrCode4, qrCode6],
       isSingleQrCode: false,
+    },
+    
+    {
+      title: 'APPRENTICE PLAN',
+      originalPrice: 12990,
+      price: 8990,
+      features: ['Internship', 'Guidance by Industry Professionals', 'Problem-Solving Skills', 'Soft Skill Development','Chance to work on Enterprise-level Application'],
+      buttonText: 'Subscribe',
+      color: 'linear-gradient(135deg, #FF8C42, #FF6E00)',
+      buttonColor: '#212121',
+      qrCodes: [qrCode2],
+      isSingleQrCode: true,
+    },
+
+
+    {
+      title: 'SOS PLAN',
+      originalPrice: 3990,
+      price: 1490,
+      features: ['Guidance by Industry Professionals', 'Interview Prep in line with Industry standards', 'Assessment & Feedback', 'Get skilled with our plan of SOS and get a brief.'],
+      buttonText: 'Subscribe',
+      color: 'linear-gradient(135deg, #6D83F2, #4C60CE)',
+      buttonColor: '#2a5298',
+      qrCodes: [qrCode1],
+      isSingleQrCode: true,
     },
   ];
 
@@ -77,15 +83,20 @@ const MembershipPlans = () => {
   };
 
   return (
-    <Container maxWidth="lg" style={{ marginTop: '100px' }}>
-      <Typography
-        variant="h4"
-        align="center"
-        gutterBottom
-        style={{ fontWeight: 700, marginBottom: '30px' }}
-      >
-        Choose Your Plan <br />
-      </Typography>
+    <Container maxWidth="lg" className="membership-plans-container" style={{ marginTop: '100px' }}>
+     <Typography
+  variant="h4"
+  align="center"
+  gutterBottom
+  style={{ 
+    fontWeight: 700, 
+    marginBottom: '30px', 
+    color: '#F8F8F8'  // Dark Teal or try #FF6F61 for Light Coral
+  }}
+>
+  Choose Your Plan <br />
+</Typography>
+
       <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {membershipPlans.map((plan, index) => (
           <Grid
