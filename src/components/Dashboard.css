@@ -1,10 +1,10 @@
 .custom-dashboard {
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 42px;
+    padding: 0px;
     height: 100vh;
     background-color: #1e1e1e;
     color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
   }
   
   .dashboard-title {
@@ -15,7 +15,7 @@
   }
   
   .dashboard-list {
-    padding: 0;
+    padding: 10;
   }
   
   .dashboard-list-item {
@@ -27,13 +27,16 @@
     background-color: #333;
   }
   
+  /* .dashboard-icon {
+    color: #fafbfc;
+  } */
   .dashboard-icon {
-    color: #00bfff;
+    color: white;
   }
   
   .dashboard-sub-item {
     color: #cccccc;
-    padding-left: 30px;
+    padding-left: 0px;
   }
   
   .dashboard-sub-item:hover {

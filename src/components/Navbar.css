@@ -32,14 +32,14 @@
   font-weight: bold;
   color: #fff3e0;
   /* background-color: ; */
-  padding: 8px 16px;
+  padding: 8px 3px;
   border-radius: 15px;
-  transition: background-color 0.3s ease;
+  /* transition: background-color 0.3s ease; */
 }
 
 .signup-link:hover {
-  color: #000000;
-  background-color: #df89f9;
+  color: #df89f9;
+  background-color: #171111;
   text-decoration: none;
 }
 
