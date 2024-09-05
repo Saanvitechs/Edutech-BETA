@@ -33,7 +33,7 @@
   position: absolute;
   bottom: 15px;
   left: 15px;
-  background-color: rgba(241, 235, 243, 0.9);
+  background-color: #d7edf8c2;
   padding: 10px 15px;
   border-radius: 10px;
   text-align: center;
@@ -143,7 +143,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #beb8fa59;
+  /* background-color: #beb8fa59; */
+  background-color: #b8f2fa59;
   padding: 20px;
   border-radius: 12px;
   margin: 40px auto;
@@ -154,7 +155,7 @@
 .stat-card {
   display: flex;
   align-items: center;
-  background-color: #eee2fcc2; /* Dark background color */
+  background-color: #d7edf8c2; /* Dark background color */
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -168,7 +169,7 @@
 
 .stat-card:hover {
   transform: translateY(-5px); /* Slight lift effect */
-  background-color: #eee2fcc2; /* Darker background on hover */
+  background-color: #c0fafa; /* Darker background on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More intense shadow */
 }
 
@@ -261,7 +262,8 @@
 }
 
 .faq-question:hover {
-  background-color: #eee2fcc2;
+  /* background-color: #eee2fcc2; */
+  background-color: #b8f2fa59;
 }
 
 .faq-answer {
