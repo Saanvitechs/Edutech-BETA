@@ -11,7 +11,6 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
-  const [ setNotificationOpen] = useState(false);
   const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
@@ -28,7 +27,6 @@ const Login = () => {
         setError('');
         localStorage.setItem('name', usernameOrEmail);
         login(response.accessToken);
-        setNotificationOpen(true);
         setTimeout(() => {
           navigate('/');
         }, 500);
@@ -51,10 +49,6 @@ const Login = () => {
       }
     }
   };
-
-  // const handleCloseNotification = () => {
-  //   setNotificationOpen(false);
-  // };
 
   return (
     <Grid 
@@ -124,17 +118,6 @@ const Login = () => {
           </Box>
         </Card>
       </Grid>
-      
-      {/* <Snackbar
-        open={notificationOpen}
-        autoHideDuration={3000}
-        onClose={handleCloseNotification}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-      >
-        <Alert onClose={handleCloseNotification} severity="success" className="notification-alert">
-          Login successful! 
-        </Alert>
-      </Snackbar> */}
     </Grid>
   );
 };
