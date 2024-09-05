@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Resource.css'; // Include the updated CSS file for dark theme styling
 import { Box, Paper, Grid } from '@mui/material';
@@ -15,52 +15,35 @@ const topics = [
   { title: 'Technical Short Answers', content: [{ name: 'Software Testing', path: '/software-testing' }, { name: 'MySQL', path: '/my-sql' }] }
 ];
 
-const Resource = () => {
-  const token = localStorage.getItem('token');
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch('http://localhost:8080/api/main-topic?mid=1', {
-      method: 'GET',
-      headers: {
-        'Authorization': `${token}`,
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.log(error));
-  }, [token]);
-
+ const Resource = () => {
   return (
     <Box className="resource-container"> {/* Updated class */}
-      <Box sx={{ width: '250px', backgroundColor: '#000000', height: '100vh' }}>
+      <Box sx={{ width: '350px', backgroundColor: '#000000', height: '100vh' }}>
         <Dashboard />
       </Box>
 
       <Box className="resource-content"> {/* Updated class */}
         <h1 style={{ color: '#ffcc00' }}>Analyze Your Depth</h1>
-        <h2 style={{ color: '#f0f0f0' }}>Data: {data}</h2>
+        
         <Box sx={{ padding: '50px' }}>
-          <Grid container spacing={2} sx={{ height: '40vh' }}>
+          <Grid container spacing={4} sx={{ height: '40vh' }}>
             {topics.map((topic, index) => (
               <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
                 <Paper
                   className="resource-topic-card" /* Renamed class */
                   sx={{
-                    padding: 2,
                     backgroundColor: '#1e1e1e',
                     display: 'flex',
-                    justifyContent: 'center',
+                    justifyContent: 'left',
                     alignItems: 'center',
                   }}
                 >
                   <div>
-                    <h3 style={{ color: '#ffcc00' }}>{topic.title}</h3>
-                    <ul>
+                    <h3 style={{ color: '#ffcc00', textAlign: 'center' }}>{topic.title}</h3>
+                    <ul style={{ listStyle: 'none' }}>
                       {topic.content.map((item, idx) => (
                         <li key={idx}>
-                          <Link to={item.path} style={{ textDecoration: 'none', color: '#00bfff' }}>
+                          <Link to={item.path} style={{ textDecoration: 'none', color: '#ffff' }}>
                             {item.name}
                           </Link>
                         </li>

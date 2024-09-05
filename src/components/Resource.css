@@ -1,16 +1,25 @@
 .resource-container {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 110vh;
   padding: 30px;
   width: 100%;
-  background: #121212; /* No background image, dark theme */
+  background-image: url('./images/Dark mpdern.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Makes the background fixed while scrolling */
+  background-color: rgba(0, 0, 0, 0.8); 
+  backdrop-filter: blur(5px); 
 }
 
 .resource-content {
   margin-left: 1rem;
   margin-top: 5rem;
   width: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Add a background color for better readability */
+  padding: 50px;
+  border-radius: 10px;
 }
 
 .resource-topic-card {
@@ -19,7 +28,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.7s ease, box-shadow 0.3s ease;
 }
 
 .resource-topic-card:hover {
