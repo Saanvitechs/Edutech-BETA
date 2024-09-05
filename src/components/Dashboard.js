@@ -71,11 +71,6 @@ import { List, ListItem, ListItemIcon, ListItemText, Box, Typography, Collapse }
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import {  faSchool, faBriefcase, faChartLine, faMessage, faCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import CodeIcon from '@mui/icons-material/Code';
-import EngineeringIcon from '@mui/icons-material/Engineering';
-import AssessmentIcon from '@mui/icons-material/Assessment';
-import WorkIcon from '@mui/icons-material/Work';
-import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import './Dashboard.css'; // Make sure to include custom styles

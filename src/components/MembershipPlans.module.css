@@ -1,21 +1,46 @@
-body {
-  background-image: url('./images/bgplans.png'); /* Path to the uploaded background image */
-  background-size: cover; /* Ensure the image covers the entire background */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-attachment: fixed; /* Fix the background when scrolling */
-  min-height: 100vh; /* Ensure it covers the full viewport height */
+  /* body {
+  background-image: url('./images/bgplans.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  min-height: 100vh; 
   margin: 0;
   padding: 0;
 }
 
-/* Additional media query to handle smaller screen sizes */
+
 @media (max-width: 768px) {
   body {
-    background-position: center top; /* Adjust the background positioning for mobile */
-    background-size: cover; /* Ensure it still covers the full mobile screen */
+    background-position: center top; 
+    background-size: cover;
     min-height: 100vh;
   }
+}
+
+.membership-plans-container {
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.8); 
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #a065d8, #7d3eb1, #2c1f73);
+  background-size: cover;
+}
+
+/* Class specifically for the MembershipPlans page */
+.membership-page-background {
+  background-image: url('./images/bgplans.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .membership-plans-container {
@@ -23,4 +48,22 @@ body {
   background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+@media (max-width: 768px) {
+  .membership-plans-container {
+    padding: 20px 10px;
+  }
+
+  .MuiCard-root {
+    height: auto;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .MuiCardContent-root h5 {
+    font-size: 1.2rem;
+  }
 }
