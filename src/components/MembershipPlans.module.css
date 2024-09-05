@@ -1,69 +1,108 @@
-  /* body {
-  background-image: url('./images/bgplans.png');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
-  min-height: 100vh; 
-  margin: 0;
-  padding: 0;
-}
-
-
-@media (max-width: 768px) {
-  body {
-    background-position: center top; 
-    background-size: cover;
-    min-height: 100vh;
-  }
-}
-
-.membership-plans-container {
-  padding: 50px 20px;
-  background: rgba(255, 255, 255, 0.8); 
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
-} */
-
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at center, #a065d8, #7d3eb1, #2c1f73);
+  background: radial-gradient(circle at center, #cca5f1, #7e35b6, #2e3549);
   background-size: cover;
-}
-
-/* Class specifically for the MembershipPlans page */
-.membership-page-background {
-  background-image: url('./images/bgplans.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
 }
 
 .membership-plans-container {
   padding: 50px 20px;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.membership-plan-card {
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 300px;
+  background: linear-gradient(to bottom, #fff, #fff);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.membership-plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+.membership-plan-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.membership-plan-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.membership-plan-features {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.membership-plan-features li {
+  margin-bottom: 10px;
+}
+
+
+.membership-plan-button {
+  background-color: white;
+  color: #333;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  font-size: 1rem;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.membership-plan-button:hover {
+  background-color: #f06292;
+  transform: translateY(-3px);
+}
+
+.executive-plan {
+  background: linear-gradient(to bottom, #FF4500, #FF6347);
+}
+
+.titan-plan {
+  background: linear-gradient(to bottom, #3A3A8D, #8A2BE2);
+}
+
+.apprentice-plan {
+  background: linear-gradient(to bottom, #FF8C42, #FF6E00);
+}
+
+.sos-plan {
+  background: linear-gradient(to bottom, #6D83F2, #4C60CE);
+}
+
 
 @media (max-width: 768px) {
   .membership-plans-container {
-    padding: 20px 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .MuiCard-root {
-    height: auto;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-  }
-
-  .MuiCardContent-root h5 {
-    font-size: 1.2rem;
+  .membership-plan-card {
+    width: 100%;
+    max-width: 90%;
+    margin-bottom: 20px;
   }
 }
