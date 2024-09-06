@@ -1,0 +1,95 @@
+/* Popup content styling */
+.subscription-popup-content {
+    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  /* Title and content text */
+  .subscription-popup-content h6 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Paragraphs */
+  .subscription-popup-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-weight: bold;
+  }
+  
+  /* QR Button */
+  .subscription-qr-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .subscription-qr-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1 1 calc(50% - 10px);
+  }
+  
+  /* Hover and Active states */
+  .subscription-qr-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .subscription-qr-button:active {
+    background-color: #004085;
+  }
+  
+  /* QR Code Image */
+  .subscription-qr-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dialog actions */
+  .subscription-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  /* Button styling for next and previous */
+  .subscription-dialog-button {
+    padding: 8px 20px;
+    font-weight: bold;
+  }
+  
+  .subscription-previous-button {
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .subscription-next-button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Hover effect for dialog buttons */
+  .subscription-dialog-button:hover {
+    opacity: 0.9;
+  }
+  

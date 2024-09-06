@@ -1,58 +1,94 @@
+.arithmetic-page-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  background-image: url('./images/Dark mpdern.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Ensure no scrolling */
+}
 
-   .resource-container {
-    background-color: #f8f8f8;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .arithmetic-container {
-    
-    background-color: #f8f8f8;
-    max-width: 100%;
-    padding: 10px;    
-  }
-  
-  .topics-grid {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 5rem;
-  }
-  
-  .topic-item {
-    color: #000;
-  }
-  
-  .subtopic-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #ffffff;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .subtopic-item:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .topic-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .folder-icon {
-    color: #ffcc00;
-    margin-right: 5px;
-  }
-  
-  .topic-title {
-    font-weight: 700;
-    margin-bottom: 0px;
-  }
-  
-  .subtopic-title {
-    font-weight: 500;
-  }
-  
+/* Sidebar Dashboard Section */
+.dashboard-section {
+  flex: 1;
+  background-color: #0a0a0a;
+  /* padding: 20px; */
+  /* border-right: 1px solid #ddd; */
+  height: 100vh;
+
+  overflow-y: auto;
+}
+
+/* Main Content Section */
+.content-section {
+  flex: 4;
+  padding: 20px;
+  overflow-y: auto; /* Ensure no scrolling */
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Topic Grid Layout */
+.topics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Individual Grid Item */
+.topic-grid-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  /* background-color: #fff; */
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  background-color: rgba(255, 255, 255, 0.075);
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topic-grid-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Topic Link Styling */
+.topic-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+/* Folder Icon Styling */
+.folder-icon {
+  color: #f9c74f;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Topic Title Styling */
+.topic-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Make sure the grid is visible without scrolling */
+.content-section {
+  height: calc(100vh - 5px); /* Adjust to fit within the screen */
+}

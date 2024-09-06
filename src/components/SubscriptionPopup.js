@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, Box, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
+
 const SubscriptionPopup = ({ open, onClose, qrCodes, isSingleQrCode }) => {
   const [step, setStep] = useState(1);
   const [selectedQrCode, setSelectedQrCode] = useState(null);
