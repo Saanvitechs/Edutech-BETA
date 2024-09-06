@@ -96,7 +96,7 @@ const Footer = () => {
           <div className="app-buttons">
           <div className="social-icons">
           
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/saanvitechs" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
             <a href="https://www.linkedin.com/company/saanvi-technology-solution/about/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
