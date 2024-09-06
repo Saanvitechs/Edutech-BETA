@@ -2,198 +2,105 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-x: hidden; 
-}
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background-image: url('./images/Dark-mpdern.png'); 
-  background-size: cover;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.membership-plans-container {
-  padding: 50px 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.membership-plan-card {
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  color: white;
-  width: 100%;
-  max-width: 300px;
-  background: linear-gradient(to bottom, #fff, #fff);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.membership-plan-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
-}
-
-
-.membership-plan-header {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.membership-plan-price {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.membership-plan-features {
-  list-style: none;
-  padding: 0;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.membership-plan-features li {
-  margin-bottom: 10px;
-}
-
-
-.membership-plan-button {
-  background-color: white;
-  color: #333;
-  border-radius: 50px;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
-  font-size: 1rem;
-  width: 80%;
-  margin: 1rem auto;
-}
-
-.membership-plan-button:hover {
-  background-color: #f06292;
-  transform: translateY(-3px);
-}
-
-.executive-plan {
-  background: linear-gradient(to bottom, #FF4500, #FF6347);
-}
-
-.titan-plan {
-  background: linear-gradient(to bottom, #3A3A8D, #8A2BE2);
-}
-
-.apprentice-plan {
-  background: linear-gradient(to bottom, #FF8C42, #FF6E00);
-}
-
-.sos-plan {
-  background: linear-gradient(to bottom, #6D83F2, #4C60CE);
-}
-
-
-@media (max-width: 768px) {
-  .membership-plans-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .membership-plan-card {
-    width: 100%;
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-}
-
-
-/* html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
-
-
-.membership-page-background {
-  background-image: url('./images/Dark-mpdern.png'); 
-  background-size: cover;
+/* Membership Page Background */
+/* .membership-page-background {
+  background-image: url('./images/Dark-mpdern.png');
+  background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; 
+  max-height: 100vh;
+  margin-top: -3vh;
+} */
+.membership-page-background {
+  background-image: url('./images/Dark-mpdern.png'); /* Replace with your correct image path */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  min-height: 100vh; /* Ensure it covers at least the entire viewport height */
+  display: flex; /* Ensure the content stretches within */
+  flex-direction: column;
+  justify-content: space-between; /* Space out the content from top to bottom */
 }
+.container {
+  height: 100vh; /* Full height of the viewport */
+}
+
 
 .membership-plans-container {
-  padding: 50px 20px;
+  padding: 2vw 1vw; /* Reduce padding around the container */
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
+  gap: 15px; /* Adjust gap between cards */
+  max-width: 80vw; /* Reduce max width of the container to make it smaller */
+  width: 100%; /* Ensure container doesn't overflow */
+  margin: 0 auto; /* Center the container */
+  min-height: 100vh; /* Keep the full viewport height if needed */
 }
 
+/* Membership Plan Card */
 .membership-plan-card {
   border-radius: 20px;
-  padding: 20px;
+  padding: 2vw; /* Dynamic padding */
   text-align: center;
   color: white;
-  width: 100%;
-  max-width: 300px;
-  background: linear-gradient(to bottom, #fff, #fff);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1 1 22vw; /* Flex-grow and basis ensure equal width */
+  max-width: 22vw; /* Width scales with viewport */
+  min-height: 550px; /* Set minimum height to ensure consistent height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  justify-content: space-between; /* Ensure content is evenly spaced */
 }
 
+/* Hover effects */
 .membership-plan-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
+/* Plan Header */
 .membership-plan-header {
-  font-size: 2rem;
+  font-size: 1.8vw; /* Scales with viewport width */
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
 }
 
+/* Plan Price */
 .membership-plan-price {
-  font-size: 1.8rem;
+  font-size: 1.5vw;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
+/* Plan Features List */
 .membership-plan-features {
   list-style: none;
   padding: 0;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 1vw;
+  margin-bottom: 2vw;
 }
 
 .membership-plan-features li {
-  margin-bottom: 10px;
+  margin-bottom: 1vw;
 }
 
+/* Plan Button */
 .membership-plan-button {
   background-color: white;
   color: #333;
   border-radius: 50px;
   font-weight: bold;
-  padding: 12px;
+  padding: 1vw; /* Dynamic button padding */
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1vw; /* Dynamic font size */
   width: 80%;
-  margin: 1rem auto;
+  margin: 1vw auto;
 }
 
 .membership-plan-button:hover {
@@ -201,6 +108,7 @@ body {
   transform: translateY(-3px);
 }
 
+/* Plan backgrounds */
 .executive-plan {
   background: linear-gradient(to bottom, #FF4500, #FF6347);
 }
@@ -217,16 +125,91 @@ body {
   background: linear-gradient(to bottom, #6D83F2, #4C60CE);
 }
 
+/* Responsive Design for smaller devices */
 
-@media (max-width: 768px) {
+/* For larger screens (desktop, 1024px and above) */
+@media (min-width: 1024px) {
   .membership-plans-container {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .membership-plan-card {
-    width: 100%;
-    max-width: 90%;
-    margin-bottom: 20px;
+    flex: 1 1 22%; /* Four cards per row */
+    max-width: 22vw;
   }
-} */
+}
+
+/* For tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .membership-plans-container {
+    flex-wrap: wrap;
+    padding: 4vw;
+    justify-content: space-around;
+  }
+
+  .membership-plan-card {
+    max-width: 45vw; /* Two cards per row */
+    flex: 1 1 45vw;
+    min-height: 500px; /* Ensure minimum height for consistency */
+  }
+
+  .membership-plan-header, .membership-plan-price, .membership-plan-button {
+    font-size: 1.8rem;
+  }
+}
+.MuiButton-root {
+  margin-bottom: 0; /* Reduce margin-bottom */
+  margin-top: 20px;
+}
+
+
+/* For tablets and smaller screens (up to 768px) */
+@media (max-width: 768px) {
+  .membership-plans-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .membership-plan-card {
+    max-width: 90vw; /* One card per row */
+    flex: 1 1 90vw;
+    min-height: 450px; /* Adjust minimum height for smaller screens */
+  }
+
+  .membership-plan-header, .membership-plan-price, .membership-plan-button {
+    font-size: 1.5rem;
+  }
+
+  .membership-plan-button {
+    width: 90%;
+  }
+}
+
+/* For mobile devices (up to 576px) - 2x2 grid */
+@media (max-width: 576px) {
+  .membership-plans-container {
+    flex-direction: row; /* Keep it as row for a 2x2 grid */
+    flex-wrap: wrap; /* Allow wrapping to create the 2x2 grid */
+    padding: 3vw;
+    justify-content: space-between; /* Ensure even spacing between cards */
+  }
+
+  .membership-plan-card {
+    max-width: 48vw; /* Each card will take up almost half the width */
+    flex: 1 1 48vw; /* Adjust flex to create 2 cards per row */
+    margin-bottom: 2rem; /* Space between rows */
+    padding: 5vw;
+    min-height: 400px; /* Adjust minimum height for mobile devices */
+  }
+
+  .membership-plan-header, 
+  .membership-plan-price, 
+  .membership-plan-button {
+    font-size: 1.2rem; /* Adjust font size for smaller devices */
+  }
+
+  .membership-plan-button {
+    width: 90%; /* Slightly smaller buttons to fit in the card */
+  }
+}

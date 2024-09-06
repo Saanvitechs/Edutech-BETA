@@ -1,37 +1,64 @@
 .resource-container {
   display: flex;
   justify-content: center;
-  min-height: 110vh;
-  padding: 30px;
+  min-height: 93vh;
+  padding: 20px; /* Reduced padding for a more compact layout */
   width: 100%;
   background-image: url('./images/Dark mpdern.jpg'); /* Replace with your image path */
   background-size: cover; /* Ensures the image covers the entire container */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Makes the background fixed while scrolling */
-  background-color: rgba(0, 0, 0, 0.8); 
-  backdrop-filter: blur(5px); 
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
 }
 
 .resource-content {
   margin-left: 1rem;
-  margin-top: 5rem;
+  margin-top: 2rem; /* Reduced margin for a tighter design */
   width: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Add a background color for better readability */
-  padding: 50px;
+  background: rgba(0, 0, 0, 0.15); /* Slightly darker background for better readability */
+  padding: 40px; /* Reduced padding inside the content area */
   border-radius: 10px;
 }
 
 .resource-topic-card {
-  padding: 20px;
+  padding: 15px; /* Reduced padding inside each card */
   background: #1e1e1e; /* Dark background */
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  text-align: left;
-  transition: transform 0.7s ease, box-shadow 0.3s ease;
+  border-radius: 10px; /* Slightly smaller border radius */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Lighter shadow for a subtle effect */
+  text-align: left; /* Keep text aligned left */
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  min-height: 220px; /* Reduced minimum height for smaller cards */
+  display: flex;
+  flex-direction: column; /* Ensure vertical layout of content */
+  justify-content: space-between;
+}
+
+.resource-topic-card h3 {
+  font-size: 1.3rem; /* Slightly smaller font size for the headers */
+  color: #ffcc00; /* Bright text color for headers */
+  text-align: center; /* Keep text aligned */
+  margin-bottom: 25px; /* Adjust margin to keep spacing tight */
+}
+
+.resource-topic-card ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.resource-topic-card ul li {
+  font-size: 1rem; /* Consistent font size for list items */
+  margin-bottom: 10px; /* Space out list items slightly */
+}
+
+.resource-topic-card a {
+  color: #fff; /* Consistent link color */
+  text-decoration: none;
+  font-size: 1rem; /* Adjust font size for links */
 }
 
 .resource-topic-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }

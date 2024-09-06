@@ -1,0 +1,58 @@
+
+   .resource-container {
+    background-color: #f8f8f8;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .arithmetic-container {
+    
+    background-color: #f8f8f8;
+    max-width: 100%;
+    padding: 10px;    
+  }
+  
+  .topics-grid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 5rem;
+  }
+  
+  .topic-item {
+    color: #000;
+  }
+  
+  .subtopic-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .subtopic-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .topic-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .folder-icon {
+    color: #ffcc00;
+    margin-right: 5px;
+  }
+  
+  .topic-title {
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+  
+  .subtopic-title {
+    font-weight: 500;
+  }
+  

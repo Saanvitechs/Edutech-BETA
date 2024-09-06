@@ -10,7 +10,7 @@ import qrCode4 from './images/titan.jpg';
 import qrCode5 from './images/EP1.jpg';
 import qrCode6 from './images/TITAN1.jpg';
 import { AuthContext } from '../hooks/AuthContext';
-import './MembershipPlans.module.css'; // Ensure correct CSS file import
+import styles from './MembershipPlans.module.css'; // Ensure correct CSS file import
 
 const MembershipPlans = () => {
   const { isAuthenticated } = useContext(AuthContext);
@@ -100,8 +100,8 @@ const MembershipPlans = () => {
   };
 
   return (
-    <div className="membership-page-background"> {/* Apply the background class here */}
-      <Container maxWidth="lg" className="membership-plans-container" style={{ marginTop: '100px' }}>
+    <div className={styles['membership-page-background']}>
+      <Container maxWidth="lg" className={styles['membership-plans-container']} style={{ marginTop: '100px' }}>
         <Typography
           variant="h4"
           align="center"
@@ -127,7 +127,7 @@ const MembershipPlans = () => {
             >
               <Card
                 style={{
-                  background: plan.background, // Use inline style for background gradient
+                  background: plan.background,
                   borderRadius: '15px',
                   boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
                   position: 'relative',
@@ -135,9 +135,9 @@ const MembershipPlans = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  height: '600px', // Set a fixed height
+                  height: '600px',
                   transition: 'transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out',
-                  overflow: 'hidden', // Ensure text does not overflow outside the card
+                  overflow: 'hidden',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'scale(1.05)';
@@ -228,4 +228,3 @@ const MembershipPlans = () => {
 };
 
 export default MembershipPlans;
-
