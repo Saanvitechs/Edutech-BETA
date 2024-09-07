@@ -1,0 +1,70 @@
+@import './Stats.css';
+@import './Testimonials.css';
+@import './Referrals.css';
+
+/* Rest of the styles specific to the new page */
+
+.new-page-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin-top: 75px;
+}
+
+.new-page-header {
+  background-color: #f5f5f5;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.new-page-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.new-page-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+.vision-section,
+.why-choose-us-section,
+.pricing-section {
+  margin: 40px 0;
+}
+
+.vision-section h2,
+.why-choose-us-section h2,
+.pricing-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.vision-section p,
+.pricing-section p {
+  font-size: 16px;
+  color: #333;
+}
+
+.why-choose-us-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.why-choose-us-section li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}

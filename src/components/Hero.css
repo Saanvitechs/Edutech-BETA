@@ -1,0 +1,97 @@
+.super-hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #1f0135 40%, #2d004a);
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.super-hero-content {
+  max-width: 60%;
+}
+
+.super-hero-content h1 {
+  font-size: 76px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff6f61, #ff8e53);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.super-hero-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.super-batch-starts {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #bdbdbd;
+}
+
+.super-apply-button {
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #ff6f61, #ff8e53);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 15px rgba(255, 110, 80, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.super-apply-button:hover {
+  background: linear-gradient(90deg, #ff8e53, #ff6f61);
+  transform: translateY(-2px);
+}
+
+.super-hero-animation {
+  width: 600px;
+  height: 400px;
+  animation: bounce 3s infinite ease-in-out; /* Continuous bounce animation */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Moves up */
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@media (max-width: 768px) {
+  .super-hero-section {
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    padding: 50px 20px;
+  }
+
+  .super-hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .super-hero-animation {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+}

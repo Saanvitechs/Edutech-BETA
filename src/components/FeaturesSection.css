@@ -1,0 +1,41 @@
+.features-section {
+    padding: 50px 60px;
+    background-color: #1f0135;
+  }
+  
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .feature-card {
+    background-color: #2b055a;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px;
+    width: 30%;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .feature-card img {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 16px;
+    color: #ccc;
+  }
+  

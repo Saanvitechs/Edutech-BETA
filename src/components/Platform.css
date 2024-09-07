@@ -1,0 +1,22 @@
+.platforms {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .platforms h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  
+  .platform-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .platform-logos img {
+    height: 60px;
+    width: auto;
+  }
+  

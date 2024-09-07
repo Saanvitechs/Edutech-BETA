@@ -25,15 +25,15 @@ const ReviewCarousel = () => {
       review: "Joining TREx was one of the best decisions I made during my career transition. The guidance and support provided throughout the training were exceptional. The real-world examples used in teaching were particularly helpful in bridging the gap between theory and practice.",
     },
     {
-      name: "Ayush Pandey",
+      name: "Ashutosh Pandey",
       review: "TREx offers an incredible learning experience. The sessions are well-organized, and the trainers are industry experts who share valuable knowledge. The hands-on approach really helped me apply what I learned and gain confidence in my skills.",
     },
     {
-      name: "Gaurav Mathur",
+      name: "Priyanshu Mishra",
       review: "The TREx team is amazing! They are passionate about teaching and provide all the resources needed to succeed. The combination of theory and practical work made learning enjoyable and effective. I highly recommend TREx to anyone looking to advance their career.",
     },
     {
-      name: "Lalit Kumar",
+      name: "Shiva Srivastava",
       review: "What I love about TREx is their commitment to providing top-notch education. The instructors are knowledgeable and approachable, making the learning process smooth and enjoyable. The focus on real-world applications has made a huge difference in my professional growth.",
     },
   ];
