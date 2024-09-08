@@ -91,7 +91,7 @@ const PlanDetailsPopup = ({ open, onClose, planDetails }) => {
             <li key={index}>{feature}</li>
           ))}
         </ul>
-        <p>Price: ₹{planDetails?.price}</p>
+        {/* <p>Price: ₹{planDetails?.price}</p> */}
         <p className="additional-text">
           This plan includes advanced features, professional guidance, and support for your career growth.
         </p>

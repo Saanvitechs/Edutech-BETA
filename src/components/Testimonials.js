@@ -4,20 +4,25 @@ import './Testimonials.css';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "Joining this course was the best decision I've ever made. The knowledge I gained has been invaluable!",
+      quote: "This program changed the trajectory of my career. The mentorship, real-world projects, and guidance helped me land my dream job!",
       author: "Jane Doe",
       position: "Software Engineer at Google"
     },
     {
-      quote: "The mentors and guidance provided are top-notch. I feel prepared for anything!",
+      quote: "I never imagined I would learn so much in such a short time. The program prepared me for industry challenges like no other.",
       author: "John Smith",
       position: "Full Stack Developer at Microsoft"
     },
     {
-      quote: "I would recommend this program to anyone looking to elevate their career in tech.",
+      quote: "The hands-on experience and in-depth training made me confident to take on real-world tasks in the tech industry.",
       author: "Emily Johnson",
       position: "Product Manager at Amazon"
     },
+    {
+      quote: "I highly recommend this program to anyone looking to upskill and get ahead in the competitive tech field.",
+      author: "Michael Lee",
+      position: "Data Scientist at Facebook"
+    }
   ];
 
   return (

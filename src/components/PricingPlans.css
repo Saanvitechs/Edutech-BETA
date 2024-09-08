@@ -1,0 +1,102 @@
+.pricing-section {
+  padding: 60px;
+  background-color: rgb(10, 0, 25);
+  color: #fff;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff8e53;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.pricing-card {
+  padding: 40px;
+  border-radius: 12px;
+  background-color: rgb(20, 2, 48);
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, border 0.5s ease-in-out;
+  border: 3px solid transparent;
+  position: relative;
+}
+
+.bestseller-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  border-image: linear-gradient(90deg, rgba(255, 0, 132, 1), rgba(0, 229, 255, 1), rgba(0, 255, 132, 1));
+  border-image-slice: 1;
+}
+
+.plan-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ff9e67;
+}
+
+.plan-price {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.plan-features li {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.get-now-button {
+  padding: 12px 20px;
+  background-color: #ff8e53;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-now-button:hover {
+  background-color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    width: 100%;
+  }
+}

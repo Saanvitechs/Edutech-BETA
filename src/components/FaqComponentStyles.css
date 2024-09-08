@@ -1,0 +1,53 @@
+.faq-component-section {
+  padding: 80px 20px;
+  background-color: rgb(10, 0, 25); /* Background color */
+  text-align: center;
+  color: #fff;
+}
+
+.faq-component-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #ff8e53;
+}
+
+.faq-component-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-component-card {
+  margin-bottom: 40px;
+  background-color: rgb(20, 2, 48); /* Card background color */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.faq-component-question {
+  font-size: 1.9rem;
+  color: #ff9e67;
+  margin-bottom: 15px;
+}
+
+.faq-component-answer {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .faq-component-content {
+    text-align: center;
+  }
+
+  .faq-component-question {
+    font-size: 1.6rem;
+  }
+
+  .faq-component-answer {
+    font-size: 1rem;
+  }
+}

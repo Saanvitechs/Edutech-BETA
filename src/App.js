@@ -100,7 +100,6 @@ import Resource from './components/Resource';
 import StudyContent from './components/StudyContent';
 import Arithmetic from './components/Arithmetic';
 import NewPageComponent from './components/NewPageComponent';
-// import HomePage from './components/HomePage';  // Ensure this path is correct
 import Testimonials from './components/Testimonials';
 import Stats from './components/Stats';
 import Referral from './components/Referrals'; // Update this if the actual path is different
@@ -120,9 +119,7 @@ function App() {
           <Route path="/arithmetic" element={<Arithmetic />} />
           <Route path="/studycontent/:id" element={<StudyContent />} />
           
-          {/* New page with testimonials, stats, and referral */}
           <Route path="/new-page-route" element={<NewPageComponent />} />
-          {/* <Route path="/home" element={<HomePage />} /> Ensure this component is present */}
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/referral" element={<Referral />} />
