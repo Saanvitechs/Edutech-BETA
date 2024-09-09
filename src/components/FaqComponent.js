@@ -8,13 +8,13 @@
 //     setActiveIndex(activeIndex === index ? null : index);
 //   };
 
-//   const faqData = [
-//     { question: 'How can I apply?', answer: 'Click the "Apply" button on the homepage to get started.' },
-//     { question: 'What is the course duration?', answer: 'Our programs typically last for 6 months, with intensive hands-on training.' },
-//     { question: 'Do you offer career support?', answer: 'Yes, we offer career counseling, interview prep, and placement assistance.' },
-//     { question: 'Is prior experience required?', answer: 'No, our courses cater to all levels, including beginners.' },
-//     { question: 'Are there any prerequisites?', answer: 'A passion for learning and a dedication to complete the projects is all you need!' },
-//   ];
+  // const faqData = [
+  //   { question: 'How can I apply?', answer: 'Click the "Apply" button on the homepage to get started.' },
+  //   { question: 'What is the course duration?', answer: 'Our programs typically last for 6 months, with intensive hands-on training.' },
+  //   { question: 'Do you offer career support?', answer: 'Yes, we offer career counseling, interview prep, and placement assistance.' },
+  //   { question: 'Is prior experience required?', answer: 'No, our courses cater to all levels, including beginners.' },
+  //   { question: 'Are there any prerequisites?', answer: 'A passion for learning and a dedication to complete the projects is all you need!' },
+  // ];
 
 //   return (
 //     <section className="faqs">
@@ -41,23 +41,13 @@ import './FaqComponentStyles.css';
 
 const FaqComponent = () => {
   const faqItems = [
-    {
-      question: "How can I sign up?",
-      answer: "You can sign up by clicking the 'Get Started' button and filling in your details."
-    },
-    {
-      question: "What platforms do you support?",
-      answer: "We support Android, iOS, and web platforms."
-    },
-    {
-      question: "Is there a trial period?",
-      answer: "Yes, we offer a 14-day trial period for all new users."
-    },
-    {
-      question: "What is the refund policy?",
-      answer: "We offer a full refund within the first 30 days of subscription if you are not satisfied."
-    }
-  ];
+   
+      { question: 'How can I apply?', answer: 'Click the "Apply" button on the homepage to get started.' },
+      { question: 'What is the course duration?', answer: 'Our programs typically last for 6 months, with intensive hands-on training.' },
+      { question: 'Do you offer career support?', answer: 'Yes, we offer career counseling, interview prep, and placement assistance.' },
+      { question: 'Is prior experience required?', answer: 'According to the plan chosen it will depends' },
+      { question: 'Are there any prerequisites?', answer: 'A passion for learning and a dedication to complete the projects is all you need!' },
+    ];
 
   return (
     <section className="faq-component-section">

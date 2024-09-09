@@ -10,12 +10,12 @@ import threesixty from './images/threesixty.png';
 
 const FeaturesSection = () => {
   const features = [
-    { title: 'Referrals Provided', description: 'Referrals to 40 Dream Companies like Amazon, Cred, Akamai, etc.', icon: referIcon },
-    { title: 'Placement Drives Provided', description: 'Sit for our Placement Drives of 15+ Dream Companies and perform well.', icon: placement },
-    { title: '100% Placements', description: 'All previous batches have had 100% placements. Check our placement record.', icon: place },
-    { title: 'Full Stack Internship', description: 'Full Stack Training and Internship by Amazon-placed seniors.', icon: coding },
-    { title: 'Live Project Building', description: 'Build a live project from scratch and showcase it in your resume.', icon: project },
-    { title: '360° Placement Program', description: 'Tailored program to prepare you for on-campus and off-campus placements.', icon: threesixty }
+    { title: 'Doubt Sessions', description: 'Doubt Sessions to resolves your doubt with our experts', icon: referIcon },
+    { title: 'Placement Help', description: 'Interview Prep in line with Indusrty Standard with assessments and feedback', icon: placement },
+    { title: '100% Guidance', description: 'We provide 100% guidance to make our students skilled to the industry standards. ', icon: place },
+    { title: 'On Job Training', description: 'On Job Training and Internship to get skilled and experienced with the industry standards.', icon: coding },
+    { title: 'Live Project Building', description: 'Build a live project from scratch and showcase it and build your resume to increase chances for getting hired', icon: project },
+    { title: '360° Assisting Program', description: 'Tailored program to prepare you for industry standards and coding to achieve your dreams.', icon: threesixty }
   ];
 
   return (
