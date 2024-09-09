@@ -1,13 +1,10 @@
 import React from 'react';
 import './Hero.css';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-const Hero = () => {
-  const navigate = useNavigate(); // Initialize navigate function
-
-  // Handle the apply button click to navigate to the membership plan page
+const Hero = ({ pricingRef }) => {
+  // Handle the apply button click to scroll to the PricingPlans section
   const handleApplyClick = () => {
-    navigate('/membership-plan');
+    pricingRef.current.scrollIntoView({ behavior: 'smooth' }); // Smooth scrolling to PricingPlans
   };
 
   return (

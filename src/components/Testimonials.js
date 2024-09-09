@@ -5,23 +5,23 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "This program changed the trajectory of my career. The mentorship, real-world projects, and guidance helped me land my dream job!",
-      author: "Jane Doe",
-      position: "Software Engineer at Google"
+      author: "Saksham Srivastava",
+      position: "Java Backend Developer"
     },
     {
       quote: "I never imagined I would learn so much in such a short time. The program prepared me for industry challenges like no other.",
-      author: "John Smith",
-      position: "Full Stack Developer at Microsoft"
+      author: "Satyam Verma",
+      position: "Full Stack Developer"
     },
     {
       quote: "The hands-on experience and in-depth training made me confident to take on real-world tasks in the tech industry.",
-      author: "Emily Johnson",
-      position: "Product Manager at Amazon"
+      author: "Abhijeet Saxena",
+      position: "Project Manager"
     },
     {
       quote: "I highly recommend this program to anyone looking to upskill and get ahead in the competitive tech field.",
-      author: "Michael Lee",
-      position: "Data Scientist at Facebook"
+      author: "Sreyashkar",
+      position: "Java Developer"
     }
   ];
 

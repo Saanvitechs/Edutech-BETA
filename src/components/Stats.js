@@ -7,19 +7,19 @@ const StatsSection = () => {
       <div className="stats-container">
         <div className="stat-item">
           <h2>100%</h2>
-          <p>Placements</p>
+          <p>Guidance</p>
         </div>
         <div className="stat-item">
-          <h2>1300+</h2>
-          <p>Cracked Dream Companies</p>
+          <h2>500+</h2>
+          <p>Onboards</p>
         </div>
         <div className="stat-item">
-          <h2>70+</h2>
-          <p>Placed in Amazon</p>
+          <h2>1000+</h2>
+          <p>Registered Students</p>
         </div>
         <div className="stat-item">
-          <h2>2000+</h2>
-          <p>Students Placed</p>
+          <h2>1000+</h2>
+          <p>Class Attented</p>
         </div>
       </div>
     </section>
