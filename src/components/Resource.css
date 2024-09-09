@@ -2,44 +2,44 @@
   display: flex;
   justify-content: center;
   min-height: 93vh;
-  padding: 20px; /* Reduced padding for a more compact layout */
+  padding: 20px;
   width: 100%;
-  background-image: url('./images/Dark mpdern.jpg'); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-attachment: fixed; /* Makes the background fixed while scrolling */
+  background-image: url('./images/Dark mpdern.jpg'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
 }
 
 .resource-content {
   margin-left: 1rem;
-  margin-top: 2rem; /* Reduced margin for a tighter design */
+  margin-top: 2rem; 
   width: 100%;
-  background: rgba(0, 0, 0, 0.15); /* Slightly darker background for better readability */
-  padding: 40px; /* Reduced padding inside the content area */
+  background: rgba(0, 0, 0, 0.15); 
+  padding: 40px; 
   border-radius: 10px;
 }
 
 .resource-topic-card {
-  padding: 15px; /* Reduced padding inside each card */
-  background: #1e1e1e; /* Dark background */
-  border-radius: 10px; /* Slightly smaller border radius */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Lighter shadow for a subtle effect */
-  text-align: left; /* Keep text aligned left */
+  padding: 15px; 
+  background: #1e1e1e; 
+  border-radius: 10px; 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); 
+  text-align: left; 
   transition: transform 0.5s ease, box-shadow 0.3s ease;
-  min-height: 220px; /* Reduced minimum height for smaller cards */
+  min-height: 220px; 
   display: flex;
-  flex-direction: column; /* Ensure vertical layout of content */
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .resource-topic-card h3 {
-  font-size: 1.3rem; /* Slightly smaller font size for the headers */
-  color: #ffcc00; /* Bright text color for headers */
-  text-align: center; /* Keep text aligned */
-  margin-bottom: 25px; /* Adjust margin to keep spacing tight */
+  font-size: 1.3rem; 
+  color: #ffcc00; 
+  text-align: center; 
+  margin-bottom: 25px; 
 }
 
 .resource-topic-card ul {
@@ -48,14 +48,14 @@
 }
 
 .resource-topic-card ul li {
-  font-size: 1rem; /* Consistent font size for list items */
-  margin-bottom: 10px; /* Space out list items slightly */
+  font-size: 1rem; 
+  margin-bottom: 10px; 
 }
 
 .resource-topic-card a {
-  color: #fff; /* Consistent link color */
+  color: #fff; 
   text-decoration: none;
-  font-size: 1rem; /* Adjust font size for links */
+  font-size: 1rem; 
 }
 
 .resource-topic-card:hover {
