@@ -1,0 +1,148 @@
+/* Carousel Container */
+.review-carousel {
+    background: #140230;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    perspective: 4000px;
+    position: relative;
+    height: 60vh;
+}
+
+/* Carousel Title */
+.carousel-title {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fffae3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: title-fade-in 1s ease-in;
+    position: relative;
+    top: -20px; /* Move the title 20px upward */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Review Card */
+.review-card {
+    background-color: #ffffff;
+    color: #1e1e1e;
+    border-radius: 10px;
+    padding: 35px 20px;
+    margin: 0 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s ease, box-shadow 0.5s ease;
+    perspective: 1000px;
+    backface-visibility: hidden;
+    font-family: 'Roboto', sans-serif; /* Clean, professional font */
+}
+
+/* Default state for all cards */
+.slick-slide {
+    opacity: 0.7;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+/* Center (active) slide - this is the middle card that pops out */
+.slick-slide.slick-current {
+    transform: scale(1.1) translateZ(150px); /* Enlarge and lift the center card */
+    opacity: 1;
+    z-index: 2; /* Bring it to the front */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ff6b6b; /* Highlight border for center card */
+}
+
+/* Left and right cards (adjacent to the center card) */
+.slick-slide.slick-prev {
+    transform: rotateY(20deg) translateZ(-100px) translateX(-30px); /* Rotate left card and move back */
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.slick-slide.slick-next {
+    transform: rotateY(-20deg) translateZ(-100px) translateX(30px); /* Rotate right card and move back */
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* Cards further away from the center */
+.slick-slide:not(.slick-prev):not(.slick-next):not(.slick-current) {
+    transform: scale(0.8) translateZ(-200px); /* Move these cards further back */
+    opacity: 0.5;
+}
+
+/* Hover effect to enhance card focus */
+.review-card:hover {
+    transform: scale(1.15) translateZ(180px); /* Enlarge a bit more on hover */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Review Text */
+.review-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Review Author */
+.review-author h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2575fc; /* Accent color */
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Slick Dots */
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #f8f8f8;
+    opacity: 0.8;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ff6b6b;
+    opacity: 1;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .review-card {
+      padding: 15px;
+      margin: 0 5px;
+    }
+
+    .review-text {
+      font-size: 1rem;
+    }
+
+    /* Make the center card smaller on mobile */
+    .slick-slide.slick-current {
+      transform: scale(1.05) translateZ(100px);
+    }
+
+    .slick-slide.slick-prev,
+    .slick-slide.slick-next {
+      transform: rotateY(15deg) translateZ(-50px) translateX(-10px);
+    }
+}
+
+/* Title Fade In Animation */
+@keyframes title-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

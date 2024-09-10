@@ -24,13 +24,13 @@
 }
 
 .nav-link:hover {
-  color: #388b69; /* Changed hover color for better contrast */
+  color: #ffffff; /* Changed hover color for better contrast */
   text-decoration: none;
 }
 
 .signup-link {
   font-weight: bold;
-  color: #fff3e0;
+  color: #ffffff;
   /* background-color: ; */
   padding: 8px 3px;
   border-radius: 15px;
@@ -45,7 +45,7 @@
 
 /* Dropdown Menu Styling */
 .navbar .dropdown-menu {
-  background-color: #343a40;
+  background-color: #000000;
   border: none;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   min-width: 100px; /* Adjust this value to make the dropdown narrower */
@@ -62,7 +62,7 @@
 }
 
 .navbar .dropdown-item:hover {
-  background-color: #495057; 
+  background-color: #000000; 
   color: #ff9800; /* Match hover color with link hover */
 }
 
@@ -91,7 +91,7 @@
 }
 
 .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-toggler-icon {

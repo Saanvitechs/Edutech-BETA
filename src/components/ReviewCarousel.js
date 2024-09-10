@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import './Home.css'; // Add your styling here
+import './story.css'; // Add your styling here
 
 const ReviewCarousel = () => {
   const reviews = [
@@ -25,15 +25,15 @@ const ReviewCarousel = () => {
       review: "Joining TREx was one of the best decisions I made during my career transition. The guidance and support provided throughout the training were exceptional. The real-world examples used in teaching were particularly helpful in bridging the gap between theory and practice.",
     },
     {
-      name: "Ashutosh Pandey",
+      name: "Ayush Pandey",
       review: "TREx offers an incredible learning experience. The sessions are well-organized, and the trainers are industry experts who share valuable knowledge. The hands-on approach really helped me apply what I learned and gain confidence in my skills.",
     },
     {
-      name: "Priyanshu Mishra",
+      name: "Gaurav Mathur",
       review: "The TREx team is amazing! They are passionate about teaching and provide all the resources needed to succeed. The combination of theory and practical work made learning enjoyable and effective. I highly recommend TREx to anyone looking to advance their career.",
     },
     {
-      name: "Shiva Srivastava",
+      name: "Lalit Kumar",
       review: "What I love about TREx is their commitment to providing top-notch education. The instructors are knowledgeable and approachable, making the learning process smooth and enjoyable. The focus on real-world applications has made a huge difference in my professional growth.",
     },
   ];
@@ -41,13 +41,15 @@ const ReviewCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 100,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: false,
+    centerMode: true,
     centerPadding: '0',
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    cssEase: 'ease-out', // Smooth transition
     responsive: [
       {
         breakpoint: 1024,
@@ -58,7 +60,7 @@ const ReviewCarousel = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           centerMode: false,
         }
       },
@@ -76,12 +78,12 @@ const ReviewCarousel = () => {
 
   return (
     <div className="review-carousel">
-      <h2>Stories to Inspire</h2>
+      <h2 className="carousel-title">Stories to Inspire</h2>
       <Slider {...settings}>
         {reviews.map((review, index) => (
           <div key={index} className="review-card">
             <div className="review-content">
-              <p>"{review.review}"</p>
+              <p className="review-text">"{review.review}"</p>
               <div className="review-author">
                 <h3>{review.name}</h3>
               </div>

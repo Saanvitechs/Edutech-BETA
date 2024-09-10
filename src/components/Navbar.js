@@ -28,7 +28,7 @@ const CustomNavbar = () => {
 
   return (
     <Navbar
-      bg="dark"
+      bg="black"
       variant="dark"
       expand="lg"
       fixed="top"

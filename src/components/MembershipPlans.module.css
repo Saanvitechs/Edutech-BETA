@@ -1,215 +1,127 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
 /* Membership Page Background */
-/* .membership-page-background {
-  background-image: url('./images/Dark-mpdern.png');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-  max-height: 100vh;
-  margin-top: -3vh;
-} */
 .membership-page-background {
-  background-image: url('./images/Dark-mpdern2.png'); /* Replace with your correct image path */
-  background-size: cover; /* Ensure the image covers the entire area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating */
-  min-height: 100vh; /* Ensure it covers at least the entire viewport height */
-  display: flex; /* Ensure the content stretches within */
+  /* background: linear-gradient(to bottom right, rgb(10, 0, 25), rgb(20, 2, 48)); */
+  background-image: url('./images/black.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space out the content from top to bottom */
-}
-.container {
-  height: 100vh; /* Full height of the viewport */
+  justify-content: space-between;
 }
 
-
+/* Membership Plans Container */
 .membership-plans-container {
-  padding: 2vw 1vw; /* Reduce padding around the container */
+  padding: 2vw 1vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px; /* Adjust gap between cards */
-  max-width: 80vw; /* Reduce max width of the container to make it smaller */
-  width: 100%; /* Ensure container doesn't overflow */
-  margin: 0 auto; /* Center the container */
-  min-height: 100vh; /* Keep the full viewport height if needed */
+  gap: 15px;
+  max-width: 80vw;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh; /* Ensures container takes at least the full viewport height */
 }
 
 /* Membership Plan Card */
 .membership-plan-card {
+  position: relative; /* Ensure ::before is positioned correctly */
   border-radius: 20px;
-  padding: 2vw; /* Dynamic padding */
+  padding: 2vw;
   text-align: center;
   color: white;
-  flex: 1 1 22vw; /* Flex-grow and basis ensure equal width */
-  max-width: 22vw; /* Width scales with viewport */
-  min-height: 550px; /* Set minimum height to ensure consistent height */
+  background:linear-gradient(135deg, #21004c, #340075, #5500b2);
+
+  flex: 1 1 22vw;
+  max-width: 22vw;
+  min-height: 550px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: column; /* Ensure content stacks vertically */
-  justify-content: space-between; /* Ensure content is evenly spaced */
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Ensure border is within the card */
 }
 
-/* Hover effects */
+/* Create the RGB border effect */
+.membership-plan-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px; /* Match card border-radius */
+  padding: 2px; /* Padding for border effect */
+  background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #00ff00, #8000ff); /* RGB gradient */
+  background-size: 400% 400%;
+  z-index: -1; /* Ensure it is behind the card content */
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Show the RGB border on hover */
+.membership-plan-card:hover::before {
+  opacity: 1; /* Show RGB border on hover */
+  animation: animateBorder 4s infinite linear;
+}
+
+/* RGB border animation */
+@keyframes animateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Hover effects for the card */
 .membership-plan-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-/* Plan Header */
-.membership-plan-header {
-  font-size: 1.8vw; /* Scales with viewport width */
-  font-weight: bold;
-  margin-bottom: 1vw;
-}
-
-/* Plan Price */
-.membership-plan-price {
-  font-size: 1.5vw;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-/* Plan Features List */
-.membership-plan-features {
-  list-style: none;
-  padding: 0;
-  font-size: 1vw;
-  margin-bottom: 2vw;
-}
-
-.membership-plan-features li {
-  margin-bottom: 1vw;
-}
-
-/* Plan Button */
-.membership-plan-button {
-  background-color: white;
-  color: #333;
-  border-radius: 50px;
-  font-weight: bold;
-  padding: 1vw; /* Dynamic button padding */
-  border: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
-  font-size: 1vw; /* Dynamic font size */
-  width: 80%;
-  margin: 1vw auto;
-}
-
-.membership-plan-button:hover {
-  background-color: #f06292;
-  transform: translateY(-3px);
-}
-
-/* Plan backgrounds */
-.executive-plan {
-  background: linear-gradient(to bottom, #FF4500, #FF6347);
-}
-
-.titan-plan {
-  background: linear-gradient(to bottom, #3A3A8D, #8A2BE2);
-}
-
-.apprentice-plan {
-  background: linear-gradient(to bottom, #FF8C42, #FF6E00);
-}
-
-.sos-plan {
-  background: linear-gradient(to bottom, #6D83F2, #4C60CE);
-}
-
-/* Responsive Design for smaller devices */
-
-/* For larger screens (desktop, 1024px and above) */
-@media (min-width: 1024px) {
-  .membership-plans-container {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .membership-plan-card {
-    flex: 1 1 22%; /* Four cards per row */
-    max-width: 22vw;
-  }
-}
-
-/* For tablets (up to 1024px) */
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .membership-plans-container {
-    flex-wrap: wrap;
     padding: 4vw;
     justify-content: space-around;
   }
 
   .membership-plan-card {
-    max-width: 45vw; /* Two cards per row */
+    max-width: 45vw;
     flex: 1 1 45vw;
-    min-height: 500px; /* Ensure minimum height for consistency */
+    min-height: 500px;
   }
 
   .membership-plan-header, .membership-plan-price, .membership-plan-button {
     font-size: 1.8rem;
   }
 }
-.MuiButton-root {
-  margin-bottom: 0; /* Reduce margin-bottom */
-  margin-top: 20px;
+
+@media (max-width: 768px) {
+  .membership-page-background {
+    background-size: cover;
+    background-position: top center;
+    min-height: 300vh;
+  }
 }
 
+@media (max-width: 576px) {
+  .membership-page-background {
+    background-size: cover;
+    background-position: center;
+  }
 
-/* For tablets and smaller screens (up to 768px) */
-@media (max-width: 768px) {
   .membership-plans-container {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .membership-plan-card {
-    max-width: 90vw; /* One card per row */
-    flex: 1 1 90vw;
-    min-height: 450px; /* Adjust minimum height for smaller screens */
-  }
-
-  .membership-plan-header, .membership-plan-price, .membership-plan-button {
-    font-size: 1.5rem;
-  }
-
-  .membership-plan-button {
-    width: 90%;
-  }
-}
-
-/* For mobile devices (up to 576px) - 2x2 grid */
-@media (max-width: 576px) {
-  .membership-plans-container {
-    flex-direction: row; /* Keep it as row for a 2x2 grid */
-    flex-wrap: wrap; /* Allow wrapping to create the 2x2 grid */
-    padding: 3vw;
-    justify-content: space-between; /* Ensure even spacing between cards */
-  }
-
-  .membership-plan-card {
-    max-width: 48vw; /* Each card will take up almost half the width */
-    flex: 1 1 48vw; /* Adjust flex to create 2 cards per row */
-    margin-bottom: 2rem; /* Space between rows */
-    padding: 5vw;
-    min-height: 400px; /* Adjust minimum height for mobile devices */
-  }
-
-  .membership-plan-header, 
-  .membership-plan-price, 
-  .membership-plan-button {
-    font-size: 1.2rem; /* Adjust font size for smaller devices */
-  }
-
-  .membership-plan-button {
-    width: 90%; /* Slightly smaller buttons to fit in the card */
+    max-width: 48vw;
+    flex: 1 1 48vw;
+    min-height: 400px;
   }
 }
