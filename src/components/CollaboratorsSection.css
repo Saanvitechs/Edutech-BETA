@@ -1,4 +1,4 @@
-.collaborators-section {
+/* .collaborators-section {
   background-color: #f8f9fa;
   padding: 20px 20px;
   text-align: center;
@@ -18,14 +18,14 @@
 
 .collaborators-logos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjusted min-width */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
   gap: 15px;
   justify-items: center;
   align-items: center;
 }
 
 .collaborator img {
-  max-width: 70%; /* Reduced max-width */
+  max-width: 70%; 
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;
@@ -41,20 +41,98 @@
   }
 
   .collaborators-logos {
-    grid-template-columns: repeat(5, 1fr); /* 5 columns for medium screens */
+    grid-template-columns: repeat(5, 1fr); 
   }
 
   .collaborator img {
-    max-width: 80px; /* Adjust logo size for medium screens */
+    max-width: 80px; 
   }
 }
 
 @media (min-width: 1200px) {
   .collaborators-logos {
-    grid-template-columns: repeat(5, 1fr); /* Ensure 5 columns on larger screens as well */
+    grid-template-columns: repeat(5, 1fr); 
   }
 
   .collaborator img {
-    max-width: 100px; /* Slightly larger logos on larger screens */
+    max-width: 100px; 
+  }
+} */
+
+/* Section styling */
+.collaborators-section {
+  background: linear-gradient(to right, #0f0c29, #302b63,#24243e);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 35px;
+}
+
+/* Section title styling */
+.collaborators-section h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.collaborators-section h2 span {
+  color: #0056b3;
+}
+
+/* Logos container */
+.collaborators-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted min-width for white tiles */
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* White tile for each collaborator */
+.collaborator-tile {
+  background-color: rgba(255, 255, 255, 0.075);;  /* White tile */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 18px;  /* Rounded corners for a modern look */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collaborator-tile:hover {
+  transform: translateY(-5px);  /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Logos within the tile */
+.collaborator-tile img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .collaborators-section h2 {
+    font-size: 24px;
+  }
+
+  .collaborators-logos {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for medium screens */
+  }
+
+  .collaborator-tile img {
+    max-width: 70%;  /* Slightly reduce the logo size for larger screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .collaborators-logos {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
+  }
+
+  .collaborator-tile img {
+    max-width: 80%;  /* Adjust logo size on larger screens */
   }
 }

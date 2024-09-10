@@ -1,5 +1,5 @@
 .home-container {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #0a0019;
   color: #333;
   max-width: 100%;
 }
@@ -144,9 +144,11 @@
   flex-wrap: wrap;
   justify-content: space-around;
   /* background-color: #beb8fa59; */
-  background-color: #b8f2fa59;
+  /* background-color: #b8f2fa59; */
+  background: linear-gradient(to right, #0f0c29, #302b63,#24243e);
+
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 0px;
   margin: 40px auto;
   width: 100%;
   margin-top: 35px;
@@ -155,9 +157,10 @@
 .stat-card {
   display: flex;
   align-items: center;
-  background-color: #d7edf8c2; /* Dark background color */
+  /* background-color: #d7edf8c2; */
+  background-color: #411482;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: calc(50% - 90px);
   margin-top: 20px;
@@ -169,20 +172,27 @@
 
 .stat-card:hover {
   transform: translateY(-5px); /* Slight lift effect */
-  background-color: #c0fafa; /* Darker background on hover */
+  background-color: #8812f7; /* Darker background on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More intense shadow */
 }
 
 .stat-icon {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 10px;
-  color: hwb(276 2% 11% / 0.795); /* Bright yellow for icons */
+  color: #ffd000; /* Bright yellow for icons */
+}
+
+.stat-card p {
+
+  font-size: 16px;
+  color: #ffffff; /* White text for better contrast */
+
 }
 
 .stat-info h3 {
   margin: 0;
   font-size: 24px;
-  color: #000000; /* White text for better contrast */
+  color: #ffffff; /* White text for better contrast */
 }
 .whatsapp-community-section {
   text-align: center;
