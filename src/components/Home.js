@@ -7,8 +7,13 @@ import './WhyPregradSection.css';
 import Footer from './Footer';
 import './Footer.js';
 import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserShield, faClipboardCheck, faClipboardList, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import reading from './images/reading.png';
+import check from './images/check.png';
+import list from './images/list.png';
+import clas from './images/clas.png'; 
+
+
+
 import CountUp from 'react-countup';
 // import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -107,35 +112,35 @@ const Home = () => {
       <CollaboratorsSection />
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }} className="statistics-section">
-        <div className="stat-card">
-          <FontAwesomeIcon icon={faUserShield} className="stat-icon" />
-          <div className="stat-info">
-            <h3><CountUp end={1.5} decimals={1} suffix=" K" duration={30} /></h3>
-            <p>Registered Students</p>
-          </div>
+      <div className="stat-card">
+        <img src={reading} alt="Registered Students Icon" className="stat-icon" />
+        <div className="stat-info">
+          <h3><CountUp end={1.5} decimals={1} suffix=" K" duration={30} /></h3>
+          <p>Registered Students</p>
         </div>
-        <div className="stat-card">
-          <FontAwesomeIcon icon={faClipboardCheck} className="stat-icon" />
-          <div className="stat-info">
-            <h3><CountUp end={554} duration={35} /></h3>
-            <p>Student Onboarded</p>
-          </div>
+      </div>
+      <div className="stat-card">
+        <img src={check} alt="Onboarded Students Icon" className="stat-icon" />
+        <div className="stat-info">
+          <h3><CountUp end={554} duration={35} /></h3>
+          <p>Student Onboarded</p>
         </div>
-        <div className="stat-card">
-          <FontAwesomeIcon icon={faClipboardList} className="stat-icon" />
-          <div className="stat-info">
-            <h3><CountUp end={414}duration={35} /></h3>
-            <p>Tests Attempted</p>
-          </div>
+      </div>
+      <div className="stat-card">
+        <img src={list} alt="Tests Attempted Icon" className="stat-icon" />
+        <div className="stat-info">
+          <h3><CountUp end={414} duration={35} /></h3>
+          <p>Tests Attempted</p>
         </div>
-        <div className="stat-card">
-          <FontAwesomeIcon icon={faChalkboardTeacher} className="stat-icon" />
-          <div className="stat-info">
-            <h3><CountUp end={1.31} decimals={2} suffix=" K" duration={15} /></h3>
-            <p>Classes Attended</p>
-          </div>
+      </div>
+      <div className="stat-card">
+        <img src={clas} alt="Classes Attended Icon" className="stat-icon" />
+        <div className="stat-info">
+          <h3><CountUp end={1.31} decimals={2} suffix=" K" duration={15} /></h3>
+          <p>Classes Attended</p>
         </div>
-      </motion.div>
+      </div>
+    </motion.div>
 
       <div className="whatsapp-community-section">
         <h4>Join Our whatsapp Community for Placement Updates & Important Resources</h4>

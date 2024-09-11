@@ -1,5 +1,6 @@
 .program-details-container {
-  background-color: #b8f2fa59;
+  /* background-color: #b8f2fa59; */
+  background: linear-gradient(to right, #0f0c29, #302b63,#24243e);
   padding: 20px;
   border-radius: 12px;
   margin: 20px auto;

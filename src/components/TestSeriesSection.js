@@ -109,8 +109,11 @@
 import React, { useState } from 'react';
 import './TestSeriesSection.css';
 import { useNavigate } from 'react-router-dom'; 
-import { faUserGraduate, faChalkboardTeacher, faLaptopCode, faBriefcase } from '@fortawesome/free-solid-svg-icons'; 
+import briefcase from './images/briefcase.png';  // Import image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import bachelor from './images/bachelor.png'; // Import image'
+import codings from './images/codings.png'; // Import imagees/coding1.png'; // Import image
+import interview from './images/interview.png';
 
 const TestSeriesSection = () => {
 
@@ -134,7 +137,8 @@ const TestSeriesSection = () => {
     { 
       defaultText: ' On-Job-Training', 
       hoverText: 'Check Titan Plan', 
-      icon: faBriefcase,
+      icon: briefcase, // Use image path here
+      isImageIcon: true,  // Mark it as an image icon
       planDetails: {
         title: "Titan", 
         description: "3 months Internship + OJT", 
@@ -145,7 +149,8 @@ const TestSeriesSection = () => {
     { 
       defaultText: ' Internship/Guidance', 
       hoverText: 'Check Apprentice Plan', 
-      icon: faUserGraduate,
+      icon: bachelor, // Use image path here
+      isImageIcon: true,   // Mark it as FontAwesome icon
       planDetails: {
         title: "Apprentice", 
         description: "Internship", 
@@ -156,7 +161,8 @@ const TestSeriesSection = () => {
     { 
       defaultText: ' Live Projects', 
       hoverText: 'Check Executive Plan', 
-      icon: faLaptopCode,
+      icon: codings, // Use image path here
+      isImageIcon: true,
       planDetails: {
         title: "Executive", 
         description: "On-Job-Training", 
@@ -167,7 +173,8 @@ const TestSeriesSection = () => {
     { 
       defaultText: ' Interview Preparation', 
       hoverText: 'Check SOS Plan', 
-      icon: faChalkboardTeacher,
+      icon: interview, // Use image path here
+      isImageIcon: true,
       planDetails: {
         title: "SOS", 
         description: "Interview Preparation", 
@@ -190,7 +197,11 @@ const TestSeriesSection = () => {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}>
               <span className="icon">
-                <FontAwesomeIcon icon={button.icon} />
+                {button.isImageIcon ? (
+                  <img src={button.icon} alt="icon" style={{ width: '24px', height: '24px' }} />  // Display image if it's an image icon
+                ) : (
+                  <FontAwesomeIcon icon={button.icon} />  // Display FontAwesome icon if it's not an image
+                )}
               </span>
               <p>
                 <strong>

@@ -18,7 +18,7 @@
 .resource-dashboard {
   background-color: #2c2c2c; /* Darker background for the dashboard */
   /* padding: 20px; */
-  border-right: 2px solid #0e0b01; /* Optional border to separate from content */
+  border-right: 2px solid #ffc400; /* Optional border to separate from content */
   height: 70vh; /* Ensure full height on the left side */
 }
 

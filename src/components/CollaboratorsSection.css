@@ -1,67 +1,6 @@
-/* .collaborators-section {
-  background-color: #f8f9fa;
-  padding: 20px 20px;
-  text-align: center;
-  margin-top: 35px;
-}
-
-.collaborators-section h2 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.collaborators-section h2 span {
-  color: #0056b3;
-}
-
-.collaborators-logos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
-  gap: 15px;
-  justify-items: center;
-  align-items: center;
-}
-
-.collaborator img {
-  max-width: 70%; 
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease-in-out;
-}
-
-.collaborator img:hover {
-  transform: scale(1.1);
-}
-
-@media (min-width: 768px) {
-  .collaborators-section h2 {
-    font-size: 22px;
-  }
-
-  .collaborators-logos {
-    grid-template-columns: repeat(5, 1fr); 
-  }
-
-  .collaborator img {
-    max-width: 80px; 
-  }
-}
-
-@media (min-width: 1200px) {
-  .collaborators-logos {
-    grid-template-columns: repeat(5, 1fr); 
-  }
-
-  .collaborator img {
-    max-width: 100px; 
-  }
-} */
-
 /* Section styling */
 .collaborators-section {
-  background: linear-gradient(to right, #0f0c29, #302b63,#24243e);
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   padding: 40px 20px;
   text-align: center;
   margin-top: 35px;
@@ -73,16 +12,17 @@
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
 }
 
 .collaborators-section h2 span {
-  color: #0056b3;
+  color: #e9ff25;
 }
 
 /* Logos container */
 .collaborators-logos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted min-width for white tiles */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive layout */
   gap: 20px;
   justify-items: center;
   align-items: center;
@@ -90,10 +30,13 @@
 
 /* White tile for each collaborator */
 .collaborator-tile {
-  background-color: rgba(255, 255, 255, 0.075);;  /* White tile */
+  background-color: rgba(255, 255, 255, 0.175); /* White tile */
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  border-radius: 18px;  /* Rounded corners for a modern look */
+  border-radius: 18px; /* Rounded corners for a modern look */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,19 +44,31 @@
 }
 
 .collaborator-tile:hover {
-  transform: translateY(-5px);  /* Slight lift on hover */
+  transform: translateY(-5px); /* Slight lift on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* Logos within the tile */
 .collaborator-tile img {
-  max-width: 80%;
-  height: auto;
-  object-fit: contain;
+  max-width: 80%; /* Ensure logos are properly sized */
+  max-height: 100%;
+  object-fit: contain; /* Maintain aspect ratio of the logos */
 }
 
-/* Media Queries for Responsiveness */
-@media (min-width: 768px) {
+/* Mobile view: 3x3 grid layout for smaller screens */
+@media (max-width: 768px) {
+  .collaborators-logos {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout for mobile screens */
+  }
+
+  .collaborator-tile {
+    width: 100%; /* Ensure each tile takes full width within the grid */
+    max-width: 100%; /* No max-width constraint to prevent overflow */
+  }
+}
+
+/* Medium screens (up to 5 columns) */
+@media (min-width: 768px) and (max-width: 1199px) {
   .collaborators-section h2 {
     font-size: 24px;
   }
@@ -122,17 +77,29 @@
     grid-template-columns: repeat(5, 1fr); /* 5 columns for medium screens */
   }
 
+  .collaborator-tile {
+    width: 260px;  /* Slightly reduce tile size for medium screens */
+    height: 160px;
+  }
+
   .collaborator-tile img {
-    max-width: 70%;  /* Slightly reduce the logo size for larger screens */
+    max-width: 70%;  /* Adjust logo size */
   }
 }
 
+/* Desktop view: 5x2 grid layout for larger screens */
 @media (min-width: 1200px) {
   .collaborators-logos {
-    grid-template-columns: repeat(5, 1fr); /* 5 columns for larger screens */
+    grid-template-columns: repeat(5, 1fr); /* 5 columns layout */
+    grid-auto-rows: auto; /* Ensure rows wrap to make it 5x2 */
+  }
+
+  .collaborator-tile {
+    width: 300px;
+    height: 180px;
   }
 
   .collaborator-tile img {
-    max-width: 80%;  /* Adjust logo size on larger screens */
+    max-width: 80%;
   }
 }

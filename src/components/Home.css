@@ -177,10 +177,12 @@
 }
 
 .stat-icon {
-  font-size: 25px;
+  width: 50px;  /* Set the width of the image */
+  height: 50px; /* Set the height of the image */
   margin-bottom: 10px;
-  color: #ffd000; /* Bright yellow for icons */
+  object-fit: contain; /* Ensure the image scales properly */
 }
+
 
 .stat-card p {
 
@@ -196,7 +198,8 @@
 }
 .whatsapp-community-section {
   text-align: center;
-  background-color: #f4f7f6;
+  /* background-color: #f4f7f6; */
+  background: linear-gradient(to right, #0f0c29, #302b63,#24243e);
   padding: 30px 15px;
   margin: 30px auto;
   border-radius: 15px;
@@ -206,16 +209,16 @@
 
 .whatsapp-community-section h4 {
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: bold;
-  color: #000000;
+  color: #ffd905;
   margin-bottom: 15px;
 }
 
 .whatsapp-community-section p {
   margin-top: 30px;
-  font-size: 14px;
-  color: #666;
+  font-size: 17px;
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
