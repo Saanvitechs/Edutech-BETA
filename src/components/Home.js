@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TestSeriesSection from './TestSeriesSection';
 import ProgramSection from './ProgramSection';
@@ -13,6 +13,7 @@ import check from './images/check.png';
 import list from './images/list.png';
 import clas from './images/clas.png'; 
 import monitor from './images/monitor.png';
+import enquireLogo from './images/enquireLogo.png';
 
 
 
@@ -83,10 +84,40 @@ const FAQSection = () => {
 
 const Home = () => {
   const navigate = useNavigate();
+  const [showText, setShowText] = useState(true);
+  const [isButtonExpanded, setIsButtonExpanded] = useState(true);
+  
+  // State to toggle button text
+
 
   const handleApplyClick = () => {
     navigate('/membership-plan');
   };
+
+  useEffect(() => {
+    let collapseTimer;
+
+    if (isButtonExpanded) {
+      collapseTimer = setTimeout(() => {
+        setShowText(false);
+        setIsButtonExpanded(false);
+      }, 5000); // Collapse after 5 seconds
+    }
+
+    return () => clearTimeout(collapseTimer); // Clear timer on component unmount
+  }, [isButtonExpanded]);
+
+  // Handle click to expand button and open the Google Form
+  const handleEnquireClick = () => {
+    setIsButtonExpanded(true); // Expand the button on click
+    setShowText(true); // Show text when clicked
+
+    // Open Google Form after expanding
+    setTimeout(() => {
+      window.open("https://forms.gle/9XhrgtSo2qa8JhaH8", "_blank"); // Open Google Form in a new tab
+    }, 300);
+  };
+
  
   return (
     <div className="home-container">
@@ -200,6 +231,11 @@ const Home = () => {
       
 
       <Footer />
+       {/* Add the floating Enquire button */}
+       <div className={`floating-btn ${isButtonExpanded ? "expanded" : ""}`} onClick={handleEnquireClick}>
+        <img src={enquireLogo} alt="Enquire Logo" className="enquire-logo" />
+        {showText && <span> Enquire</span>} {/* Show text only when `showText` is true */}
+      </div>
     </div>
   );
 };

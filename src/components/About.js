@@ -18,11 +18,11 @@ const About = () => {
         </div>
         <div className="feature-item">
           <h3>Expert Mentors</h3>
-          <p>Mentorship from top professionals at companies like Google and Microsoft.</p>
+          <p>Mentorship from top professionals at companies like Amazon, Infosys and Nike.</p>
         </div>
         <div className="feature-item">
           <h3>Career Support</h3>
-          <p>Career counseling, interview prep, and guaranteed placements.</p>
+          <p>Career counseling, interview prep, and On job training.</p>
         </div>
       </div>
     </section>

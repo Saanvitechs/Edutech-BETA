@@ -5,7 +5,7 @@ import FeaturesSection from './FeaturesSection';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Testimonials from './Testimonials';
-import Referral from './Referrals';
+// import Referral from './Referrals';
 import Faq from './FaqComponent';
 import About from './About';
 import PricingPlans from './PricingPlan';
@@ -27,7 +27,7 @@ const NewPageComponent = () => {
       <div ref={pricingRef}> {/* Assign ref here */}
         <PricingPlans />
       </div>
-      <Referral />
+      {/* <Referral /> */}
       <About />
       <Faq />
       <Footer />

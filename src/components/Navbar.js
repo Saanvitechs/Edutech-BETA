@@ -48,6 +48,17 @@ const CustomNavbar = () => {
           />
           TREx
         </Navbar.Brand>
+
+        <Nav.Link
+          href="https://forms.gle/8FbbS3bzckijRXnAA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="navbar-book-webinar-btn"
+
+        >
+          Book Webinar
+        </Nav.Link>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav onClick={handleNavClick}>
