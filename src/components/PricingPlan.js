@@ -10,7 +10,7 @@ const PricingPlans = () => {
     {
       title: 'EXECUTIVE PLAN',
       originalPrice: 55990,
-      price: 27990,
+      price: 27990 ,
       features: [
         'On-Job-Training',
         'Guidance by Industry Professionals',

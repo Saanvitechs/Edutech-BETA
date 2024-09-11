@@ -7,10 +7,12 @@ import './WhyPregradSection.css';
 import Footer from './Footer';
 import './Footer.js';
 import { motion } from 'framer-motion';
+
 import reading from './images/reading.png';
 import check from './images/check.png';
 import list from './images/list.png';
 import clas from './images/clas.png'; 
+import monitor from './images/monitor.png';
 
 
 
@@ -32,28 +34,24 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "What kind of career support will I be given?",
-      answer: "This course will provide OJT or On Job Training which will works as experience or helps in gaining experience."
+      answer: "This course provides comprehensive On-the-Job Training (OJT), which serves as a practical platform for participants to gain real-world experience in their field of study. By applying theoretical knowledge in a professional environment, participants will not only enhance their technical skills but also develop critical problem-solving and decision-making abilities. This hands-on experience is designed to bridge the gap between academic learning and workplace expectations, offering a significant advantage in career development and preparing individuals for future professional challenges."
     },
     {
       question: "Can I access course materials after completing the course?",
-      answer: "Yes, you will have a year access to all course materials, including any updates we make in the future."
+      answer: "You will receive full access to all course materials for one year, including any updates or enhancements that are made during this period. This ensures that you stay up-to-date with the latest content and developments, allowing you to continue refining your knowledge and skills throughout the duration of the course. Our commitment to providing updated resources is designed to support your ongoing learning and professional growth, ensuring that the material remains relevant and aligned with industry trends and advancements."
     },
     {
       question: "Who is eligible for these courses?",
-      answer: "Our courses are designed for students, professionals, and anyone interested in upgrading their skills in software development."
+      answer: "Our courses are thoughtfully designed to cater to a diverse audience, including students, professionals, and individuals who are eager to enhance their skills in software development. Whether you are just starting your journey or looking to advance your existing expertise, our programs provide the necessary tools and knowledge to help you succeed. With a focus on practical, industry-relevant skills, these courses offer opportunities for continuous growth and development, making them suitable for learners at any stage of their career or educational path."
     },
-    // {
-    //   question: "What if I miss a lecture?",
-    //   answer: "All our live sessions are recorded, and you will have access to the recordings within 24 hours after the session."
-    // },
     {
       question: "When are the live classes held?",
       answer: "Live sessions are typically held as per the requirement of the batch."
     },
     {
       question: "Does TREx give certificates?",
-      answer: "Yes, we provide experience upon successful completion of our courses."
-    },
+      answer: "Yes, TREx provides certificates upon successfully completing the curriculum. These certificates serve as a formal recognition of your achievement and can be used to demonstrate your expertise in the subject matter covered during the course. The certification process ensures that you have gained the necessary knowledge and skills, reflecting your commitment to professional development."
+    },   
   ];
 
   const toggleFAQ = (index) => {
@@ -89,24 +87,51 @@ const Home = () => {
   const handleApplyClick = () => {
     navigate('/membership-plan');
   };
+ 
   return (
     <div className="home-container">
-      {/* <DesktopPopup /> */}
-      <div className="hero-section">
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="hero-text">
-          <div align='center'>
-            <h1>Bridging Knowledge and Practice for Future Leaders</h1>
+      {/* First Section with Lottie Animation and Text */}
+      <section className="top-section">
+        <div className="top-section-left">
+          {/* Professional Learning Camp with logo */}
+          <div className="camp-heading">
+            <img src={monitor} alt="Logo" />
+            <span className="camp-heading-text">Professional Learning Camp</span>
           </div>
-          <p></p>
-          <p></p>
+          <h1 className="main-heading">
+            THE RIGHT WAY TO LEARN <span className="highlight">PROGRAMMING</span>
+          </h1>
+          <p className="subtext">
+            We Train People to be Professionals.<br/>
+            Become job-ready with projects tailored to industry standards and expectations.
+          </p>
+          <div>
+            {/* Move the button below the subtext */}
+            <button className="applys-btn" onClick={handleApplyClick}>
+              Apply Now
+            </button>
+          </div>
+        </div>
+        
+        <div className="top-section-right">
+          <iframe
+            src="https://lottie.host/embed/b74f2a70-dd1f-4d17-aa09-4b736ea1e786/1UQUvDjQK2.json"
+            style={{ border: 'none', width: '400px', height: '400px' }}
+            title="Lottie Animation"
+          ></iframe>
+        </div>
+      </section>
+
+      {/* Hero Text Box Section */}
+      <section className="hero-section">
+        <div className="hero-text-box">
+          <h1>Bridging Knowledge and Practice for Future Leaders</h1>
           <p>At our core, we connect classroom learning with real-world applications, shaping the next generation of industry leaders.</p>
           <p>Our hands-on training programs empower people to develop essential skills, drive innovation, and excel in their fields.</p>
           <p>Join us to transform your potential into impactful leadership</p>
-          <div align='center'>
-          <button className="apply-btn" onClick={handleApplyClick}>Apply Now</button>
-          </div>
-        </motion.div>
-      </div>
+          
+        </div>
+      </section>
 
       <TestSeriesSection />
       <CollaboratorsSection />

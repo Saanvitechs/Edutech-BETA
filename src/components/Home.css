@@ -1,112 +1,24 @@
 .home-container {
-  background-color: #0a0019;
+  background-color: #12012d;
   color: #333;
   max-width: 100%;
 }
 
-.hero-section {
-  margin-top: 2rem;
-  background: url('./images/hero1.svg') no-repeat center center;
-  background-size: cover;
-  height: 80vh;
-  position: relative;
-  margin-bottom: 20px;
-  padding: 0 20px;
-}
-
-.apply-btn {
-  background-color: green;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.15s ease;
-}
-
-.apply-btn:hover {
-  background-color: darkgreen;
-}
-
-.hero-text {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  background-color: #d7edf8c2;
-  padding: 10px 15px;
-  border-radius: 10px;
-  text-align: center;
-  width: calc(100% - 30px); /* Ensures the hero-text doesn't overflow */
-}
-
-@media only screen and (max-width: 600px) {
-  .hero-section {
-    background: url('./images/hero.png');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    height: 60vh;
-    position: relative;
-    margin-bottom: 20px;
-    padding: 0 20px;
-  }
-  .hero-text {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    background-color: rgba(248, 248, 248, 0.9);
-    padding: 10px 15px;
-    border-radius: 10px;
-    text-align: center;
-    width: calc(100% - 30px); /* Ensures the hero-text doesn't overflow */
-  }
-}
-
-
-
-.hero-text h1 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  line-height: 1.3;
-}
-
-.hero-text p {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.signup-btn {
-  background-color: #00c853;
-  color: white;
-  padding: 12px 25px;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-
-.signup-btn:hover {
-  background-color: #009624;
-}
 
 .about-section {
-  background: #f4f7f6;
-  color: #333;
+  background: linear-gradient(90deg, #2c3e50 0%, #000000 100%);
+  color: #f15f62;
   padding: 20px;
   margin: 40px 20px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  
+  text-align: center;
+
 }
 
 .about-header {
-  background-color: #003366;
-  color: white;
+  /* background-color: #003366; */
+  color: #f15f62;
   padding: 10px 15px;
   font-weight: bold;
   font-size: 16px;
@@ -118,25 +30,30 @@
 }
 
 .about-content p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5;
   margin: 10px 0;
   max-width: 100%;
+  color: #fff;
 }
 
 .read-more-btn {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #000000;
+  background-color: #eb0e21;
   color: white;
   text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: background-position 300ms ease;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #e60d0d 50%, #ff4f4f 50%);
+  border-radius: 14px;
+  background-position: 0% 0%;
 }
 
 .read-more-btn:hover {
-  background-color: #009624;
+  background-position: 100% 0%;
+  background-color: #eb0e21;
 }
 
 .statistics-section {
@@ -243,17 +160,24 @@
   margin: 30px 15px;
   padding: 15px;
   text-align: center;
+  background: linear-gradient(90deg, #2c3e50 0%, #000000 100%);
+
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
 .faq-section h2 {
-  font-size: 22px;
+  font-size: 36px;
   font-weight: bold;
+  color:  #f15f62  ; 
   margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
 }
+
 
 .faq-section p {
   font-size: 14px;
-  color: #666;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -266,6 +190,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   padding: 12px;
@@ -276,16 +201,20 @@
 
 .faq-question:hover {
   /* background-color: #eee2fcc2; */
-  background-color: #b8f2fa59;
+  /* background-color: #b8f2fa59; */
+  background: linear-gradient(90deg, rgba(184, 242, 250, 0.35) 0%, rgba(255, 255, 255, 0) 100%);
+
 }
 
 .faq-answer {
   padding: 12px;
-  border-left: 3px solid red;
+  border-left: 5px solid red;
   background-color: #f9f9f9;
   border-radius: 0 0 5px 5px;
   border-top: none;
-  font-size: 14px;
+  justify-content: space-between;
+  align-items: left;
+  font-size: 16px;
   color: #333;
 }
 
@@ -396,6 +325,7 @@
   .faq-question {
     font-size: 14px;
     padding: 8px;
+    color: #ffffff;
   }
 
   .faq-answer {
@@ -416,3 +346,202 @@
     font-size: 10px;
   }
 }
+
+/* First Section (Top Section with Lottie Animation and Text) */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  background-color: #12012d; /* Background color for the top section */
+}
+
+.top-section-left {
+  flex: 1;
+  text-align: left;
+}
+
+.camp-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.camp-heading img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.camp-heading-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.top-section-right {
+  flex: 1;
+  text-align: right;
+}
+
+/* Main heading */
+.main-heading {
+  font-size: 56px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.main-heading .highlight {
+  color: #f15f62; /* Highlight color for 'PROGRAMMING' */
+}
+
+/* Subtext below the heading */
+.subtext {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Lottie Animation */
+.top-section-right iframe {
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+/* Hero Section (Text Box Section) */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #12012d; /* Darker background color for the hero section */
+  padding: 50px;
+}
+
+.hero-text-box {
+  background: linear-gradient(to right, #0f0c29, #302b63,#24243e);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 1800px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero heading */
+.hero-text-box h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Hero paragraph */
+.hero-text-box p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Apply button in hero section */
+.applys-btn {
+  display: inline-block;
+    background-color: #ff6b6b; /* Initial background color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-position 300ms ease; /* Transition for the hover effect */
+    margin-top: 20px;
+    background-size: 200% 100%; /* Double the background width */
+    background-image: linear-gradient(to right, #ff6b6b 50%, #ff4f4f 50%); /* Sliding gradient from left to right */
+    background-position: 0% 0%; /* Initial background position */
+
+}
+
+.applys-btn:hover {
+  background-position: 100% 0%;
+  background-color: #eb0e21;
+
+}
+/* Existing Styles */
+
+/* Mobile styles (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* Top Section */
+  .top-section {
+    margin-top: 50px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px; /* Reduce padding for mobile */
+  }
+
+  .camp-heading {
+    justify-content: center;
+  }
+
+  .camp-heading img {
+    width: 20px; /* Slightly smaller for mobile */
+    height: 30px;
+  }
+
+  .camp-heading-text {
+    font-size: 20px;
+  }
+
+  .top-section-right {
+    order: 2; /* Move the animation in between the heading and text */
+    margin: 20px 0;
+  }
+
+  .top-section-left {
+    order: 1; /* Ensure heading and subtext come first */
+    text-align: center;
+  }
+
+  .main-heading {
+    font-size: 28px; /* Adjust font size for mobile */
+    margin-bottom: 10px;
+  }
+
+  .subtext {
+    font-size: 16px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 20px; /* Reduce padding for mobile */
+  }
+
+  .hero-text-box {
+    width: 100%; /* Make hero text box smaller */
+    margin: 0 auto; /* Center align the hero text box */
+    padding: 30px; /* Adjust padding for mobile */
+  }
+
+  .hero-text-box h1 {
+    font-size: 24px;
+  }
+
+  .hero-text-box p {
+    font-size: 14px;
+  }
+
+  .applys-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  /* Adjust Lottie animation size for mobile */
+  .top-section-right iframe {
+    width: 300px;  /* Smaller size for mobile */
+    height: 300px;
+  }
+}
+
