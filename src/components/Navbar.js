@@ -14,7 +14,13 @@ const CustomNavbar = () => {
   const [expanded, setExpanded] = useState(false); // State to handle navbar expansion
 
   const handleLogout = () => {
+    // Clear localStorage for popup on logout
+    localStorage.removeItem('popupShown'); // This will reset the popup state
+
+    // Call the logout function from AuthContext
     logout();
+
+    // Redirect to login page
     navigate('/login');
   };
 
@@ -54,7 +60,6 @@ const CustomNavbar = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-book-webinar-btn"
-
         >
           Book Webinar
         </Nav.Link>
@@ -70,7 +75,7 @@ const CustomNavbar = () => {
               <NavDropdown
                 title={<FontAwesomeIcon icon={faUserCircle} size="lg" />}
                 id="profile-dropdown"
-                align="end" // Replace alignRight with align="end"
+                align="end"
                 onClick={handleDropdownClick} // Handle dropdown click
               >
                 <NavDropdown.Item as={Link} to="">{username}</NavDropdown.Item>

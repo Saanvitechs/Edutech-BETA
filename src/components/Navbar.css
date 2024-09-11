@@ -34,23 +34,21 @@
 
 /* Move the Book a Webinar button to the right of the navbar */
 .navbar-book-webinar-btn {
-  margin-left: auto; /* Align to the right */
-  /* margin-right: 20px; Space from the other nav items */
-  background-color: #ff9900;
-  color: #fff;
-  padding: 10px 15px;
+  margin-left: 10px !important; /* Align to the right */
+  background-color: #ff9900 !important; /* Ensure background color is applied */
+  color: #fff !important; /* Ensure text color is applied */
+  padding: 6px 10px !important;
   border-radius: 20px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
-  margin-left: 20px;
   transition: background-color 0.3s ease;
 }
 
-/* .navbar-book-webinar-btn:hover {
-  background-color: #e68900;
-  color: #fff;
-} */
+.navbar-book-webinar-btn:hover {
+  background-color: #e68900 !important; /* Ensure hover background color is applied */
+  color: #fff !important; /* Ensure hover text color is applied */
+}
 
 /* Styling for nav links */
 .nav-link {

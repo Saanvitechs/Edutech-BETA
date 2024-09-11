@@ -3,10 +3,10 @@ import './Popup.css';
 
 const Popup = ({ onClose }) => {
   return (
-    <div className="popup-overlay">
-      <div className="popup-content">
+    <div className="custom-popup-overlay">
+      <div className="custom-popup-content">
         {/* Red Cross Button */}
-        <button className="close-icon" onClick={onClose}>&times;</button>
+        <button className="custom-close-icon" onClick={onClose}>&times;</button>
 
         <h2>Join Our Webinar!</h2>
         <p>
@@ -17,7 +17,7 @@ const Popup = ({ onClose }) => {
           href="https://forms.gle/8FbbS3bzckijRXnAA" // Replace with your actual Google Form link
           target="_blank" 
           rel="noopener noreferrer"
-          className="book-webinar-btn"
+          className="custom-book-webinar-btn"
         >
           Book a Webinar for free
         </a>

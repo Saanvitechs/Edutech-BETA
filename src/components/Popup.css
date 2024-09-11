@@ -1,5 +1,5 @@
 /* Overlay to cover the screen */
-.popup-overlay {
+.custom-popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +13,7 @@
   }
   
   /* Popup content box */
-  .popup-content {
+  .custom-popup-content {
     position: relative; /* Necessary for the close icon to be positioned */
     background-color: #fff;
     padding: 30px;
@@ -22,11 +22,11 @@
     text-align: center;
     max-width: 400px;
     width: 90%; /* Responsive width */
-    animation: fadeIn 0.3s ease-in-out;
+    animation: customFadeIn 0.3s ease-in-out;
   }
   
   /* Add fade-in animation for better effect */
-  @keyframes fadeIn {
+  @keyframes customFadeIn {
     from {
       opacity: 0;
       transform: scale(0.9);
@@ -38,7 +38,7 @@
   }
   
   /* Close icon (Red X) */
-  .close-icon {
+  .custom-close-icon {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -51,12 +51,12 @@
     transition: color 0.3s ease;
   }
   
-  .close-icon:hover {
+  .custom-close-icon:hover {
     color: #d50000;
   }
   
   /* Heading */
-  .popup-content h2 {
+  .custom-popup-content h2 {
     margin-bottom: 10px;
     font-size: 22px;
     font-weight: bold;
@@ -64,14 +64,14 @@
   }
   
   /* Paragraph text */
-  .popup-content p {
+  .custom-popup-content p {
     font-size: 14px;
     color: #666;
     margin-bottom: 20px;
   }
   
   /* Book Webinar button */
-  .book-webinar-btn {
+  .custom-book-webinar-btn {
     background-color: #00c853;
     color: white;
     padding: 10px 20px;
@@ -82,7 +82,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .book-webinar-btn:hover {
+  .custom-book-webinar-btn:hover {
     background-color: #009624;
   }
   
