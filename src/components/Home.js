@@ -342,7 +342,7 @@ const Home = ({ onScrollToPricing }) => {
 
   // Handle click to apply for membership
   const handleApplyClick = () => {
-    navigate('/membership-plan');
+    navigate('/planDetails');
   };
 
   // Timer to collapse the Enquire button

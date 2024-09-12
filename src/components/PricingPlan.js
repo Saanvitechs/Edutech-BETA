@@ -60,9 +60,9 @@
 //   ];
 
 //   // Handle redirect to membership plan page
-//   const handleGetNowClick = () => {
-//     navigate('/membership-plan'); // Redirect to the membership plan page
-//   };
+  // const handleGetNowClick = () => {
+  //   navigate('/membership-plan'); // Redirect to the membership plan page
+  // };
 
 //   return (
 //     <section className="pricing-section">
@@ -102,10 +102,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './PricingPlans.css';
 import bestsellerBadge from './images/bestseller.png';
+import { useNavigate } from 'react-router-dom';
 
 const PricingPlans = ({ planIndex }) => {
   const planRefs = useRef([]);
   const [highlightedIndex, setHighlightedIndex] = useState(null);
+  const navigate = useNavigate(); // Initialize useNavigate
+
 
   const plans = [
     {
@@ -135,11 +138,24 @@ const PricingPlans = ({ planIndex }) => {
     },
   ];
 
+  const handleGetNowClick = () => {
+    navigate('/membership-plan'); // Redirect to the membership plan page
+  };
+
   // Scroll to and highlight the plan based on the planIndex
   useEffect(() => {
     if (planIndex !== null && planRefs.current[planIndex]) {
       setHighlightedIndex(Number(planIndex)); // Highlight the selected plan
       planRefs.current[planIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Remove highlight after 5 seconds (5000ms)
+      const timer = setTimeout(() => {
+        setHighlightedIndex(null); // Remove the highlight
+      }, 5000);
+
+      // Cleanup function to clear the timeout if the component unmounts
+      return () => clearTimeout(timer);
+    
     }
   }, [planIndex]);
 
@@ -164,7 +180,12 @@ const PricingPlans = ({ planIndex }) => {
                 <li key={i}>{feature}</li>
               ))}
             </ul>
-            <button className="get-now-button">Get Now</button>
+            <button
+              className="get-now-button"
+              onClick={handleGetNowClick} // Redirect to membership page on button click
+            >
+              Get Now
+            </button>
           </div>
         ))}
       </div>

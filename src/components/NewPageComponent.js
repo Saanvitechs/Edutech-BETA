@@ -72,31 +72,15 @@ const NewPageComponent = () => {
   return (
     <div>
       <Navbar />
-      
-      {/* Hero Section */}
-      <HeroSection />
-      
-      {/* Stats Section */}
+      <HeroSection pricingRef={pricingRef}/>
       <StatsSection />
-
-      {/* Features Section */}
       <FeaturesSection />
-
-      {/* Testimonials */}
       <Testimonials />
-
-      {/* Pricing Plans Section - Ref and Query Parameter Scroll */}
       <div ref={pricingRef}> 
         <PricingPlans planIndex={new URLSearchParams(location.search).get('plan')} /> {/* Pass planIndex as prop */}
       </div>
-
-      {/* About Section */}
       <About />
-
-      {/* FAQ Section */}
       <Faq />
-
-      {/* Footer */}
       <Footer />
     </div>
   );
