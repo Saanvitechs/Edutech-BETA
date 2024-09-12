@@ -241,6 +241,7 @@
 // };
 
 // export default Home;
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TestSeriesSection from './TestSeriesSection';
@@ -316,7 +317,7 @@ const FAQSection = () => {
   );
 };
 
-const Home = () => {
+const Home = ({ onScrollToPricing }) => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false); // Popup state
   const [showText, setShowText] = useState(true);
@@ -404,7 +405,7 @@ const Home = () => {
         </div>
       </section>
 
-      <TestSeriesSection />
+      <TestSeriesSection onScrollToPricing={onScrollToPricing} /> {/* Pass scroll handler */}
       <CollaboratorsSection />
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3 }} className="statistics-section">

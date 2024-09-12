@@ -1,3 +1,5 @@
+
+
 // import React from 'react';
 // import './PricingPlans.css';
 // import bestsellerBadge from './images/bestseller.png'; // Bestseller badge image
@@ -74,7 +76,7 @@
 //             <h3 className="plan-title">{plan.title}</h3>
 //             <p className="plan-price">
 //               <span className="original-price">₹{plan.originalPrice}</span>
-//               ₹{plan.price}
+//               ₹{plan.price} <span className="gst">+GST</span>
 //             </p>
 //             <ul className="plan-features">
 //               {plan.features.map((feature, i) => (
@@ -97,79 +99,61 @@
 // export default PricingPlans;
 
 
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './PricingPlans.css';
-import bestsellerBadge from './images/bestseller.png'; // Bestseller badge image
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import bestsellerBadge from './images/bestseller.png';
 
-const PricingPlans = () => {
-  const navigate = useNavigate(); // Initialize navigate function
+const PricingPlans = ({ planIndex }) => {
+  const planRefs = useRef([]);
+  const [highlightedIndex, setHighlightedIndex] = useState(null);
 
   const plans = [
     {
       title: 'EXECUTIVE PLAN',
       originalPrice: 55990,
-      price: 27990 ,
-      features: [
-        'On-Job-Training',
-        'Guidance by Industry Professionals',
-        'Problem-Solving Skills',
-        'Chance to work on Enterprise-level Application',
-        'Interview Prep in line with Industry Standards',
-      ],
+      price: 27990,
+      features: ['On-Job-Training', 'Guidance by Industry Professionals', 'Problem-Solving Skills'],
     },
     {
       title: 'TITAN PLAN',
       originalPrice: 49990,
       price: 24990,
-      features: [
-        '3 months Internship + OJT',
-        'Guidance by Industry Professionals',
-        'Problem-Solving Skills',
-        'Soft Skill Development',
-        'Chance to work on Enterprise-level Application',
-      ],
-      isBestseller: true, // Titan plan has bestseller badge
+      features: ['3 months Internship + OJT', 'Guidance by Industry Professionals', 'Soft Skill Development'],
+      isBestseller: true,
     },
     {
       title: 'APPRENTICE PLAN',
       originalPrice: 12990,
       price: 8990,
-      features: [
-        'Internship',
-        'Guidance by Industry Professionals',
-        'Problem-Solving Skills',
-        'Soft Skill Development',
-        'Chance to work on Enterprise-level Application',
-      ],
+      features: ['Internship', 'Guidance by Industry Professionals', 'Problem-Solving Skills'],
     },
     {
       title: 'SOS PLAN',
       originalPrice: 3990,
       price: 1490,
-      features: [
-        'Guidance by Industry Professionals',
-        'Interview Prep in line with Industry standards',
-        'Assessment & Feedback',
-        'Get skilled with our plan of SOS and get a brief.',
-      ],
+      features: ['Guidance by Industry Professionals', 'Interview Prep', 'Assessment & Feedback'],
     },
   ];
 
-  // Handle redirect to membership plan page
-  const handleGetNowClick = () => {
-    navigate('/membership-plan'); // Redirect to the membership plan page
-  };
+  // Scroll to and highlight the plan based on the planIndex
+  useEffect(() => {
+    if (planIndex !== null && planRefs.current[planIndex]) {
+      setHighlightedIndex(Number(planIndex)); // Highlight the selected plan
+      planRefs.current[planIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [planIndex]);
 
   return (
     <section className="pricing-section">
       <h2 className="pricing-title">Pricing Plans</h2>
       <div className="pricing-container">
         {plans.map((plan, index) => (
-          <div key={index} className="pricing-card">
-            {plan.isBestseller && (
-              <img src={bestsellerBadge} alt="Bestseller" className="bestseller-badge" />
-            )}
+          <div
+            key={index}
+            className={`pricing-card ${highlightedIndex === index ? 'highlighted' : ''}`} // Highlight the card if selected
+            ref={(el) => (planRefs.current[index] = el)} // Store ref for each plan
+          >
+            {plan.isBestseller && <img src={bestsellerBadge} alt="Bestseller" className="bestseller-badge" />}
             <h3 className="plan-title">{plan.title}</h3>
             <p className="plan-price">
               <span className="original-price">₹{plan.originalPrice}</span>
@@ -180,12 +164,7 @@ const PricingPlans = () => {
                 <li key={i}>{feature}</li>
               ))}
             </ul>
-            <button
-              className="get-now-button"
-              onClick={handleGetNowClick} // Redirect to membership page on button click
-            >
-              Get Now
-            </button>
+            <button className="get-now-button">Get Now</button>
           </div>
         ))}
       </div>

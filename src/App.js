@@ -26,10 +26,15 @@ function App() {
   const location = useLocation(); // Get the current location
 
   useEffect(() => {
-    // Scroll to the top of the page whenever the route changes
-    window.scrollTo(0, 0);
-  }, [location]);
+    // Only scroll to top if the user is not on the pricing-plans route with a specific plan
+    const params = new URLSearchParams(location.search);
+    const planIndex = params.get('plan');
 
+    if (!location.pathname.includes('/pricing-plans') || planIndex === null) {
+      // Scroll to the top of the page whenever the route changes (except when there's a plan in query)
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
   return (
     <AuthProvider>
       <div className="App">
@@ -47,6 +52,8 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/referral" element={<Referral />} />
+          <Route path="/pricing-plans" element={<NewPageComponent />} /> {/* Route to NewPageComponent */}
+
 
           {/* Protect these routes */}
           <Route
