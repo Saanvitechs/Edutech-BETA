@@ -1,61 +1,76 @@
+.assignment-page {
+  background: linear-gradient(to right, #141E30, #243B55);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  padding-top: 95px;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif; /* Use a modern, professional font */
+}
 
-     .assignment-page {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-        padding-top: 95px;
-      }
-      
-      .page-heading {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-      }
-      
-      .assignment-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        text-align: left;
-      }
-      
-      .assignment-table th,
-      .assignment-table td {
-        padding: 12px;
-        border-bottom: 1px solid #ddd;
-      }
-      
-      .assignment-table th {
-        background-color: #f4f4f4;
-      }
-      
-      .assignment-table tr.completed {
-        background-color: #d4edda;
-        color: #155724;
-      }
-      
-      .done-button {
-        background-color: #28a745;
-        color: white;
-        padding: 8px 12px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      
-      .undo-button {
-        background-color: #ffc107;
-        color: white;
-        padding: 8px 12px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      
-      .done-button:hover,
-      .undo-button:hover {
-        opacity: 0.9;
-      }
-      
+.page-heading {
+  color: #f15f62;
+  margin-top: 40px;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Adds spacing for a cleaner look */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds depth to the heading */
+}
+
+.assignment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for table */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for table */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  overflow: hidden;
+}
+
+.assignment-table th,
+.assignment-table td {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 12px;
+  border-bottom: 1px solid #9bd6e2; /* Border only at the bottom for cleaner look */
+  color: #fff;
+}
+
+.assignment-table th {
+  background-color: rgba(48, 43, 99, 0.7); /* Dark background for header */
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9bd6e2;
+}
+
+.assignment-table td {
+  background-color: rgba(36, 36, 62, 0.8); /* Slightly darker row background */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.assignment-table td:hover {
+  background-color: rgba(48, 43, 99, 0.6); /* Subtle hover effect for better interaction */
+}
+
+.assignment-table tr.completed {
+  background-color: rgba(147, 112, 219, 0.8); /* Slightly muted purple for completed rows */
+  color: #fff;
+}
+
+.assignment-table tr.completed td {
+  color: #e0e0e0; /* Slightly lighter text for completed rows */
+}
+
+.assignment-table th:first-child,
+.assignment-table td:first-child {
+  border-left: none;
+}
+
+.assignment-table th:last-child,
+.assignment-table td:last-child {
+  border-right: none;
+}

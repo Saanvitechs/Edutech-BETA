@@ -73,7 +73,6 @@ function AssignmentPage() {
   return (
     <div className="assignment-page">
       <h1 className="page-heading">ASSIGNMENT</h1>
-      <h2 className="project-name">Project: {projectData.projectName}</h2>
       <table className="assignment-table">
         <thead>
           <tr>
