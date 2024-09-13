@@ -1,76 +1,83 @@
 .assignment-page {
-  background: linear-gradient(to right, #141E30, #243B55);
+  background-image: url('./images/file.png'); /* Your background image */
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  padding-top: 95px;
+  padding-top: 150px;
   min-height: 100vh;
-  font-family: 'Arial', sans-serif; /* Use a modern, professional font */
+  font-family: 'Arial', sans-serif;
 }
 
 .page-heading {
-  color: #f15f62;
-  margin-top: 40px;
-  font-size: 4rem;
+  color: #fcfcfc;
+  font-size: 8.5rem; /* Increased font size for the heading */
   font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Single Card Container */
+.assignment-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Single Card for Desktop */
+.assignment-card {
+  background-color: rgba(35, 30, 60, 1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 40px; /* Increased padding for more space */
+  width: 100%; /* Take up full width on mobile */
+  max-width: 800px; /* Increased max width for more space on desktop */
+  color: #ffffff;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px; /* Adds spacing for a cleaner look */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds depth to the heading */
 }
 
-.assignment-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 50px;
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for table */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for table */
-  border-radius: 10px; /* Rounded corners for a modern look */
-  overflow: hidden;
+.assignment-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px; /* Increased margin for more space between rows */
 }
 
-.assignment-table th,
-.assignment-table td {
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 12px;
-  border-bottom: 1px solid #9bd6e2; /* Border only at the bottom for cleaner look */
-  color: #fff;
-}
-
-.assignment-table th {
-  background-color: rgba(48, 43, 99, 0.7); /* Dark background for header */
-  font-size: 1.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.card-title {
+  font-weight: bold;
   color: #9bd6e2;
+  text-transform: uppercase;
+  font-size: 1.5rem; /* Increased font size for titles */
 }
 
-.assignment-table td {
-  background-color: rgba(36, 36, 62, 0.8); /* Slightly darker row background */
-  transition: background-color 0.3s ease; /* Smooth transition for hover */
+.card-value {
+  color: #ffffff;
+  font-size: 1.5rem; /* Increased font size for values */
+  text-align: left;
 }
 
-.assignment-table td:hover {
-  background-color: rgba(48, 43, 99, 0.6); /* Subtle hover effect for better interaction */
-}
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .assignment-card {
+    padding: 30px;
+    margin-bottom: 1rem;
+  }
 
-.assignment-table tr.completed {
-  background-color: rgba(147, 112, 219, 0.8); /* Slightly muted purple for completed rows */
-  color: #fff;
-}
+  .page-heading {
+    font-size: 3rem; /* Adjust heading for mobile */
+  }
 
-.assignment-table tr.completed td {
-  color: #e0e0e0; /* Slightly lighter text for completed rows */
-}
+  .assignment-detail {
+    display: block; /* Stack the details vertically */
+    text-align: left;
+  }
 
-.assignment-table th:first-child,
-.assignment-table td:first-child {
-  border-left: none;
-}
-
-.assignment-table th:last-child,
-.assignment-table td:last-child {
-  border-right: none;
+  .card-title, .card-value {
+    display: block;
+    margin-bottom: 12px; /* More space for vertical stacking */
+  }
 }

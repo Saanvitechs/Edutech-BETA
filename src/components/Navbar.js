@@ -5,6 +5,7 @@ import { AuthContext } from '../hooks/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
+
 import logo from './images/trex_logo.png';
 
 const CustomNavbar = () => {

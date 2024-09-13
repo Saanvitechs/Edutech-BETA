@@ -1,3 +1,4 @@
+/* Existing Pricing Section Styles */
 .pricing-section {
   padding: 60px;
   background-color: rgb(10, 0, 25);
@@ -47,7 +48,6 @@
   border-image: linear-gradient(90deg, rgba(255, 0, 132, 1), rgba(0, 229, 255, 1), rgba(0, 255, 132, 1));
   transform: scale(1.05);
   border-image-slice: 1;
-
 }
 
 .plan-title {
@@ -96,7 +96,7 @@
   background-color: #ff6f61;
 }
 
-/* Responsive Design */
+/* Responsive Design for shifting Bestseller icon to the right */
 @media (max-width: 768px) {
   .pricing-container {
     grid-template-columns: 1fr;
@@ -104,5 +104,9 @@
 
   .pricing-card {
     width: 100%;
+  }
+
+  .bestseller-badge {
+    left: 240px; /* Shift the Best Seller badge slightly to the right on mobile screens */
   }
 }
