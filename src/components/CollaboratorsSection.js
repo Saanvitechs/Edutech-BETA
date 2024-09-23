@@ -28,9 +28,12 @@ const CollaboratorsSection = () => {
   return (
     <div className="collaborators-section">
       <h2>
-        Learn from the Professionals working in 
-        <span> Fortune 500 Companies</span>
+      While many focus solely on IT training, we leverage our position as an industry-leading IT firm to offer practical education designed to enhance career growth.        
       </h2>
+      <h3>
+        Get Trained by Folks having experience in
+      <span> Fortune 500 Companies</span>
+      </h3>
       <div className="collaborators-logos">
         {collaborators.map((collaborator, index) => (
           <div key={index} className="collaborator-tile">

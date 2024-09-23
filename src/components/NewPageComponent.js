@@ -1,47 +1,10 @@
-// import React, { useRef, useEffect } from 'react';
-// import HeroSection from './Hero';
-// import StatsSection from './Stats';
-// import FeaturesSection from './FeaturesSection';
-// import Navbar from './Navbar';
-// import Footer from './Footer';
-// import Testimonials from './Testimonials';
-// // import Referral from './Referrals';
-// import Faq from './FaqComponent';
-// import About from './About';
-// import PricingPlans from './PricingPlan';
 
-// const NewPageComponent = () => {
-//   useEffect(() => {
-//     // Scroll to the top whenever the component is rendered
-//     window.scrollTo(0, 0);
-//   }, []);
-//   const pricingRef = useRef(null); // Reference to PricingPlans
-
-//   return (
-//     <div>
-//       <Navbar />
-//       <HeroSection pricingRef={pricingRef} /> {/* Pass ref to Hero */}
-//       <StatsSection />
-//       <FeaturesSection />
-//       <Testimonials />
-//       <div ref={pricingRef}> {/* Assign ref here */}
-//         <PricingPlans />
-//       </div>
-//       {/* <Referral /> */}
-//       <About />
-//       <Faq />
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default NewPageComponent;
 
 
 import React, { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; // To get query parameters
 import Navbar from './Navbar';
-import Footer from './Footer';
+// import Footer from './Footer';
 import HeroSection from './Hero';
 import StatsSection from './Stats';
 import FeaturesSection from './FeaturesSection';
@@ -81,7 +44,7 @@ const NewPageComponent = () => {
       </div>
       <About />
       <Faq />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

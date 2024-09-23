@@ -18,6 +18,18 @@
 .collaborators-section h2 span {
   color: #e9ff25;
 }
+ 
+.collaborators-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+.collaborators-section h3 span {
+  color: #e9ff25;
+}
 
 /* Logos container */
 .collaborators-logos {

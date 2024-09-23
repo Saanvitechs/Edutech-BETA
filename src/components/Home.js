@@ -4,7 +4,7 @@ import TestSeriesSection from './TestSeriesSection';
 import ProgramSection from './ProgramSection';
 import './Home.css';
 import './WhyPregradSection.css';
-import Footer from './Footer';
+// import Footer from './Footer';
 import { motion } from 'framer-motion';
 import Popup from './Popup'; // Import your Popup component
 import reading from './images/reading.png';
@@ -132,10 +132,10 @@ const Home = ({ onScrollToPricing }) => {
         <div className="top-section-left">
           <div className="camp-heading">
             <img src={monitor} alt="Logo" />
-            <span className="camp-heading-text">Professional Learning Camp</span>
+            <span className="camp-heading-text">Elite Workforce Development Program</span>
           </div>
           <h1 className="main-heading">
-            THE RIGHT WAY TO LEARN <span className="highlight">PROGRAMMING</span>
+           ATTAIN JOB-READY EXPERTISE TO THRIVE IN THE <span className="highlight">COMPETITIVE MARKET</span>
           </h1>
           <p className="subtext">
             We Train People to be Professionals.<br />
@@ -146,7 +146,7 @@ const Home = ({ onScrollToPricing }) => {
         <div className="top-section-right">
           <iframe
             src="https://lottie.host/embed/b74f2a70-dd1f-4d17-aa09-4b736ea1e786/1UQUvDjQK2.json"
-            style={{ border: 'none', width: '400px', height: '400px' }}
+            style={{ border: 'none', width: '600px', height: '550px' }}
             title="Lottie Animation"
           ></iframe>
         </div>
@@ -218,7 +218,7 @@ const Home = ({ onScrollToPricing }) => {
       <ReviewCarousel />
       <FAQSection />
 
-      <Footer />
+      {/* <Footer /> */}
 
       {/* Enquire Button */}
       <div className={`floating-btn ${isButtonExpanded ? "expanded" : ""}`} onClick={handleEnquireClick}>

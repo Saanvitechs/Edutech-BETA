@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AuthProvider } from './hooks/AuthContext';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
 import ForgotPassword from './components/ForgotPassword';
@@ -20,7 +21,7 @@ import NewPageComponent from './components/NewPageComponent';
 import Testimonials from './components/Testimonials';
 import Stats from './components/Stats';
 import Referral from './components/Referrals';
-
+import Knowmore from './components/Knowmore';
 
 function App() {
   const location = useLocation(); // Get the current location
@@ -52,8 +53,8 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/referral" element={<Referral />} />
-          <Route path="/pricing-plans" element={<NewPageComponent />} /> {/* Route to NewPageComponent */}
-
+          <Route path="/pricing-plans" element={<NewPageComponent />} />
+          <Route path="/know" element={<Knowmore />} />
 
           {/* Protect these routes */}
           <Route
@@ -83,6 +84,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/membership-plan" element={<MembershipPlans />} />
         </Routes>
+       <Footer /> 
       </div>
     </AuthProvider>
   );
