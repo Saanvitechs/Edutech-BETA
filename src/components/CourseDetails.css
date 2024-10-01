@@ -1,0 +1,80 @@
+/* .plan-buttons {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+  }
+  
+  .plan-buttons .MuiButton-root {
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: none;
+    border-radius: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .plan-buttons .MuiButton-root:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .plan-buttons .selected {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: black;
+  }
+   */
+   /* Container for Course Details content */
+.course-details-container {
+    padding: 80px 20px 20px 20px; /* Add padding to avoid overlap with the navbar */
+    min-height: calc(100vh - 160px); /* Ensures content area height without footer overlap */
+  }
+  
+  /* Plan Button Group */
+  .plan-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+  }
+  
+  .plan-buttons .MuiButton-root {
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: none;
+    border-radius: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .plan-buttons .MuiButton-root:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Highlight the selected plan button */
+  .plan-buttons .selected {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: black;
+  }
+  
+  /* Content Area Below the Buttons */
+  .plan-content {
+    margin-top: 20px;
+  }
+  
+  /* Ensuring the footer is not overlapped */
+  footer {
+    position: relative;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+  }
+  

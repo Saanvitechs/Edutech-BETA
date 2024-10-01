@@ -22,6 +22,7 @@ import Testimonials from './components/Testimonials';
 import Stats from './components/Stats';
 import Referral from './components/Referrals';
 import Knowmore from './components/Knowmore';
+import CourseDetails from './components/CourseDetails';
 
 function App() {
   const location = useLocation(); // Get the current location
@@ -55,6 +56,7 @@ function App() {
           <Route path="/referral" element={<Referral />} />
           <Route path="/pricing-plans" element={<NewPageComponent />} />
           <Route path="/know" element={<Knowmore />} />
+          <Route path="/course" element={<CourseDetails />} />
 
           {/* Protect these routes */}
           <Route

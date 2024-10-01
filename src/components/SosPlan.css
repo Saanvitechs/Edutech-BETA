@@ -1,0 +1,317 @@
+/* Wrapper for the entire layout (both left and right sides) */
+.wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: space-between;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #111827, #27425a99);
+    color: #e0e0e0;
+}
+
+/* Left Section: Sticky Title and Buttons */
+.left-section {
+    position: sticky;
+    top: 100px;
+    left: 0;
+    width: 50%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.025);;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* Right Section: Scrollable Multi-Step Progression */
+.right-section {
+    width: 75%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.025);;
+
+}
+
+/* Wrapper for steps */
+.step-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    margin-top: 150px;
+}
+
+/* Single step */
+.step {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 75px;
+}
+
+/* Step number */
+.step-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b6b, #f06543);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Step content */
+.step-content {
+    margin-left: 30px;
+    padding: 5px;
+    width: 100%;
+}
+/*styles for stepTitle in discription title*/
+.step-title3 {
+    font-size: 26px !important;
+    font-weight: bolder !important;
+    margin-bottom: 10px !important; /* Space between title and description */
+    color: #fff;
+    text-align: left;
+}
+/*styles for stepDescription in discription title*/
+.step-description3 {
+    font-size: 18px !important;
+    line-height: 1.3; /* Ensure proper line spacing */
+    margin-bottom: 20px; /* Space between description and the next content */
+    color: #cbd5e0; /* Lighter gray for readability */
+    text-align: left;
+}
+
+/* Add the vertical line connecting the steps */
+.step::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 50px;
+    width: 2px;
+    height: 80%;
+    background-color: #ff6b6b;
+    z-index: 1;
+}
+
+/* Stops the line halfway at the last step */
+.step:last-child::before {
+    height: 20px;
+}
+
+/* Lesson Carousel */
+.lesson-carousel {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.lesson-wrapper {
+    display: flex;
+    justify-content: space-between; /* Space out the cards evenly */
+    overflow: hidden; /* Ensure no cards overflow out of view */
+    width: 100%; /* Ensure the wrapper takes up the full width of the container */
+}
+
+.lesson-card3 {
+    width: 35%;
+    height: 220px;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #262626;
+    color: #e0e0e0;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.lesson-header {
+    display: flex;
+    align-items: center; /* Vertically align the icon and text */
+    margin-bottom: 3px;
+}
+
+.lesson-number {
+    margin-left: 10px !important; /* Space between the icon and the text */
+    font-weight: bold;
+    color: #440ab1; /* Matching the color of the icon */
+}
+.lesson-title3 {
+    line-height: 1.3 !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    color: #000; /* Title color */
+}
+.lesson-description3 {
+    margin-top: 10px;
+    font-size: 14px !important;
+    color: #000; /* Description color */
+    text-align: left;
+}
+
+/* Fix for IconButton color for arrows */
+.MuiIconButton-root {
+    color: #ffffff; /* White color for arrow buttons */
+    transition: color 0.3s ease;
+}
+
+.MuiIconButton-root:hover {
+    color: #00bcd4; /* Light blue color on hover for better visibility */
+}
+
+/* Navigation Buttons */
+button:disabled {
+    color: rgba(255, 255, 255, 0.8);
+    cursor: not-allowed;
+}
+
+/* Description card styling */
+.description-card {
+    background-color:#2d3748 !important;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    border-radius: 30px !important;
+    color: #e0e0e0 !important;
+}
+
+/* Button styles */
+.MuiButton-root.main-btn5 {
+    font-size: 16px !important;  /* Increased font size for larger text */
+    padding: 16px 24px !important;  /* Increased padding for a bigger button */
+    border-radius: 12px !important;  /* More rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+
+.main-btn.contained {
+    background: linear-gradient(135deg, #ff6b6b, #f06543);
+    color: white;
+}
+
+.main-btn.outlined {
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+}
+
+/* Typography improvements */
+.main-title {
+    font-weight: 800;
+    color: #ff6b6b;
+    text-align: left;
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 40px;  /* Added 40px gap below the buttons */
+}
+
+/* General mobile layout adjustments */
+/* Adjust layout for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Adjust layout: make the right section take full width */
+    .wrapper {
+        flex-direction: column;
+    }
+
+    /* Left section will stack on top and take full width */
+    .left-section {
+        width: 100%;
+        position: relative;
+        top: 0;
+        padding: 10px;
+    }
+
+    /* Right section will take full width */
+    .right-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Reduce padding in the steps */
+    .step {
+        padding-left: 23px;
+    }
+    .lesson-wrapper {
+        display: flex;
+        flex-direction: row; /* Keep it as a row */
+        overflow: hidden; /* Hide overflow */
+        width: 100%; /* Full width for one card at a time */
+    }
+    /* Adjust card width for mobile */
+    .lesson-card {
+        width: 100%; /* Each card takes the full width on mobile */
+        margin-right: 0; /* No right margin on mobile */
+        height: inherit;
+    }
+
+    /* Typography changes */
+    .step-title3 {
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    .step-description3 {
+        position: relative;
+        max-height: 50px; /* Set the maximum height for the collapsed state */
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    .step-description3.expanded {
+        max-height: none; /* Remove height restriction */
+    }
+    .read-more-link {
+        color: #0dcaf0 !important; /* Blue-green color */
+        text-decoration: underline; /* Underline to resemble a link */
+        cursor: pointer; /* Pointer cursor */
+        font-weight: bold; /* Bold text */
+        font-size: 14px; /* Font size */
+        background: none; /* Remove button background */
+        border: none; /* Remove button border */
+        padding: 0; /* Remove button padding */
+        display: inherit;
+        margin-top: 10px;
+        transition: color 0.3s ease;
+    }
+    .read-more-link:hover {
+        color: #cbd5e0; /* Slightly darker shade on hover */
+    }
+    .lesson-title3 {
+        font-size: 24px !important;
+    }
+
+    .lesson-description3 {
+        font-size: 14px !important;
+    }
+
+    /* Adjust icon button size for better touch experience */
+    .MuiIconButton-root {
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 769px) {
+    .step-description3 {
+        max-height: none; /* Allow full description on desktop */
+    }
+
+    /* Hide the Read More button on desktop */
+    .read-more-link {
+        display: none;
+    }
+}
