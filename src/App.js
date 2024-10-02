@@ -56,7 +56,7 @@ function App() {
           <Route path="/referral" element={<Referral />} />
           <Route path="/pricing-plans" element={<NewPageComponent />} />
           <Route path="/know" element={<Knowmore />} />
-          <Route path="/course" element={<CourseDetails />} />
+          <Route path="/course-details/:plan" element={<CourseDetails />} /> {/* Dynamic plan route */}
 
           {/* Protect these routes */}
           <Route

@@ -159,11 +159,11 @@ const ITCareerSteps = () => {
           <Typography variant="h3" className="main-title">
             Get Ready for Your IT Career in 6 Steps
           </Typography>
-          <div className="button-group">
-            <Button variant="contained" color="primary" className="main-btn">
+          <div className="button-group3">
+            <Button variant="contained" color="primary" className="main-btn3"  onClick={() => window.open('https://forms.gle/F5AUkk5J4Tjy2AabA', '_blank')}>
               Enroll Now
             </Button>
-            <Button variant="outlined" color="primary" className="main-btn">
+            <Button variant="outlined" color="primary" className="main-btn3"  onClick={() => window.open('https://forms.gle/PGrDh2pKSKEXjTud6', '_blank')}>
               Book a Free Demo Class
             </Button>
           </div>

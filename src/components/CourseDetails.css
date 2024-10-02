@@ -1,36 +1,8 @@
-/* .plan-buttons {
-    display: flex;
-    justify-content: flex-start;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-  }
-  
-  .plan-buttons .MuiButton-root {
-    border: none;
-    font-size: 16px;
-    padding: 10px 20px;
-    text-transform: none;
-    border-radius: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .plan-buttons .MuiButton-root:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .plan-buttons .selected {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    color: black;
-  }
-   */
-   /* Container for Course Details content */
 .course-details-container {
     padding: 80px 20px 20px 20px; /* Add padding to avoid overlap with the navbar */
     min-height: calc(100vh - 160px); /* Ensures content area height without footer overlap */
+    background: linear-gradient(135deg, #111827, #27425a99); /* Linear gradient background */
+    color: #ffffff;
   }
   
   /* Plan Button Group */
@@ -38,31 +10,31 @@
     display: flex;
     justify-content: flex-start;
     margin-bottom: 20px;
-    border-radius: 8px;
-    background-color: #f5f5f5;
+    border-radius: 15%;
+    background-color: transparent;
   }
   
   .plan-buttons .MuiButton-root {
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 16px;
     padding: 10px 20px;
     text-transform: none;
-    border-radius: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #ffffff;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .plan-buttons .MuiButton-root:hover {
-    background-color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1e1e1e;
   }
   
   /* Highlight the selected plan button */
   .plan-buttons .selected {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly highlighted selected button */
+    border: 1px solid #fff;
+    color: #1e1e1e;
   }
   
   /* Content Area Below the Buttons */

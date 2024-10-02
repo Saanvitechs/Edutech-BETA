@@ -68,7 +68,7 @@ const CustomNavbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav onClick={handleNavClick}>
-            <Nav.Link as={Link} to="/resource">Resource</Nav.Link>
+            {/* <Nav.Link as={Link} to="/resource">Resource</Nav.Link> */}
             <Nav.Link as={Link} to="/assignments">Check My Assignment</Nav.Link>
             <Nav.Link as={Link} to="/membership-plan">Plans</Nav.Link>
 

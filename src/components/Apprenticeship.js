@@ -145,13 +145,13 @@ const Apprenticeship = () => {
       <div className="left-section">
         <div className="header-section">
           <Typography variant="h3" className="main-title">
-            Get Ready for Your IT Career in 6 Steps
+            Accelerate Your Career Growth Through Internships
           </Typography>
           <div className="button-group3">
-            <Button variant="contained" color="primary" className="main-btn3">
+            <Button variant="contained" color="primary" className="main-btn3"  onClick={() => window.open('https://forms.gle/F5AUkk5J4Tjy2AabA', '_blank')}>
               Enroll Now
             </Button>
-            <Button variant="outlined" color="primary" className="main-btn3">
+            <Button variant="outlined" color="primary" className="main-btn3"  onClick={() => window.open('https://forms.gle/PGrDh2pKSKEXjTud6', '_blank')}>
               Book a Free Demo Class
             </Button>
           </div>
