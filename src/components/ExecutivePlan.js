@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'; // Import useEffect
 import { Typography, Button, Card, CardContent, IconButton } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { faBookOpen, faCircleLeft,faCircleRight } from '@fortawesome/free-solid-svg-icons';
 import './ExecutivePlan.css';
 
 const StepContent = ({ stepNumber, stepTitle, stepDescription, lessons }) => {
@@ -82,7 +80,7 @@ const StepContent = ({ stepNumber, stepTitle, stepDescription, lessons }) => {
         <div className="lesson-carousel">
         {showArrows && (
             <IconButton onClick={handlePrevious} disabled={currentIndex === 0}>
-              <ArrowBackIcon />
+              <FontAwesomeIcon icon={faCircleLeft} style={{ color: 'white' }} />
             </IconButton>
           )}
           <div className="lesson-wrapper">
@@ -109,7 +107,7 @@ const StepContent = ({ stepNumber, stepTitle, stepDescription, lessons }) => {
           </div>
           {showArrows && (
             <IconButton onClick={handleNext} disabled={currentIndex >= lessons.length - cardsPerView}>
-              <ArrowForwardIcon />
+              <FontAwesomeIcon icon={faCircleRight} style={{ color: 'white' }}/>
             </IconButton>
           )}
         </div>
