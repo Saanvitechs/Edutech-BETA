@@ -11,7 +11,6 @@ import AssignmentPage from './components/AssignmentPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import MembershipPlans from './components/MembershipPlans';
 import ProfilePage from './components/ProfilePage';
-import SubscriptionPopup from './components/SubscriptionPopup';
 import TermsOfUse from './components/TermsOfUse';
 import ComingSoon from './components/ComingSoon';
 import Resource from './components/Resource';
@@ -67,14 +66,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/subscriptionPopup"
-            element={
-              <ProtectedRoute>
-                <SubscriptionPopup />
-              </ProtectedRoute>
-            }
-          />
+         
           <Route
             path="/profile"
             element={

@@ -142,7 +142,10 @@ const ITCareerSteps = () => {
   ];
 
   const lessonsStep5 = [
-    
+    { id: 1, title: 'Sprint Planning', description: 'Develop the ability to meticulously plan and scope out tasks. Learn to break down complex requirements into manageable user stories and estimate work accurately.' },
+    { id: 2, title: 'Assigning User Stories', description: 'Work collaboratively to assign tasks and take ownership of different components of the project.' },
+    { id: 3, title: 'Sprint Start', description: 'Kick off each sprint by focusing on a clear set of deliverables and tasks.' },
+    { id: 4, title: 'Sprint Retrospective', description: 'At the end of each sprint, present your progress in a demo session and reflect on improvements for the next sprint in a retrospective meeting.' },
   ];
 
   const lessonsStep6 = [
