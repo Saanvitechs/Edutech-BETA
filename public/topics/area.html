@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometric Area Calculations</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+    }
+
+    /* Container for all content */
+    .content-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* Header styling */
+    h1, h2 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Headings and Strong styling */
+    h3, strong {
+      color: #ffcc00;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    /* Paragraph styling */
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #b3b3b3;
+      text-align: left;
+    }
+
+    /* List styling */
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+
+    /* Strong tags */
+    strong {
+      color: #ff5733;
+    }
+
+    /* Blockquote styling */
+    blockquote {
+      font-size: 1.1rem;
+      color: #ccc;
+      padding: 1rem;
+      background-color: #333;
+      border-left: 4px solid #555;
+      margin: 1.5rem 0;
+    }
+
+    /* Solution block styling */
+    .solution {
+      background-color: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #4e0967;
+      color: #b3b3b3;
+    }
+
+    /* Hover effects for better interactivity */
+    ul li:hover, ol li:hover {
+      color: #ffcc00;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+      margin: 2rem 0;
+    }
+
+    /* Links styling */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <h1><strong>&nbsp;Geometric Area Calculations</strong></h1>
+
+    <h3>Basic Concepts</h3>
+    <p>Calculation of the surface area of various geometric shapes.</p>
+
+    <h3>Key Formulas</h3>
+    <p>Area of a rectangle = Length &times; Breadth</p>
+    <p>Area of a triangle = &frac12; &times; Base &times; Height</p>
+    <p>Area of a circle = &pi; &times; Radius&sup2;</p>
+
+    <h3>Applications</h3>
+    <p>Problems involving finding the area of land, rooms, etc.</p>
+
+    <h3>Points to Remember</h3>
+    <h4>(A) Triangle:</h4>
+    <p>(i) Area of a triangle = &frac12; &times; Base &times; Height</p>
+    <p>(ii) If a, b, c are the lengths of the sides of a triangle and s = &frac12; (a+b+c)</p>
+    <p>(iii) Area of equilateral triangle = &frac12; &times; (side)&sup2;</p>
+    <p>Perimeter of an equilateral triangle = 3 &times; side</p>
+
+    <h4>(B) Quadrilaterals:</h4>
+    <p>(i) Area of a rectangle = Length &times; Breadth</p>
+    <p>(Diagonal)&sup2; = (Length)&sup2; + (Breadth)&sup2;</p>
+    <p>Perimeter of a rectangle = 2(Length + Breadth)</p>
+    <p>(ii) Area of Parallelogram = Base &times; Height</p>
+    <p>(iii) Area of a square = (side)&sup2; = (diagonal)&sup2;</p>
+    <p>Perimeter of a square = 4 &times; side</p>
+    <p>(iv) Area of Rhombus = &frac12; &times; (Product of diagonals)</p>
+    <p>(v) Area of 4 walls of a room = 2 &times; (Length + Breadth) &times; Height</p>
+    <p>(vi) Area of trapezium = &frac12; &times; (sum of parallel sides) &times; perpendicular distance between them</p>
+
+    <h4>(C) Circles</h4>
+    <p>(i) Circumference of a circle = 2&pi;r</p>
+    <p>(ii) Area of Circle = &pi;r&sup2;</p>
+    <p>(iii) Arc AB = &theta; / 360 &times; 2&pi;r, where &ang;AOB= &theta; and O is the center</p>
+    <p>(iv) Area of sector AOB = &theta; / 360 &times; &pi;r&sup2;</p>
+
+    <h3>Some Quicker Methods:</h3>
+    <ol>
+      <li>Carpeting a Floor:</li>
+    </ol>
+    <p>(i) Length of the carpet required = Area of the floor / Width of the carpet</p>
+    <p>(ii) Amount Required = Rate per meter &times; Length of carpet</p>
+    <ol start="2">
+      <li>Paving with tiles:</li>
+    </ol>
+    <p>(i) Number of tiles required = Area of the floor / Area of one tile</p>
+    <p>(ii) The side of the largest possible square tile = HCF of length and breadth of the room</p>
+    <ol start="3">
+      <li>Path around a garden, verandah around a room:</li>
+    </ol>
+    <p>(i) Area of verandah outside room = 2 &times; (width of verandah) &times; [length + breadth of room + 2(width of verandah)]</p>
+    <p>(ii) Area of path within garden = 2 &times; (width of path) &times; [length + breadth of garden - 2(width of path)]</p>
+    <ol start="4">
+      <li>Rhombus</li>
+    </ol>
+    <p>(i) Area of a rhombus = &frac12; &times; (product of diagonals)</p>
+    <ol start="5">
+      <li>If the length and breadth of a rectangle are increased by x% and y% respectively, the area is increased by (x + y + xy)%</li>
+    </ol>
+
+    <h3>Example Problems</h3>
+
+    <!-- Example 1 -->
+    <p><strong>Example 1:</strong><br />Find the area of a rectangle with length 12 meters and breadth 8 meters.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of a rectangle = Length &times; Breadth = 12 &times; 8 = 96 square meters</p>
+    </div>
+
+    <!-- Example 2 -->
+    <p><strong>Example 2:</strong><br />Find the area of a triangle with a base of 10 meters and height of 5 meters.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of a triangle = &frac12; &times; Base &times; Height = &frac12; &times; 10 &times; 5 = 25 square meters</p>
+    </div>
+
+    <!-- Example 3 -->
+    <p><strong>Example 3:</strong><br />What is the area of a circle with a radius of 7 cm?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of a circle = &pi; &times; Radius&sup2; = 3.14 &times; 7&sup2; = 153.86 square cm</p>
+    </div>
+
+    <!-- Example 4 -->
+    <p><strong>Example 4:</strong><br />Find the area of an equilateral triangle with a side length of 6 meters.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of an equilateral triangle = &frac34; &times; &radic;3 &times; (side)&sup2; = &frac34; &times; &radic;3 &times; 36 = 15.59 square meters</p>
+    </div>
+
+    <!-- Example 5 -->
+    <p><strong>Example 5:</strong><br />Find the area of a trapezium where the lengths of the parallel sides are 12 meters and 8 meters, and the height is 5 meters.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of a trapezium = &frac12; &times; (sum of parallel sides) &times; height = &frac12; &times; (12 + 8) &times; 5 = 50 square meters</p>
+    </div>
+
+    <!-- Example 6 -->
+    <p><strong>Example 6:</strong><br />Find the area of a square with a diagonal of 10 meters.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of a square = &frac12; &times; (diagonal)&sup2; = &frac12; &times; 10&sup2; = 50 square meters</p>
+    </div>
+
+    <!-- Example 7 -->
+    <p><strong>Example 7:</strong><br />The radius of a sector of a circle is 6 cm, and the angle subtended by the arc at the center is 60&deg;. Find the area of the sector.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of a sector = &theta; / 360 &times; &pi; &times; r&sup2; = 60 / 360 &times; 3.14 &times; 6&sup2; = 18.84 square cm</p>
+    </div>
+
+    <!-- Example 8 -->
+    <p><strong>Example 8:</strong><br />A rhombus has diagonals of 12 meters and 16 meters. Find the area of the rhombus.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of a rhombus = &frac12; &times; (product of diagonals) = &frac12; &times; 12 &times; 16 = 96 square meters</p>
+    </div>
+
+    <!-- Example 9 -->
+    <p><strong>Example 9:</strong><br />The perimeter of a square is 40 cm. Find its area.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Side of the square = Perimeter / 4 = 40 / 4 = 10 cm</p>
+      <p>Area of the square = side&sup2; = 10&sup2; = 100 square cm</p>
+    </div>
+
+    <!-- Example 10 -->
+    <p><strong>Example 10:</strong><br />A room has a length of 6 meters, breadth of 4 meters, and height of 3 meters. Find the area of the four walls.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Area of 4 walls = 2 &times; (Length + Breadth) &times; Height = 2 &times; (6 + 4) &times; 3 = 60 square meters</p>
+    </div>
+
+  </div>
+</body>
+</html>

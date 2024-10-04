@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Averages</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+    }
+
+    /* Container for all content */
+    .content-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* Header styling */
+    h1, h2 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Headings and Strong styling */
+    h3, strong {
+      color: #ffcc00;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    /* Paragraph styling */
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #b3b3b3;
+      text-align: left;
+    }
+
+    /* List styling */
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+
+    /* Strong tags */
+    strong {
+      color: #ff5733;
+    }
+
+    /* Blockquote styling */
+    blockquote {
+      font-size: 1.1rem;
+      color: #ccc;
+      padding: 1rem;
+      background-color: #333;
+      border-left: 4px solid #555;
+      margin: 1.5rem 0;
+    }
+
+    /* Solution block styling */
+    .solution {
+      background-color: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #4e0967;
+      color: #b3b3b3;
+    }
+
+    /* Hover effects for better interactivity */
+    ul li:hover, ol li:hover {
+      color: #ffcc00;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+      margin: 2rem 0;
+    }
+
+    /* Links styling */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <h2><strong>&nbsp;Average</strong></h2>
+
+    <ul>
+      <li><strong>Basic Concepts:</strong> The average is the sum of all quantities divided by the number of quantities.</li>
+      <li><strong>Key Formulas:</strong></li>
+      <ul>
+        <li>Average = Sum of Quantities / Number of Quantities</li>
+      </ul>
+      <li><strong>Applications:</strong> Problems involving finding averages, weighted averages, combined averages, etc.</li>
+    </ul>
+
+    <p><strong>Points to Remember:</strong></p>
+    <p>1) The average of n quantities of the same kind is equal to the sum of all the quantities divided by the number of quantities;<br />
+       Average = Sum of Quantities / Number of Quantities<br /> 
+       Sum of quantities = Average × Number of quantities<br />
+       Number of quantities = Sum of Quantities / Average</p>
+
+    <p>2) Average of two or more groups:<br />
+       If the number of quantities in two groups are n<sub>1</sub> and n<sub>2</sub> respectively and their individual averages are X and Y respectively, the combined average of the two groups is given by:<br />
+       Combined Average = (n<sub>1</sub> × X + n<sub>2</sub> × Y) / (n<sub>1</sub> + n<sub>2</sub>)</p>
+
+    <p>3) If the average of n<sub>1</sub> quantities is X and the average of n<sub>2</sub> quantities out of n<sub>1</sub> is Y, the average of the remaining quantities is:<br />
+       Average of Remaining Quantities = [n<sub>1</sub> × X – n<sub>2</sub> × Y] / (n<sub>1</sub> - n<sub>2</sub>)</p>
+
+    <p>4) The average of n quantities is equal to X. One quantity of value P is replaced with a new quantity Q, and the new average of quantities becomes Y. Then Q is given by:<br />
+       Q = P + n (Y - X)</p>
+
+    <p>5) The average of n quantities is X. If one quantity is removed, and the average becomes Y, the value of the removed quantity is:<br />
+       Value of Removed Quantity = n (X - Y) + Y</p>
+
+    <p>6) Average of numbers:</p>
+    <ul>
+      <li><strong>Natural numbers:</strong> The average of the first n consecutive natural numbers is given by; Average = (n + 1) / 2</li>
+      <li>The average of the square of the first n consecutive natural numbers is given by; Average = (n(n + 1)(2n + 1)) / 6</li>
+      <li>The average of cubes of the first n consecutive natural numbers is given by; Average = [(n(n + 1) / 2)]^2</li>
+    </ul>
+
+    <ul>
+      <li><strong>Even numbers:</strong> The average of the first n consecutive even numbers is given by; Average = n + 1</li>
+    </ul>
+
+    <ul>
+      <li><strong>Odd numbers:</strong> The average of the first n consecutive odd numbers is given by n.</li>
+    </ul>
+
+    <h3>Examples</h3>
+
+    <!-- Example 1 -->
+    <p><strong>Example 1:</strong><br />Five students scored 80, 90, 70, 85, and 75 in an exam. What is their average score?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Average = (80 + 90 + 70 + 85 + 75) / 5 = 400 / 5 = 80</p>
+      <p><strong>Answer:</strong> The average score is <strong>80</strong>.</p>
+    </div>
+
+    <!-- Example 2 -->
+    <p><strong>Example 2:</strong><br />In a class, Section A has 20 students with an average score of 75, and Section B has 30 students with an average score of 80. What is the overall average score of both sections combined?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Weighted Average = [(75 × 20) + (80 × 30)] / (20 + 30) = 3900 / 50 = 78</p>
+      <p><strong>Answer:</strong> The overall average score is <strong>78</strong>.</p>
+    </div>
+
+    <!-- Example 3 -->
+    <p><strong>Example 3:</strong><br />The average of four numbers is 60. If the sum of three of those numbers is 170, what is the fourth number?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Sum of 4 numbers = 60 × 4 = 240<br />The fourth number = 240 - 170 = 70</p>
+      <p><strong>Answer:</strong> The fourth number is <strong>70</strong>.</p>
+    </div>
+
+    <!-- Example 4 -->
+    <p><strong>Example 4:</strong><br />The average age of 10 students in a class is 15 years. A new student joins, and the new average becomes 16 years. What is the age of the new student?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Total age of 10 students = 10 × 15 = 150<br />Total age of 11 students = 11 × 16 = 176<br />Age of the new student = 176 - 150 = 26</p>
+      <p><strong>Answer:</strong> The age of the new student is <strong>26 years</strong>.</p>
+    </div>
+
+    <!-- Example 5 -->
+    <p><strong>Example 5:</strong><br />In a company, the average salary of male employees is $50,000, and the average salary of female employees is $45,000. If there are 30 male employees and 20 female employees, what is the overall average salary of all employees?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Weighted Average = [(50,000 × 30) + (45,000 × 20)] / (30 + 20) = 2,400,000 / 50 = 48,000</p>
+      <p><strong>Answer:</strong> The overall average salary is <strong>$48,000</strong>.</p>
+    </div>
+
+    <!-- Example 6 -->
+    <p><strong>Example 6:</strong><br />A person drives to a destination at 60 km/h and returns at 40 km/h. What is their average speed for the entire journey?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Average speed = (2 × 60 × 40) / (60 + 40) = 4800 / 100 = 48 km/h</p>
+      <p><strong>Answer:</strong> The average speed is <strong>48 km/h</strong>.</p>
+    </div>
+
+    <!-- Example 7 -->
+    <p><strong>Example 7:</strong><br />In a class of 50 students, the overall average marks is 65. The average marks of the 30 students who passed is 75, and the average marks of the 20 students who failed is 50. Verify the overall average using this data.</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Sum of marks of passed students = 30 × 75 = 2250<br />Sum of marks of failed students = 20 × 50 = 1000<br />Total sum of marks = 2250 + 1000 = 3250<br />Overall average = 3250 / 50 = 65</p>
+      <p><strong>Answer:</strong> The overall average is <strong>65</strong>.</p>
+    </div>
+
+    <!-- Example 8 -->
+    <p><strong>Example 8:</strong><br />The average weight of 8 people is 70 kg. If one person leaves and the new average becomes 68 kg, what was the weight of the person who left?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Total weight of 8 people = 8 × 70 = 560<br />Total weight of remaining 7 people = 7 × 68 = 476<br />Weight of the person who left = 560 - 476 = 84</p>
+      <p><strong>Answer:</strong> The weight of the person who left is <strong>84 kg</strong>.</p>
+    </div>
+
+    <!-- Example 9 -->
+    <p><strong>Example 9:</strong><br />A cricket player has an average score of 45 runs over 10 matches. If he scores 55 runs in the next match, what will be his new average score?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Total score in 10 matches = 10 × 45 = 450<br />Total score after 11 matches = 450 + 55 = 505<br />New average = 505 / 11 = 45.91</p>
+      <p><strong>Answer:</strong> The new average score is <strong>45.91</strong>.</p>
+    </div>
+
+    <!-- Example 10 -->
+    <p><strong>Example 10:</strong><br />The average score of 7 students is 80 in a math test. If an additional student joins, and the new average becomes 78, what was the score of the new student?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Total score of 7 students = 7 × 80 = 560<br />Total score of 8 students = 8 × 78 = 624<br />Score of the new student = 624 - 560 = 64</p>
+      <p><strong>Answer:</strong> The score of the new student is <strong>64</strong>.</p>
+    </div>
+  </div>
+</body>
+</html>

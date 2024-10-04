@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+    }
+
+    /* Container for all content */
+    .content-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* Header styling */
+    h1, h2 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Headings and Strong styling */
+    h3, strong {
+      color: #ffcc00;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    /* Paragraph styling */
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #b3b3b3;
+      text-align: left;
+    }
+
+    /* List styling */
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+
+    /* Strong tags */
+    strong {
+      color: #ff5733;
+    }
+
+    /* Blockquote styling */
+    blockquote {
+      font-size: 1.1rem;
+      color: #ccc;
+      padding: 1rem;
+      background-color: #333;
+      border-left: 4px solid #555;
+      margin: 1.5rem 0;
+    }
+
+    /* Solution block styling */
+    .solution {
+      background-color: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #4e0967;
+      color: #b3b3b3;
+    }
+
+    /* Hover effects for better interactivity */
+    ul li:hover, ol li:hover {
+      color: #ffcc00;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+      margin: 2rem 0;
+    }
+
+    /* Links styling */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <h1><strong>&nbsp;Calendar</strong></h1>
+
+    <h3>Definition</h3>
+    <p>Calendar aptitude refers to the ability to understand and solve problems related to dates, days of the week, and calendars. This involves calculating day differences, determining the day of the week for a given date, and understanding leap years and the structure of the Gregorian calendar.</p>
+
+    <h3>Key Concepts</h3>
+
+    <ol>
+      <li><strong>Days of the Week:</strong></li>
+    </ol>
+    <ul>
+      <li>There are seven days in a week: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.</li>
+      <li>The days of the week repeat in a cycle every seven days.</li>
+    </ul>
+
+    <ol start="2">
+      <li><strong>Month Structure:</strong></li>
+    </ol>
+    <ul>
+      <li>The Gregorian calendar consists of 12 months:</li>
+      <ul>
+        <li>January: 31 days</li>
+        <li>February: 28 days (29 in a leap year)</li>
+        <li>March: 31 days</li>
+        <li>April: 30 days</li>
+        <li>May: 31 days</li>
+        <li>June: 30 days</li>
+        <li>July: 31 days</li>
+        <li>August: 31 days</li>
+        <li>September: 30 days</li>
+        <li>October: 31 days</li>
+        <li>November: 30 days</li>
+        <li>December: 31 days</li>
+      </ul>
+    </ul>
+
+    <ol start="3">
+      <li><strong>Leap Year:</strong></li>
+    </ol>
+    <ul>
+      <li>A leap year occurs every four years to compensate for the extra 0.25 days in a year, resulting in 366 days instead of the usual 365.</li>
+      <li>A year is a leap year if:</li>
+      <ul>
+        <li>It is divisible by 4;</li>
+        <li>It is not divisible by 100, unless it is also divisible by 400.</li>
+      </ul>
+    </ul>
+
+    <ol start="4">
+      <li><strong>Calculating Days Between Dates:</strong></li>
+    </ol>
+    <ul>
+      <li>To calculate the number of days between two dates, consider the number of days in each month and account for leap years if applicable.</li>
+      <li>Count the total days from the start date to the end date.</li>
+    </ul>
+
+    <ol start="5">
+      <li><strong>Finding the Day of the Week:</strong></li>
+    </ol>
+    <ul>
+      <li>Use formulas such as Zeller's Congruence or the Doomsday Rule to determine the day of the week for any given date.</li>
+      <li>Alternatively, you can count forward or backward from a known date and its corresponding day of the week.</li>
+    </ul>
+
+    <h3>Problem-Solving Techniques</h3>
+
+    <ol>
+      <li><strong>Coding and Decoding Dates:</strong></li>
+    </ol>
+    <ul>
+      <li>Assign numbers to days (e.g., Sunday = 0, Monday = 1, ..., Saturday = 6).</li>
+      <li>Use these codes to perform calculations and determine the day of the week.</li>
+    </ul>
+
+    <ol start="2">
+      <li><strong>Calendar Odd Days:</strong></li>
+    </ol>
+    <ul>
+      <li>Calculate the odd days in a given period to find the day of the week. Odd days are the remainder when the total number of days is divided by 7.</li>
+      <li>For example, 8 days have 1 odd day (8 mod 7 = 1).</li>
+    </ul>
+
+    <ol start="3">
+      <li><strong>Working with Specific Dates:</strong></li>
+    </ol>
+    <ul>
+      <li>For certain dates (like the first day of the year), you can memorize the day for any year to help in quick calculations for other dates in that year.</li>
+    </ul>
+
+    <h3>Applications</h3>
+    <p>Calendar aptitude is often tested in competitive exams and assessments, where problems may involve calculating the day of the week for historical dates, determining how many days are between two events, or solving puzzles related to calendars.</p>
+
+    <h3>Example Problems</h3>
+
+    <!-- Example 1 -->
+    <p><strong>Example 1:</strong><br />If today is Monday, what will be the day of the week 45 days from now?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>45 days = 6 weeks and 3 days.<br />Adding 3 days to Monday:<br />Monday + 3 days = <strong>Thursday</strong>.</p>
+    </div>
+
+    <!-- Example 2 -->
+    <p><strong>Example 2:</strong><br />What day of the week was July 4, 1776?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Using Zeller's Congruence or known formulas, we find that July 4, 1776, was a <strong>Thursday</strong>.</p>
+    </div>
+
+    <!-- Example 3 -->
+    <p><strong>Example 3:</strong><br />If a year is a leap year, how many odd days does it have?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>A leap year has 366 days.<br />Calculating odd days:<br />366 mod 7 = 2<br /><strong>So, it has 2 odd days.</strong></p>
+    </div>
+
+    <!-- Example 4 -->
+    <p><strong>Example 4:</strong><br />What is the day of the week on January 1, 2000?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>January 1, 2000, was a <strong>Saturday</strong>.</p>
+    </div>
+
+    <!-- Example 5 -->
+    <p><strong>Example 5:</strong><br />How many days are there from March 15, 2022, to June 15, 2022?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>March: 16 days (15th to 31st)<br />April: 30 days<br />May: 31 days<br />June: 15 days<br />Total: 16 + 30 + 31 + 15 = 92 days.<br /><strong>Total days: 92.</strong></p>
+    </div>
+
+    <!-- Example 6 -->
+    <p><strong>Example 6:</strong><br />If January 1 is a Friday, what day will January 31 be?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>January has 31 days.<br />Days from January 1 to January 31 = 30 days.<br />Calculating: 30 mod 7 = 2.<br />So, January 31 will be:<br />Friday + 2 days = <strong>Sunday</strong>.</p>
+    </div>
+
+    <!-- Example 7 -->
+    <p><strong>Example 7:</strong><br />If a person was born on February 29, 2000, and celebrates their birthday every leap year, how many times will they celebrate their birthday until 2024?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Leap years from 2000 to 2024 are 2000, 2004, 2008, 2012, 2016, 2020, and 2024.<br /><strong>Total celebrations: 7 times.</strong></p>
+    </div>
+
+    <!-- Example 8 -->
+    <p><strong>Example 8:</strong><br />How many days are there in total from January 1, 1990, to December 31, 1999?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>Total years: 10 (1990 to 1999)<br />Leap years: 1992, 1996.<br />Total days = (8 &times; 365) + (2 &times; 366) = 2920 + 732 = 3652 days.<br /><strong>Total days: 3652.</strong></p>
+    </div>
+
+    <!-- Example 9 -->
+    <p><strong>Example 9:</strong><br />If today is September 1, 2024, what day will it be 60 days from today?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>60 days = 2 months (September has 30 days and October has 31 days).<br />Adding 60 days from September 1:<br />September: 30 days<br />October: 31 days<br />Remaining: 60 - 30 - 31 = 0 (end of October)<br />Thus, November 1, 2024, is 60 days from September 1.<br /><strong>Day: November 1, 2024.</strong></p>
+    </div>
+
+    <!-- Example 10 -->
+    <p><strong>Example 10:</strong><br />What day of the week will be exactly 100 days from March 15, 2023?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>100 days = 14 weeks and 2 days.<br />Starting from March 15, 2023:<br />March 15 is a Wednesday.<br />Adding 2 days:<br />Wednesday + 2 days = <strong>Friday</strong>.</p>
+    </div>
+  </div>
+</body>
+</html>
