@@ -1,93 +1,43 @@
-
-// import React, { useState } from 'react';
-// import { Button, ButtonGroup, Typography } from '@mui/material';
-// import ITCareerSteps from './Knowmore'; // Importing your ITCareerSteps component
-// import ExecutivePlan from './ExecutivePlan';
-// import Apprenticeship from './Apprenticeship';
-// import SosPlan from './SosPlan';
-// import './CourseDetails.css'; // Import custom CSS for layout and styling
-
-// const CourseDetails = () => {
-//   const [selectedPlan, setSelectedPlan] = useState('Nothing'); // Manage the selected plan
-
-//   const handlePlanChange = (plan) => {
-//     setSelectedPlan(plan);
-//   };
-
-//   return (
-//     <div className="course-details-container">
-//       {/* Heading */}
-//       <Typography variant="h4" style={{ marginBottom: '20px' }}>
-//         Course Details
-//       </Typography>
-
-//       {/* Button Group for Plan Selection */}
-//       <ButtonGroup variant="outlined" className="plan-buttons">
-//         <Button
-//           onClick={() => handlePlanChange('Titan Plan')}
-//           className={selectedPlan === 'Titan Plan' ? 'selected' : ''}
-//         >
-//           Titan Plan
-//         </Button>
-//         <Button
-//           onClick={() => handlePlanChange('Executive Plan')}
-//           className={selectedPlan === 'Executive Plan' ? 'selected' : ''}
-//         >
-//           Executive Plan
-//         </Button>
-//         <Button
-//           onClick={() => handlePlanChange('Apprentice Plan')}
-//           className={selectedPlan === 'Apprentice Plan' ? 'selected' : ''}
-//         >
-//           Apprentice Plan
-//         </Button>
-//         <Button
-//           onClick={() => handlePlanChange('SOS Plan')}
-//           className={selectedPlan === 'SOS Plan' ? 'selected' : ''}
-//         >
-//           SOS Plan
-//         </Button>
-//       </ButtonGroup>
-
-//       {/* Conditionally Render ITCareerSteps when Titan Plan is selected */}
-//       <div className="plan-content">
-//         {selectedPlan === 'Titan Plan' && <ITCareerSteps />}
-//       </div>
-//       <div className="plan-content">
-//         {selectedPlan === 'Executive Plan' && <ExecutivePlan />}
-//       </div>
-//       <div className="plan-content">
-//         {selectedPlan === 'Apprentice Plan' && <Apprenticeship />}
-//       </div>
-//       <div className="plan-content">
-//         {selectedPlan === 'SOS Plan' && <SosPlan />}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CourseDetails;
-
-
-
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Button, ButtonGroup, Typography } from '@mui/material';
-import { useParams } from 'react-router-dom';
 import ITCareerSteps from './Knowmore'; // Importing your ITCareerSteps component
 import ExecutivePlan from './ExecutivePlan';
 import Apprenticeship from './Apprenticeship';
 import SosPlan from './SosPlan';
 import './CourseDetails.css'; // Import custom CSS for layout and styling
 
-const CourseDetails = () => {
-  const { plan } = useParams(); // Get the plan from the URL
-  const [selectedPlan, setSelectedPlan] = useState('Nothing'); // Manage the selected plan
 
+const CourseDetails = ({ planIndex }) => {
+  const location = useLocation();
+  const [selectedPlan, setSelectedPlan] = useState('Nothing'); // Manage the selected plan
+ 
+
+  // New useEffect to map the planIndex to specific plans and auto-select them based on URL
   useEffect(() => {
-    if (plan) {
-      setSelectedPlan(plan); // Set the selected plan based on the URL
+    const params = new URLSearchParams(location.search);  // Get query parameters
+    const planIndex = params.get('plan');  // Get the "plan" query parameter
+  
+    console.log("Plan Index:", planIndex);
+    if (planIndex) {
+      switch (planIndex) {
+        case '0':
+          setSelectedPlan('titan-plan');
+          break;
+        case '1':
+          setSelectedPlan('executive-plan');
+          break;
+        case '2':
+          setSelectedPlan('apprentice-plan');
+          break;
+        case '3':
+          setSelectedPlan('sos-plan');
+          break;
+        default:
+          setSelectedPlan('Nothing');
+      }
     }
-  }, [plan]);
+  }, [planIndex]);
 
   const handlePlanChange = (plan) => {
     setSelectedPlan(plan);

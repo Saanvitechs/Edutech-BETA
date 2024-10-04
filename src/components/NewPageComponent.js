@@ -1,17 +1,13 @@
-
-
-
 import React, { useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; // To get query parameters
 import Navbar from './Navbar';
-// import Footer from './Footer';
 import HeroSection from './Hero';
 import StatsSection from './Stats';
 import FeaturesSection from './FeaturesSection';
 import Testimonials from './Testimonials';
 import About from './About';
 import Faq from './FaqComponent';
-import PricingPlans from './PricingPlan';
+import PricingPlans from './CourseDetails';
 
 const NewPageComponent = () => {
   const pricingRef = useRef(null); // Ref for the PricingPlans section
@@ -37,11 +33,11 @@ const NewPageComponent = () => {
       <Navbar />
       <HeroSection pricingRef={pricingRef}/>
       <StatsSection />
-      <FeaturesSection />
-      <Testimonials />
       <div ref={pricingRef}> 
         <PricingPlans planIndex={new URLSearchParams(location.search).get('plan')} /> {/* Pass planIndex as prop */}
       </div>
+      <FeaturesSection />
+      <Testimonials />
       <About />
       <Faq />
       {/* <Footer /> */}

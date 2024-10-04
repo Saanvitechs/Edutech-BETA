@@ -19,35 +19,39 @@ const TestSeriesSection = () => {
   };
 
   // Navigate to NewPageComponent and pass the plan index via URL parameters
-  const handleButtonClick = (index) => {
-    navigate(`/pricing-plans?plan=${index}`); // Navigate to PricingPlans page with the selected plan index
+  const handleButtonClick = (planIndex) => {
+    navigate(`/course?plan=${planIndex}`); // Navigate to NewPageComponent with the selected plan index
   };
 
   const buttonData = [
 
     {
-      defaultText: 'Live Projects',
-      hoverText: 'Check Executive Plan',
+      defaultText: 'Live Projects & OJT',
+      hoverText: 'Check Titan Plan',
       icon: codings,
       isImageIcon: true,
+      planIndex: 0,
     },
     {
       defaultText: 'On-Job-Training',
-      hoverText: 'Check Titan Plan',
+      hoverText: 'Check Executive Plan',
       icon: briefcase,
       isImageIcon: true,
+      planIndex: 1,
     },
     {
       defaultText: 'Internship/Guidance',
       hoverText: 'Check Apprentice Plan',
       icon: bachelor,
       isImageIcon: true,
+      planIndex: 2,
     },
     {
       defaultText: 'Interview Preparation',
       hoverText: 'Check SOS Plan',
       icon: interview,
       isImageIcon: true,
+      planIndex: 3,
     },
   ];
 

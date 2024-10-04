@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+    }
+
+    /* Container for all content */
+    .content-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* Header styling */
+    h1, h2 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Headings and Strong styling */
+    h3, strong {
+      color: #ffcc00;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    /* Paragraph styling */
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #b3b3b3;
+      text-align: left;
+    }
+
+    /* List styling */
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+
+    /* Strong tags */
+    strong {
+      color: #ff5733;
+    }
+
+    /* Blockquote styling */
+    blockquote {
+      font-size: 1.1rem;
+      color: #ccc;
+      padding: 1rem;
+      background-color: #333;
+      border-left: 4px solid #555;
+      margin: 1.5rem 0;
+    }
+
+    /* Solution block styling */
+    .solution {
+      background-color: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #4e0967;
+      color: #b3b3b3;
+    }
+
+    /* Hover effects for better interactivity */
+    ul li:hover, ol li:hover {
+      color: #ffcc00;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+      margin: 2rem 0;
+    }
+
+    /* Links styling */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <h2><strong>&nbsp;Simple Interest</strong></h2>
+    <p><strong>Definition:</strong></p>
+    <p>Simple interest is a financial term that refers to the interest calculated on the principal amount, which is the initial sum of money borrowed or invested. It is not compounded, meaning that interest is calculated only on the original principal throughout the investment or loan period.</p>
+    
+    <p><strong>Formula:</strong></p>
+    <p>The formula for calculating simple interest is given by:</p>
+    <p>SI = P &times; R &times; T / 100</p>
+    <p>Where:</p>
+    <ul>
+      <li><strong>SI</strong> represents the simple interest.</li>
+      <li><strong>P</strong> denotes the principal amount (the initial amount of money).</li>
+      <li><strong>R</strong> signifies the rate of interest per year, expressed as a percentage.</li>
+      <li><strong>T</strong> indicates the time period for which the money is borrowed or invested, measured in years.</li>
+    </ul>
+    
+    <p><strong>Characteristics:</strong></p>
+    <ol>
+      <li><strong>Linear Growth</strong>: The amount of interest earned or paid grows linearly over time, directly proportional to the time period and the rate of interest.</li>
+      <li><strong>Constant Rate</strong>: The interest rate remains constant for the entire duration of the investment or loan.</li>
+      <li><strong>No Compounding Effect</strong>: Unlike compound interest, simple interest does not factor in interest on previously earned interest, making calculations straightforward.</li>
+      <li><strong>Ease of Calculation</strong>: Simple interest calculations are generally easier and quicker compared to compound interest calculations, making them accessible for various financial assessments.</li>
+    </ol>
+    
+    <p><strong>Total Amount Calculation:</strong></p>
+    <p>The total amount accrued or payable at the end of the investment or loan period can be determined by adding the calculated simple interest to the principal amount. This can be expressed as:</p>
+    <p>A = P + SI</p>
+    <p>Where:</p>
+    <ul>
+      <li><strong>A</strong> represents the total amount.</li>
+      <li><strong>P</strong> is the principal amount.</li>
+      <li><strong>SI</strong> is the simple interest.</li>
+    </ul>
+    
+    <p><strong>Applications:</strong></p>
+    <ul>
+      <li><strong>Loans</strong>: It is often applied to personal loans, car loans, and some short-term borrowing arrangements.</li>
+      <li><strong>Savings Accounts</strong>: Certain savings accounts and fixed deposits might utilize simple interest for short-term investments.</li>
+      <li><strong>Financial Planning</strong>: Simple interest is useful in financial planning, budgeting, and forecasting future returns on investments.</li>
+    </ul>
+    
+    <h3>Examples:</h3>
+
+    <!-- Example 1 -->
+    <p><strong>Example 1</strong></p>
+    <div class="solution">
+      <p><strong>A principal amount of $2,500 is invested at an interest rate of 4% per annum for 5 years. Calculate the simple interest.</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (2500 &times; 4 &times; 5) / 100 = 500</p>
+    </div>
+
+    <!-- Example 2 -->
+    <p><strong>Example 2</strong></p>
+    <div class="solution">
+      <p><strong>If $3,000 is borrowed at a simple interest rate of 6% for 2 years, find the total amount to be repaid.</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (3000 &times; 6 &times; 2) / 100 = 360<br /> Total Amount = Principal + SI = 3000 + 360 = 3360</p>
+    </div>
+
+    <!-- Example 3 -->
+    <p><strong>Example 3</strong></p>
+    <div class="solution">
+      <p><strong>A person invests $10,000 at an annual interest rate of 5% for 3 years. Determine the simple interest earned.</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (10000 &times; 5 &times; 3) / 100 = 1500</p>
+    </div>
+
+    <!-- Example 4 -->
+    <p><strong>Example 4</strong></p>
+    <div class="solution">
+      <p><strong>A loan of $1,200 is taken out at an interest rate of 8% for 4 years. Calculate the interest to be paid.</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (1200 &times; 8 &times; 4) / 100 = 384</p>
+    </div>
+
+    <!-- Example 5 -->
+    <p><strong>Example 5</strong></p>
+    <div class="solution">
+      <p><strong>If you invest $5,500 at a simple interest rate of 7% for 6 years, what will be the total interest accrued?</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (5500 &times; 7 &times; 6) / 100 = 2310</p>
+    </div>
+
+    <!-- Example 6 -->
+    <p><strong>Example 6</strong></p>
+    <div class="solution">
+      <p><strong>A student takes a loan of $800 at an interest rate of 5% for 2 years. Find the simple interest.</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (800 &times; 5 &times; 2) / 100 = 80</p>
+    </div>
+
+    <!-- Example 7 -->
+    <p><strong>Example 7</strong></p>
+    <div class="solution">
+      <p><strong>If a sum of $4,000 is invested for 5 years at a simple interest rate of 10% per annum, what is the simple interest earned?</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (4000 &times; 10 &times; 5) / 100 = 2000</p>
+    </div>
+
+    <!-- Example 8 -->
+    <p><strong>Example 8</strong></p>
+    <div class="solution">
+      <p><strong>A person borrows $600 at a simple interest rate of 9% for 3 years. Calculate the total interest paid.</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (600 &times; 9 &times; 3) / 100 = 162</p>
+    </div>
+
+    <!-- Example 9 -->
+    <p><strong>Example 9</strong></p>
+    <div class="solution">
+      <p><strong>A principal of $1,500 is invested at a rate of 12% per annum for 4 years. Find the simple interest.</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (1500 &times; 12 &times; 4) / 100 = 720</p>
+    </div>
+
+    <!-- Example 10 -->
+    <p><strong>Example 10</strong></p>
+    <div class="solution">
+      <p><strong>If you lend $750 at an interest rate of 11% for 2 years, what will be the total amount received at the end?</strong></p>
+      <p><strong>Solution:</strong><br /> SI = (750 &times; 11 &times; 2) / 100 = 165<br /> Total Amount = Principal + SI = 750 + 165 = 915</p>
+    </div>
+
+  </div>
+</body>
+</html>

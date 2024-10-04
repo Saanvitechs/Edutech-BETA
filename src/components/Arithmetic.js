@@ -42,7 +42,7 @@ const Arithmetic = () => {
         <Grid container spacing={2} className="topics-grid">
           {topicsWithUrls.map((topic, index) => (
             <Grid item xs={12} sm={6} md={4} lg={2.75} key={index} className="topic-grid-item" style={{ marginBottom: '1rem' }}>
-              <Link to={`/studycontent${topic.url}`} className="topic-link">
+              <Link to={`/topic${topic.url}`} className="topic-link">
                 <FolderIcon className="folder-icon" />
                 <Typography variant="body1" className="topic-title">
                   {topic.name}

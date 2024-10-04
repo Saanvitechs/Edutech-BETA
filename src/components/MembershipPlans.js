@@ -198,7 +198,7 @@ const MembershipPlans = () => {
         'Interview Prep in line with Industry Standards',
       ],
       buttonText: 'Know More',
-      planPath: 'executive-plan',  // Add plan path for navigation
+      planIndex: 1,  // Add plan path for navigation
     },
     {
       title: 'TITAN PLAN',
@@ -210,7 +210,7 @@ const MembershipPlans = () => {
         'Chance to work on Enterprise-level Application',
       ],
       buttonText: 'Know More',
-      planPath: 'titan-plan',
+      planIndex: 1,
     },
     {
       title: 'APPRENTICE PLAN',
@@ -222,7 +222,7 @@ const MembershipPlans = () => {
         'Chance to work on Enterprise-level Application',
       ],
       buttonText: 'Know More',
-      planPath: 'apprentice-plan',
+      planIndex: 2,
     },
     {
       title: 'SOS PLAN',
@@ -233,13 +233,12 @@ const MembershipPlans = () => {
         'Get skilled with our plan of SOS and get a brief.',
       ],
       buttonText: 'Know More',
-      planPath: 'sos-plan',
+      planIndex: 3,
     },
   ];
 
-  const handleSubscribeClick = (planPath) => {
-    // Navigate to the CourseDetails page with the plan path
-    navigate(`/course-details/${planPath}`);
+  const handleButtonClick = (planIndex) => {
+    navigate(`/course-details?plan=${planIndex}`); // Navigate to NewPageComponent with the selected plan index
   };
 
   return (
@@ -332,7 +331,7 @@ const MembershipPlans = () => {
                     width: '80%',
                     alignSelf: 'center',
                   }}
-                  onClick={() => handleSubscribeClick(plan.planPath)}  
+                  onClick={() => handleButtonClick(plan.planIndex)}  
                 >
                   {plan.buttonText}
                 </Button>

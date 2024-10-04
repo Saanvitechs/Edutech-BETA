@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+    }
+
+    /* Container for all content */
+    .content-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* Header styling */
+    h1, h2 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Headings and Strong styling */
+    h3, strong {
+      color: #ffcc00;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    /* Paragraph styling */
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #b3b3b3;
+      text-align: left;
+    }
+
+    /* List styling */
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+
+    /* Strong tags */
+    strong {
+      color: #ff5733;
+    }
+
+    /* Blockquote styling */
+    blockquote {
+      font-size: 1.1rem;
+      color: #ccc;
+      padding: 1rem;
+      background-color: #333;
+      border-left: 4px solid #555;
+      margin: 1.5rem 0;
+    }
+
+    /* Solution block styling */
+    .solution {
+      background-color: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #4e0967;
+      color: #b3b3b3;
+    }
+
+    /* Hover effects for better interactivity */
+    ul li:hover, ol li:hover {
+      color: #ffcc00;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+      margin: 2rem 0;
+    }
+
+    /* Links styling */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <h2><strong>&nbsp;Compound Interest</strong></h2>
+
+    <p><strong>Definition:</strong></p>
+    <p>Compound interest is the interest calculated on the initial principal and also on the accumulated interest of previous periods. Unlike simple interest, which is calculated only on the principal amount, compound interest grows over time as it builds upon itself. This effect is known as "interest on interest," and it leads to exponential growth of the investment or loan.</p>
+
+    <p><strong>Formula:</strong></p>
+    <p>The formula for calculating the total amount (A) accrued over time with compound interest is given by:</p>
+    <p>A = P (1 + R/n)<sup>nT</sup></p>
+    <p>Where:</p>
+    <ul>
+      <li><strong>A</strong> = the total amount after time T</li>
+      <li><strong>P</strong> = principal amount (initial investment or loan amount)</li>
+      <li><strong>R</strong> = annual interest rate (in decimal)</li>
+      <li><strong>n</strong> = number of times interest is compounded per year</li>
+      <li><strong>T</strong> = time (in years)</li>
+    </ul>
+
+    <p>The compound interest (CI) can then be found by subtracting the principal from the total amount:</p>
+    <p>CI = A &minus; P</p>
+
+    <p><strong>Characteristics:</strong></p>
+    <ol>
+      <li><strong>Exponential Growth</strong>: The amount of interest earned or paid increases exponentially over time due to the accumulation of interest on interest.</li>
+      <li><strong>Frequency of Compounding</strong>: The more frequently interest is compounded, the greater the total amount will be. Common compounding intervals include annually, semi-annually, quarterly, and monthly.</li>
+      <li><strong>Time Factor</strong>: The length of time the money is invested or borrowed significantly affects the total amount accrued due to compound interest.</li>
+      <li><strong>Flexibility</strong>: Compound interest can be applied in various financial products, including savings accounts, loans, and investments.</li>
+    </ol>
+
+    <p><strong>Applications:</strong></p>
+    <ul>
+      <li><strong>Savings Accounts</strong>: Many savings accounts and fixed deposits utilize compound interest to grow deposits over time.</li>
+      <li><strong>Investments</strong>: Investment vehicles, such as stocks and mutual funds, often use compound interest to increase the value of investments.</li>
+      <li><strong>Loans</strong>: Some loans, particularly credit cards, may calculate interest using a compound method, leading to higher amounts owed over time if not managed properly.</li>
+    </ul>
+
+    <p><strong>Benefits of Compound Interest:</strong></p>
+    <ul>
+      <li><strong>Wealth Growth</strong>: Compound interest allows investors to grow their wealth significantly over time, especially when investments are left to compound over many years.</li>
+      <li><strong>Retirement Planning</strong>: Utilizing compound interest effectively is crucial for retirement savings, as it can lead to substantial growth of retirement funds.</li>
+    </ul>
+
+    <h3>Examples</h3>
+
+    <!-- Question 1 -->
+    <p><strong>Question 1</strong><br />A principal amount of $5,000 is invested at an annual interest rate of 6%, compounded annually. What will be the total amount after 4 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>A = P (1 + r/n)^(nt)</p>
+      <ul>
+        <li>P = 5000</li>
+        <li>r = 0.06</li>
+        <li>n = 1 (compounded annually)</li>
+        <li>t = 4</li>
+      </ul>
+      <p>A = 5000 (1 + 0.06/1)^(1*4)</p>
+      <p>A = 5000 (1.06)^4 &asymp; 5000 * 1.2625 = 6312.50</p>
+      <p><strong>Total Amount = $6,312.50</strong></p>
+    </div>
+
+    <!-- Question 2 -->
+    <p><strong>Question 2</strong><br />If $10,000 is deposited in a savings account that offers an interest rate of 5% compounded quarterly, what will be the total amount after 3 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 10000, r = 0.05, n = 4, t = 3</p>
+      <p>A = 10000 (1 + 0.05/4)^(4*3)</p>
+      <p>A = 10000 (1 + 0.0125)^(12)</p>
+      <p>A = 10000 (1.0125)^(12) &asymp; 10000 * 1.1616 = 11616.16</p>
+      <p><strong>Total Amount = $11,616.16</strong></p>
+    </div>
+
+    <!-- Question 3 -->
+    <p><strong>Question 3</strong><br />You borrow $2,000 at an interest rate of 8% per annum, compounded semi-annually. How much will you owe at the end of 5 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 2000, r = 0.08, n = 2, t = 5</p>
+      <p>A = 2000 (1 + 0.08/2)^(2*5)</p>
+      <p>A = 2000 (1 + 0.04)^(10)</p>
+      <p>A = 2000 (1.04)^(10) &asymp; 2000 * 1.4802 = 2960.40</p>
+      <p><strong>Total Amount = $2,960.40</strong></p>
+    </div>
+
+    <!-- Question 4 -->
+    <p><strong>Question 4</strong><br />An investment of $7,500 is made at a compound interest rate of 4% per annum, compounded monthly. What will be the total amount after 2 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 7500, r = 0.04, n = 12, t = 2</p>
+      <p>A = 7500 (1 + 0.04/12)^(12*2)</p>
+      <p>A = 7500 (1 + 0.003333)^(24)</p>
+      <p>A = 7500 (1.003333)^(24) &asymp; 7500 * 1.083282 = 8124.61</p>
+      <p><strong>Total Amount = $8,124.61</strong></p>
+    </div>
+
+    <!-- Question 5 -->
+    <p><strong>Question 5</strong><br />If you invest $1,200 at an interest rate of 10% compounded annually, how much interest will you earn after 6 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 1200, r = 0.10, n = 1, t = 6</p>
+      <p>A = 1200 (1 + 0.10/1)^(1*6)</p>
+      <p>A = 1200 (1.10)^(6) &asymp; 1200 * 1.771561 = 2125.87</p>
+      <p><strong>Interest Earned = $925.87</strong></p>
+    </div>
+
+    <!-- Question 6 -->
+    <p><strong>Question 6</strong><br />A sum of $4,500 is invested for 3 years at an annual interest rate of 9%, compounded monthly. What will be the total amount at the end of the investment period?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 4500, r = 0.09, n = 12, t = 3</p>
+      <p>A = 4500 (1 + 0.09/12)^(12*3)</p>
+      <p>A = 4500 (1 + 0.0075)^(36)</p>
+      <p>A = 4500 (1.0075)^(36) &asymp; 4500 * 1.348850 = 6079.83</p>
+      <p><strong>Total Amount = $6,079.83</strong></p>
+    </div>
+
+    <!-- Question 7 -->
+    <p><strong>Question 7</strong><br />You plan to invest $3,000 in a fund that offers a compound interest rate of 7% per annum, compounded annually. How much will the investment be worth after 10 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 3000, r = 0.07, n = 1, t = 10</p>
+      <p>A = 3000 (1 + 0.07/1)^(1*10)</p>
+      <p>A = 3000 (1.07)^(10) &asymp; 3000 * 1.967151 = 5901.45</p>
+      <p><strong>Total Amount = $5,901.45</strong></p>
+    </div>
+
+    <!-- Question 8 -->
+    <p><strong>Question 8</strong><br />If you take a loan of $1,000 at an annual interest rate of 12% compounded quarterly, what will be the total amount to be repaid after 2 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 1000, r = 0.12, n = 4, t = 2</p>
+      <p>A = 1000 (1 + 0.12/4)^(4*2)</p>
+      <p>A = 1000 (1 + 0.03)^(8)</p>
+      <p>A = 1000 (1.03)^(8) &asymp; 1000 * 1.266769 = 1266.77</p>
+      <p><strong>Total Amount = $1,266.77</strong></p>
+    </div>
+
+    <!-- Question 9 -->
+    <p><strong>Question 9</strong><br />An investor deposits $2,500 in a bank account that pays 6% interest compounded semi-annually. What will be the total amount in the account after 5 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 2500, r = 0.06, n = 2, t = 5</p>
+      <p>A = 2500 (1 + 0.06/2)^(2*5)</p>
+      <p>A = 2500 (1 + 0.03)^(10)</p>
+      <p>A = 2500 (1.03)^(10) &asymp; 2500 * 1.343916 = 3359.79</p>
+      <p><strong>Total Amount = $3,359.79</strong></p>
+    </div>
+
+    <!-- Question 10 -->
+    <p><strong>Question 10</strong><br />If a principal amount of $8,000 is invested at an interest rate of 5% per annum, compounded monthly, what will be the total amount after 4 years?</p>
+    <div class="solution">
+      <p><strong>Solution:</strong></p>
+      <p>P = 8000, r = 0.05, n = 12, t = 4</p>
+      <p>A = 8000 (1 + 0.05/12)^(12*4)</p>
+      <p>A = 8000 (1 + 0.0041667)^(48)</p>
+      <p>A = 8000 (1.0041667)^(48) &asymp; 8000 * 1.221386 = 9761.09</p>
+      <p><strong>Total Amount = $9,761.09</strong></p>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 .course-details-container {
     padding: 80px 20px 20px 20px; /* Add padding to avoid overlap with the navbar */
     min-height: calc(100vh - 160px); /* Ensures content area height without footer overlap */
-    background: linear-gradient(135deg, #111827, #27425a99); /* Linear gradient background */
+    background: linear-gradient(135deg, #181e2e, #0f111a, #1c2439);
     color: #ffffff;
   }
   

@@ -22,7 +22,7 @@ import Stats from './components/Stats';
 import Referral from './components/Referrals';
 import Knowmore from './components/Knowmore';
 import CourseDetails from './components/CourseDetails';
-
+import TopicContent from './components/TopicContent';
 function App() {
   const location = useLocation(); // Get the current location
 
@@ -49,13 +49,14 @@ function App() {
           <Route path="/resource" element={<Resource />} />
           <Route path="/arithmetic" element={<Arithmetic />} />
           <Route path="/studycontent/:id" element={<StudyContent />} />
-          <Route path="/planDetails" element={<NewPageComponent />} />
+          <Route path="/course" element={<NewPageComponent />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/referral" element={<Referral />} />
           <Route path="/pricing-plans" element={<NewPageComponent />} />
           <Route path="/know" element={<Knowmore />} />
-          <Route path="/course-details/:plan" element={<CourseDetails />} /> {/* Dynamic plan route */}
+          <Route path="/course-details" element={<CourseDetails />} />
+          <Route path="/topic/:topicName" element={<TopicContent />} />
 
           {/* Protect these routes */}
           <Route
