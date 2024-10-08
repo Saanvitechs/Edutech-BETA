@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Races and Games</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+    }
+
+    /* Container for all content */
+    .content-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* Header styling */
+    h1, h2 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Headings and Strong styling */
+    h3, strong {
+      color: #ffcc00;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    /* Paragraph styling */
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #b3b3b3;
+      text-align: left;
+    }
+
+    /* List styling */
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+
+    /* Strong tags */
+    strong {
+      color: #ff5733;
+    }
+
+    /* Solution block styling */
+    .solution {
+      background-color: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #4e0967;
+      color: #b3b3b3;
+    }
+
+    /* Hover effects for better interactivity */
+    ul li:hover, ol li:hover {
+      color: #ffcc00;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+      margin: 2rem 0;
+    }
+
+    /* Links styling */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <h1>Races and Games</h1>
+    <p>Races and games problems in aptitude tests involve calculations related to speed, distance, time, and the relative advantages or disadvantages of competitors. Questions may ask you to determine who wins, by how much distance or time, and to understand terms like 'start' or 'head start.' These concepts can be broken down to simple distance-speed-time relationships and help in mastering competitive problem-solving techniques.</p>
+
+    <h2>Key Concepts and Terminology</h2>
+    <ol>
+      <li><strong>Race</strong>: A competition where participants move from a starting point to a finish line, aiming to complete the course in the shortest time possible.</li>
+      <li><strong>Start or Head Start</strong>: An advantage in terms of distance or time given to one participant before the race begins.</li>
+      <li><strong>Dead Heat</strong>: A situation where two or more participants finish the race at the same time, making it a tie.</li>
+      <li><strong>Time Advantage</strong>: The difference in time taken by two participants to complete the race.</li>
+      <li><strong>Distance Advantage</strong>: When a participant finishes the race while another still has some distance left to cover.</li>
+    </ol>
+
+    <h2>Formulas and Calculations</h2>
+    <ol>
+      <li><strong>Relative Speed (Same Direction)</strong>:<br> Relative Speed = Speed of A - Speed of B (if A is faster than B)</li>
+      <li><strong>Relative Speed (Opposite Directions)</strong>:<br> Relative Speed = Speed of A + Speed of B</li>
+      <li><strong>Time Difference Calculation</strong>:<br> Time Difference = Distance / Relative Speed</li>
+      <li><strong>Lead Distance</strong>:<br> Lead Distance = Relative Speed &times; Time Difference</li>
+      <li><strong>Time Taken by Each Participant</strong>:<br> Time Taken = Distance / Speed</li>
+    </ol>
+
+    <h2>Detailed Examples</h2>
+    <p>Below are examples that demonstrate how to solve problems in races and games scenarios.</p>
+
+    <div class="solution">
+      <h3>Example 1: Calculating Lead Distance</h3>
+      <p>A and B are in a 100 m race. A finishes 10 meters ahead of B. If B’s speed is 5 m/s, what is A’s speed?<br><br>
+      Solution:<br>
+      Since A finishes 10 meters ahead, B only runs 90 meters while A runs the full 100 meters.<br>
+      Time taken by B = 90 / 5 = 18 seconds.<br>
+      Speed of A = 100 / 18 &asymp; 5.56 m/s.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 2: Calculating Time Advantage</h3>
+      <p>In a 200 m race, A gives B a head start of 20 meters. A’s speed is 8 m/s, while B’s speed is 6 m/s. Who wins, and by how much time?<br><br>
+      Solution:<br>
+      B’s distance to cover = 180 m (200 - 20).<br>
+      Time taken by A = 200 / 8 = 25 seconds.<br>
+      Time taken by B = 180 / 6 = 30 seconds.<br>
+      A wins by a time advantage of 30 - 25 = 5 seconds.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 3: Race with Distance Advantage</h3>
+      <p>In a 400 m race, A can give B a 20-meter lead. If A’s speed is 10 m/s, what is B’s speed?<br><br>
+      Solution:<br>
+      Time taken by A to cover 400 m = 400 / 10 = 40 seconds.<br>
+      B needs to cover 380 meters in the same 40 seconds:<br>
+      Speed of B = 380 / 40 = 9.5 m/s.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 4: Calculating Dead Heat in a Race</h3>
+      <p>A and B are running a 150 m race. A runs at 10 m/s, and B runs at 12 m/s. If A has a head start of 20 meters, do they finish together?<br><br>
+      Solution:<br>
+      A’s effective distance to cover = 130 m.<br>
+      Time for A = 130 / 10 = 13 seconds.<br>
+      Time for B = 150 / 12 &asymp; 12.5 seconds.<br>
+      B finishes first, so they do not finish together.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 5: Time Advantage in a Circular Track</h3>
+      <p>A and B are on a circular track of 300 meters. A runs at 12 m/s, and B at 8 m/s. How long until A overtakes B?<br><br>
+      Solution:<br>
+      Relative speed = 12 - 8 = 4 m/s.<br>
+      Time to gain a 300-meter lead = 300 / 4 = 75 seconds.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 6: Calculating Start Advantage in Distance Terms</h3>
+      <p>In a 500 m race, A gives B a 50-meter start. A’s speed is 15 m/s, while B’s speed is 10 m/s. How much time does A need to cover B’s head start?<br><br>
+      Solution:<br>
+      Relative speed = 15 - 10 = 5 m/s.<br>
+      Time to cover 50 meters = 50 / 5 = 10 seconds.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 7: Race Completion Time</h3>
+      <p>A 600 m race sees A at 20 m/s and B at 18 m/s. Who finishes first, and by how much time?<br><br>
+      Solution:<br>
+      Time for A = 600 / 20 = 30 seconds.<br>
+      Time for B = 600 / 18 &asymp; 33.33 seconds.<br>
+      A wins by a time advantage of 33.33 - 30 = 3.33 seconds.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 8: Distance Advantage Calculation</h3>
+      <p>In a 1000 m race, A beats B by 100 meters. A’s speed is 25 m/s. What is B’s speed?<br><br>
+      Solution:<br>
+      Time taken by A = 1000 / 25 = 40 seconds.<br>
+      B covers 900 m in this time:<br>
+      Speed of B = 900 / 40 = 22.5 m/s.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 9: Completing a Race with Opposite Directions</h3>
+      <p>A and B start from the same point on a 500 m circular track, in opposite directions. A’s speed is 10 m/s, and B’s speed is 15 m/s. When do they meet?<br><br>
+      Solution:<br>
+      Relative speed = 10 + 15 = 25 m/s.<br>
+      Time to meet = 500 / 25 = 20 seconds.</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 10: Calculating Head Start Distance</h3>
+      <p>In a 300 m race, A beats B by 30 meters. If B’s speed is 9 m/s, find A’s speed.<br><br>
+      Solution:<br>
+      Time taken by B = 270 / 9 = 30 seconds.<br>
+      Distance covered by A in this time:<br>
+      Speed of A = 300 / 30 = 10 m/s.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probability</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+    }
+
+    /* Container for all content */
+    .content-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    /* Header styling */
+    h1, h2 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-align: center;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Headings and Strong styling */
+    h3, strong {
+      color: #ffcc00;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    /* Paragraph styling */
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #b3b3b3;
+      text-align: left;
+    }
+
+    /* List styling */
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+
+    /* Strong tags */
+    strong {
+      color: #ff5733;
+    }
+
+    /* Blockquote styling */
+    blockquote {
+      font-size: 1.1rem;
+      color: #ccc;
+      padding: 1rem;
+      background-color: #333;
+      border-left: 4px solid #555;
+      margin: 1.5rem 0;
+    }
+
+    /* Solution block styling */
+    .solution {
+      background-color: #292929;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #4e0967;
+      color: #b3b3b3;
+    }
+
+    /* Hover effects for better interactivity */
+    ul li:hover, ol li:hover {
+      color: #ffcc00;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #555;
+      margin: 2rem 0;
+    }
+
+    /* Links styling */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <h1 style="text-align: center;">Probability</h1>
+    <p>Probability is the branch of mathematics that deals with the likelihood or chance of different outcomes in uncertain situations. The probability of an event provides a measure of how likely it is that the event will occur. This concept is used widely in real life, from calculating the chance of rain to analyzing data trends and predicting outcomes in games of chance.<br> In aptitude exams, probability questions test the ability to understand and solve problems involving random events, often requiring knowledge of basic probability principles, formulas, and calculation methods.</p>
+    
+    <h2>Key Concepts and Terminology</h2>
+    <ol>
+      <li><strong>Experiment</strong>: An action or process that can result in different outcomes. For example, rolling a die or flipping a coin.</li>
+      <li><strong>Sample Space (S)</strong>: The set of all possible outcomes of an experiment.</li>
+      <li><strong>Event (E)</strong>: A subset of the sample space, consisting of outcomes that fulfill certain conditions.</li>
+      <li><strong>Favorable Outcomes</strong>: The specific outcomes of an event that we are interested in.</li>
+    </ol>
+
+    <h2>Basic Probability Formula</h2>
+    <p>The probability of an event E happening, denoted as P(E), is calculated by the formula:<br>
+    P(E) = Number of Favorable Outcomes / Total Number of Possible Outcomes<br>
+    where:<br>
+    - P(E) is the probability of event E,<br>
+    - Number of Favorable Outcomes is the count of outcomes in E,<br>
+    - Total Number of Possible Outcomes is the size of the sample space S.</p>
+
+    <h2>Probability Range</h2>
+    <p>The probability of any event lies between 0 and 1:<br>
+    0 &le; P(E) &le; 1<br>
+    - P(E) = 1 indicates a certain event (it will definitely happen).<br>
+    - P(E) = 0 indicates an impossible event (it will not happen).</p>
+
+    <h2>Types of Probability</h2>
+    <ol>
+      <li><strong>Theoretical Probability</strong>: Based on possible outcomes rather than actual experiments.</li>
+      <li><strong>Experimental Probability</strong>: Based on experiments or actual trials, calculated as P(E) = Number of Times Event Occurs / Total Number of Trials.</li>
+      <li><strong>Conditional Probability</strong>: The probability of an event occurring given that another event has already occurred.</li>
+    </ol>
+
+    <h2>Common Probability Rules</h2>
+    <ol>
+      <li><strong>Addition Rule</strong>: For mutually exclusive events A and B, P(A &cup; B) = P(A) + P(B).</li>
+      <li><strong>Multiplication Rule</strong>: For independent events A and B, P(A &cap; B) = P(A) &times; P(B).</li>
+    </ol>
+
+    <h2>Detailed Examples</h2>
+    <p>Below are examples that demonstrate how to calculate probability in different scenarios.</p>
+
+    <div class="solution">
+      <h3>Example 1: Basic Probability Calculation</h3>
+      <p>What is the probability of rolling a 5 on a six-sided die?<br><br>
+      Solution:<br>
+      Total outcomes: 6. Favorable outcomes: 1.<br>
+      P(rolling a 5) = 1/6</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 2: Probability of Drawing a Red Card</h3>
+      <p>What is the probability of drawing a red card from a 52-card deck?<br><br>
+      Solution:<br>
+      Total red cards = 26.<br>
+      P(red card) = 26/52 = 1/2</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 3: Probability of Getting a Head in a Coin Toss</h3>
+      <p>What is the probability of getting a head when a coin is tossed?<br><br>
+      Solution:<br>
+      Total outcomes = 2. Favorable outcome for head = 1.<br>
+      P(head) = 1/2</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 4: Probability of Getting an Even Number on a Die</h3>
+      <p>What is the probability of rolling an even number on a die?<br><br>
+      Solution:<br>
+      Favorable outcomes: {2, 4, 6}.<br>
+      P(even number) = 3/6 = 1/2</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 5: Probability of Drawing an Ace</h3>
+      <p>What is the probability of drawing an Ace from a deck of 52 cards?<br><br>
+      Solution:<br>
+      Total Aces = 4.<br>
+      P(Ace) = 4/52 = 1/13</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 6: Probability of Two Independent Events (Dice Roll and Coin Toss)</h3>
+      <p>If a die is rolled and a coin is tossed, what is the probability of getting a 4 on the die and a head on the coin?<br><br>
+      Solution:<br>
+      P(4) = 1/6, P(head) = 1/2.<br>
+      P(4 and head) = 1/6 &times; 1/2 = 1/12</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 7: Probability of Not Getting a 6</h3>
+      <p>What is the probability of not rolling a 6 on a die?<br><br>
+      Solution:<br>
+      P(6) = 1/6.<br>
+      P(not 6) = 1 - 1/6 = 5/6</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 8: Probability of Drawing a Face Card</h3>
+      <p>What is the probability of drawing a face card (Jack, Queen, or King) from a deck of 52 cards?<br><br>
+      Solution:<br>
+      Total face cards = 12.<br>
+      P(face card) = 12/52 = 3/13</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 9: Conditional Probability (Given an Event)</h3>
+      <p>A card is drawn from a deck of 52 cards. What is the probability that it’s a Queen given that it’s a face card?<br><br>
+      Solution:<br>
+      Total face cards = 12, Favorable outcomes (Queens) = 4.<br>
+      P(Queen | face card) = 4/12 = 1/3</p>
+    </div>
+
+    <div class="solution">
+      <h3>Example 10: Probability of Complementary Events</h3>
+      <p>If the probability of raining tomorrow is 0.4, what is the probability that it will not rain?<br><br>
+      Solution:<br>
+      P(not raining) = 1 - 0.4 = 0.6.</p>
+    </div>
+  </div>
+</body>
+</html>S
